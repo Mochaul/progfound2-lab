@@ -1,5 +1,5 @@
 # Lab 1 : Pengenalan Java & Git
-Dasar-dasar Pemrograman 2 - CSGE601021 | Fakultas Ilmu Komputer, Universitas Indonesia, 2018
+Dasar-dasar Pemrograman 2 - CSGE601021 | Fakultas Ilmu Komputer, Universitas Indonesia, Semester Genap 2017/2018
 
 **Dibuat oleh: IF | KT**
 
@@ -9,10 +9,12 @@ Dasar-dasar Pemrograman 2 - CSGE601021 | Fakultas Ilmu Komputer, Universitas Ind
 
 Di DDP 1 kalian telah belajar konsep-konsep pemrograman dengan menggunakan bahasa Python, 
 di DDP 2 ini kalian memperdalam pemahaman pemrograman kalian dengan konsep-konsep yang menarik 
-seperti Obejct Oriented Programming dengan menggunakan bahasa pemrograman Java. 
+seperti _Object Oriented Programming_ dengan menggunakan bahasa pemrograman Java.
+ 
 Pasti timbul pertanyaan di benak kalian, kenapa memakai Java ? kenapa tidak pakai Python saja?. 
+
 Singkatnya, Java mempunyai kelebihan yaitu kejelasan struktur dalam pemrogramannya, 
-sehingga membuat mudah untuk memahami konsep Object Oriented. Selain itu juga masih ada perbedaan lain 
+sehingga membuat mudah untuk memahami konsep _Object Oriented_. Selain itu juga masih ada perbedaan lain 
 yang perlu kalian ketahui, simak penjelasan dibawah ini.
 
 **Interpreted / Compiled**
@@ -26,22 +28,25 @@ harus diubah menjadi bahasa lain yang bisa dimengerti komputer, lalu setelah itu
 
 Pada dasarnya, walaupun memiliki perbedaan yang mencolok, semua bahasa pemrograman itu memiliki garis besar yang sama, 
 sehingga jika kalian telah memahami sebuah bahasa pemrograman, akan lebih mudah untuk memahami bahasa yang lain. 
-Oleh karena itu, yuk simak perbedaan intruksi-intruksi di Python dan Java.
 
+Oleh karena itu, yuk simak perbedaan intruksi-intruksi di Python dan Java.
 
 1.  Declaring & Assigning Variables
     
     Variabel di Python bersifat _dynamic_, contohnya adalah kita bisa memberi nilai dengan tipe data apapun ke sebuah 
-    variabel, dan kita bisa mengubah nilai variabel tersebut dengan tipe data yang berbeda. Java memiliki variabel yang 
+    variabel, dan kita bisa mengubah nilai variabel tersebut dengan tipe data yang berbeda. 
+    
+    Java memiliki variabel yang 
     bersifat _static_, perbedaanya dengan Python adalah kita harus memberikan informasi mengenai tipe data sebuah variabel 
-    secara **eksplisit**, serta kita hanya bisa mengganti nilai variabel tersebut dengan tipe data yang sama. Untuk lebih 
-    jelasnya lihat perbandingan dibawah ini.
+    secara **eksplisit**, serta kita hanya bisa mengganti nilai variabel tersebut dengan tipe data yang sama. 
+    
+    Untuk lebih jelasnya lihat perbandingan dibawah ini.
 
     **Python**
     
     ```python
     var1 = 3
-    var2 = “Hehe”
+    var2 = "Hehe"
     var3 = True
     var1 = False # bisa
     ```
@@ -50,7 +55,7 @@ Oleh karena itu, yuk simak perbedaan intruksi-intruksi di Python dan Java.
     
     ```java
     int var1 = 3;
-    String var2 = “Hehe”;
+    String var2 = "Hehe";
     boolean var3 = true;
     var1 = False; // error, var1 bertipe int
     ```
@@ -108,8 +113,10 @@ Oleh karena itu, yuk simak perbedaan intruksi-intruksi di Python dan Java.
     >Perhatian
     >
     >Di Python, untuk mendefinisikan isi sebuah conditions (if elif else), kita memberi titik dua  ( : ) 
-    pada conditions, lalu isinya berada dibawahnya dengan indentasi. Di Java, isi dari sebuah conditions ada didalam 
-    kurung kurawal ( { } ) indentasi hanya sebagai aestetik agar program lebih mudah dibaca, ini juga berlaku untuk 
+    pada conditions, lalu isinya berada dibawahnya dengan indentasi. 
+    >
+    >Di Java, isi dari sebuah conditions ada didalam 
+    kurung kurawal ( **{ }** ) indentasi hanya sebagai aestetik agar program lebih mudah dibaca, ini juga berlaku untuk 
     fungsi, class, dan lain-lain.
 
 3.  Loop
@@ -120,7 +127,7 @@ Oleh karena itu, yuk simak perbedaan intruksi-intruksi di Python dan Java.
     
     ```python
     for num in range(10):
-        print(“Cetakan ke-” + str(num+1))
+        print("Cetakan ke-" + str(num+1))
     
     point = 0
     while (point < 10):
@@ -151,8 +158,9 @@ Oleh karena itu, yuk simak perbedaan intruksi-intruksi di Python dan Java.
     ```
     
     Kita harus membuat variabel dulu, lalu tentukan syarat berjalannya loop, yang selama true, maka loop akan berjalan, 
-    dan yang ketiga memberikan peubah nilai agar nilai suatu saat loop nya berhenti. Memang terlihat rumit namun kita 
-    bisa membuat for loop yang bermacam-macam.
+    dan yang ketiga memberikan peubah nilai agar nilai suatu saat loop nya berhenti. 
+    
+    Memang terlihat rumit namun kita bisa membuat for loop yang bermacam-macam.
     
 
 ### Membuat Program Java
@@ -170,11 +178,12 @@ sebuah class. Pastikan nama class nya sama dengan nama file nya (jika nama filen
 
 Lalu, kita buat sebuah fungsi _main_, Buat apa fungsi main? Fungsi main berguna sebagai entry-point (titik masuk) 
 jalannya sebuah program, saat kalian jalankan program kalian, Java akan mencari letak fungsi main, lalu menjalankan 
-instruksi yang ada didalamnya. Setelah itu di dalam fungsi main tersebut bisa diisikan instruksi-instruksi yang 
-ingin dijalankan, contoh programnya :
+instruksi yang ada didalamnya. 
+
+Setelah itu di dalam fungsi main tersebut bisa diisikan instruksi-instruksi yang ingin dijalankan, contoh 
+programnya :
 
 ```java
-
 public class Halo{
     
     public static void main(String[] args){
@@ -193,8 +202,12 @@ public class Halo{
 
 Untuk menjalankan program kalian, pertama save dulu file kalian, lalu buka folder dimana file kalian berada, pada 
 address bar nya, ketik `cmd`, lalu tekan Enter, Command Prompt akan terbuka dengan directory menunjuk lokasi file 
-kalian. Kalian juga bisa membuka Command Prompt di Start Menu, namun kalian harus mengarahkan direktorinya ke folder
-dimana program kalian berada secara manual (gunakan perintah `cd` untuk berpindah direktori dan `<drive>:` untuk 
+kalian. 
+
+Kalian juga bisa membuka Command Prompt di Start Menu, namun kalian harus mengarahkan direktorinya ke folder
+dimana program kalian berada secara manual 
+
+>(gunakan perintah `cd` untuk berpindah direktori dan `<drive>:` untuk 
 berpindah partisi, misal `D:`)
 
 Untuk menjalankan program, kalian perlu melakukan 2 perintah di Command Prompt, yaitu :
@@ -227,14 +240,18 @@ diberikan sebuah pengalaman baru dengan menggunakan Git.
 **Version Control System (VCS)**
 
 VCS merupakan sebuah software yang membantu para developer untuk saling bekerja sama dan tetap mempertahankan 
-riwayat kerja mereka secara utuh. VCS memiliki beberapa fungsi, di antaranya mengizinkan para developer untuk 
-bekerja secara bersamaan, tidak mengizinkan saling tumpang-tindih perubahaan yang ada, dan mempertahankan riwayat 
-dari setiap versi. VCS sendiri terbagi menjadi dua tipe, yaitu Centralized VCS (CVCS) dan Distributed/Decentralized 
-VCS (DVCS). 
+riwayat kerja mereka secara utuh. 
+
+VCS memiliki beberapa fungsi, di antaranya mengizinkan para developer untuk  bekerja secara bersamaan, tidak 
+mengizinkan saling tumpang-tindih perubahaan yang ada, dan mempertahankan riwayat dari setiap versi. 
+
+VCS sendiri terbagi menjadi dua tipe, yaitu Centralized VCS (CVCS) dan Distributed/Decentralized VCS (DVCS). 
 
 Git merupakan VCS yang sering digunakan sekarang ini. Git merupakan salah satu Distributed Version Control System 
 (DVCS), yang berarti salinan kode yang tersimpan di local repository adalah sebuah version control repository yang 
-lengkap. Jadi, antara local repository dan remote repository sama-sama berisi versi terakhir (terupdate).
+lengkap. 
+
+Jadi, antara local repository dan remote repository sama-sama berisi versi terakhir (terupdate).
 
 **Perintah di Git**
 
@@ -243,8 +260,9 @@ Untuk melihat berbagai perintah (command) yang ada di Git, kamu bisa melihatnya 
 **Tutorial Git**
 
 Pada bagian pertama, kamu sudah diberikan soal tutorial mengenai bahasa pemrograman Java. Pada bagian ini, kamu 
-akan menyimpan file yang telah kamu buat secara remote di GitLab. Untuk melakukan hal tersebut, harap ikuti 
-langkah-langkah berikut ini:
+akan menyimpan file yang telah kamu buat secara remote di GitLab. 
+
+Untuk melakukan hal tersebut, harap ikuti langkah-langkah berikut ini:
 
 1. Buatlah sebuah folder yang akan menjadi local repository yang kamu gunakan,. Nama folder bebas.
 
@@ -330,18 +348,19 @@ teman kalian, agar kalian tidak tertinggal.
 
 ***
 
-## A New Beginning
+## Chapter 1 : A New Beginning
 
 Dek Depe merupakan mahasiswa pindahan baru di Fasilkom UI, karena di tempat dulu ia belajar programming menggunakan 
-bahasa pemrograman Python, dia kesulitan untuk memahami bahasa pemrograman Java yang digunakan di DDP 2. Dan ia 
-pun meminta tolong kepada anda untuk menunjukkan bentuk program Java dari program Python yang ia buat, karena anda 
-merupakan mahasiswa yang baik dan memiliki inisiatif s̶e̶r̶t̶a̶ ̶i̶n̶g̶i̶n̶ ̶P̶D̶K̶T̶ ̶d̶e̶n̶g̶a̶n̶ ̶D̶e̶k̶ 
-̶D̶e̶p̶e̶. Anda pun bersedia untuk mengajarkan bahasa Java ke Dek Depe.
+bahasa pemrograman Python, dia kesulitan untuk memahami bahasa pemrograman Java yang digunakan di DDP 2. 
+
+Dan ia pun meminta tolong kepada anda untuk menunjukkan bentuk program Java dari program Python yang ia buat, 
+karena anda merupakan mahasiswa yang baik dan memiliki inisiatif s̶e̶r̶t̶a̶ ̶i̶n̶g̶i̶n̶ ̶P̶D̶K̶T̶ ̶d̶e̶n̶g̶a̶n̶ 
+̶D̶e̶k̶ ̶D̶e̶p̶e̶. Anda pun bersedia untuk mengajarkan bahasa Java ke Dek Depe.
 
 Tugas kalian adalah mengubah program Python dibawah ini menjadi sebuah Program Java, untuk tiap soal buatlah File dan 
 Class nya sendiri (1 soal 1 file Java) dengan nama yang telah ditentukan di tiap soal.
 
-1. Class : _Jumlah_
+1. Class : **_Jumlah_**
 
     ```python
     int angka1 = 40
@@ -350,51 +369,51 @@ Class nya sendiri (1 soal 1 file Java) dengan nama yang telah ditentukan di tiap
     print hasil
     ```
 
-2. d
+2. Class : **_HitungBerulang_**
 
     ```python
-        hasil = 0
+    hasil = 0
+    
+    for a in range(10):
+        hasil = hasil + (a*100 - a)
         
-        for a in range(10):
-            hasil = hasil + (a*100 - a)
+    print(hasil)
+    ```
+
+3. Class : **_CekUmur_**
+
+    ```python
+    umur = 19
+    
+    if(umur < 10):
+        print("Anak-anak")
+    elif(umur < 20):
+        print("Remaja")
+    elif(umur < 50):
+        print("Dewasa")
+    else:
+        print("Lansia")
+    ```
+
+4. Class : **_GenapGanjil_**
+
+    ```python
+    hasil = 0
+    ulangan = 10
+    
+    for angka in range(ulangan):
+        if(angka%2 == 0):
+            print("Angka Genap")
+    
+        elif(angka%2 == 1):
+            print("Angka Ganjil")
+    
+        if(angka == ulangan//2):
+            print("Angka tengah")
             
-        print(hasil)
-    ```
-
-3.
-
-    ```python
-        umur = 19
-        
-        if(umur < 10):
-            print("Anak-anak")
-        elif(umur < 20):
-            print("Remaja")
-        elif(umur < 50):
-            print("Dewasa")
-        else:
-            print("Lansia")
-    ```
-
-4.
-
-    ```python
-        hasil = 0
-        ulangan = 10
-        
-        for angka in range(ulangan):
-            if(angka%2 == 0):
-                print("Angka Genap")
-        
-            elif(angka%2 == 1):
-                print("Angka Ganjil")
-        
-            if(angka == ulangan//2):
-                print("Angka tengah")
-                
-            hasil += angka
-        
-        print(angka)
+        hasil += angka
+    
+    print(angka)
     ```
 
 Setelah kalian selesai mengerjakan soal-soal di atas, coba compile dan jalankan programnya untuk mengecek kebenaran 
@@ -403,17 +422,4 @@ error.
 
 Untuk submisi, masukan file java ke local repo kalian di folder dengan nama “tutorial_1” lalu push ke repo di 
 gitlab kalian. Pastikan file `.class` tidak ikut di push.
-
-
-
-
-
-
-
-
-
-
-
-
-
 
