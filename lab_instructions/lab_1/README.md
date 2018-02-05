@@ -295,9 +295,9 @@ Untuk melakukan hal tersebut, harap ikuti langkah-langkah berikut ini:
    files_ dari folder tersebut. Oleh karena itu, jalankan perintah `git add <nama-file>` untuk setiap _untracked files_.
                  
 9. Setelah itu, jalankan perintah `git commit -m “<isi-dengan-pesanmu>”`. Hal tersebut berfungsi sebagai penanda 
-   terhadap perubahan yang terjadi di dalam files yang kamu baut sebelumnya. 
+   terhadap perubahan yang terjadi di dalam files yang kamu buat sebelumnya. 
                     
-10. Dengan begitu, kamu sudah berhasil mengimplementasikan Git di _local repository_. Unutk tahapan berikutnya, 
+10. Dengan begitu, kamu sudah berhasil mengimplementasikan Git di _local repository_. Untuk tahapan berikutnya, 
     kamu akan membagikan hasil kerjamu kepada orang lain melalui GitLab, yang terkoneksi dengan local repository yang 
     kamu miliki. Buka [GitLab](https://gitlab.com) melalui browser kalian.
                         
@@ -344,6 +344,12 @@ Untuk melakukan hal tersebut, harap ikuti langkah-langkah berikut ini:
                                                
 17.  Jalankan perintah `git remote -v`, maka akan muncul alamat repository kalian di bagian origin dan alamat 
      repository resmi DDP 2 di bagian upstream.
+     
+18. Untuk meng-_"upload"_ hasil pekerjaan kalian, setelah kalian lakukan perintah `add` dan `commit` seperti petunjuk 
+    diatas. ketik perintah `git push origin master` untuk menyimpan file yang kalian telah `commit` sebelumnya ke repo 
+    dengan nama `origin` (yaitu repo kalian)
+    
+    > perintah `push` memiliki format `git push <nama link> <branch>`
 
 >Perhatian
 >
