@@ -384,9 +384,9 @@ Class nya sendiri (1 soal 1 file Java) dengan nama yang telah ditentukan di tiap
 1. Class : **_Jumlah_**
 
     ```python
-    int angka1 = 40
-    int angka2 = 2
-    int hasil = angka1 + angka2
+    angka1 = 40
+    angka2 = 2
+    hasil = angka1 + angka2
     print hasil
     ```
 
