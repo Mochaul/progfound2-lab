@@ -19,19 +19,20 @@ yang perlu kalian ketahui, simak penjelasan dibawah ini.
 
 **Interpreted / Compiled**
 
-Python merupakan salah satu Interpreted Language, dimana saat program dijalankan, 
+Python merupakan salah satu _Interpreted Language_, dimana saat program dijalankan, 
 komputer akan mengeksekusi tiap instruksi satu per satu. Oleh karena itu kita bisa langsung 
-menjalankan program Python. Java merupakan salah satu Compiled Language, dimana setiap program 
+menjalankan program Python. Java merupakan salah satu _Compiled Language_, dimana setiap program 
 harus diubah menjadi bahasa lain yang bisa dimengerti komputer, lalu setelah itu baru bisa dijalankan.
 
 **Struktur Kode**
 
-Pada dasarnya, walaupun memiliki perbedaan yang mencolok, semua bahasa pemrograman itu memiliki garis besar yang sama, 
-sehingga jika kalian telah memahami sebuah bahasa pemrograman, akan lebih mudah untuk memahami bahasa yang lain. 
+Pada dasarnya, walaupun memiliki perbedaan struktur kode yang mencolok, semua bahasa pemrograman itu memiliki garis 
+besar yang sama, sehingga jika kalian telah memahami sebuah bahasa pemrograman, akan lebih mudah untuk memahami bahasa 
+yang lain. 
 
 Oleh karena itu, yuk simak perbedaan intruksi-intruksi di Python dan Java.
 
-1.  Declaring & Assigning Variables
+1.  **Declaring & Assigning Variables**
     
     Variabel di Python bersifat _dynamic_, contohnya adalah kita bisa memberi nilai dengan tipe data apapun ke sebuah 
     variabel, dan kita bisa mengubah nilai variabel tersebut dengan tipe data yang berbeda. 
@@ -60,19 +61,19 @@ Oleh karena itu, yuk simak perbedaan intruksi-intruksi di Python dan Java.
     var1 = False; // error, var1 bertipe int
     ```
     
-    **_Catatan :_** Tipe tipe data di Java antara lain, int (bil. bulat), double (bil. pecahan), boolean (true/false), String 
-    (kalimat), char (satu huruf), dan masih banyak lagi yang akan kalian pelajari nanti.
+    **_Catatan :_** Tipe tipe data di Java antara lain, **int** (bil. bulat), **double** (bil. pecahan), **boolean** 
+    (true/false), **String** (kalimat), **char** (satu huruf), dan masih banyak lagi yang akan kalian pelajari nanti.
     
     >**Perhatian**
     >
-    >Di Java, kalian harus memberikan semicolon ( ; ) di tiap akhir instruksi, 
+    >Di Java, kalian harus memberikan semicolon ( **;** ) di tiap akhir instruksi, 
     ini menandakan akhir sebuah instruksi dan pemisah antar instruksi, 
     dimana di Python tiap instruksi dipisahkan dengan baris.
     
-2.  If-Else Conditions
+2.  **If-Else Conditions**
 
-    Flow Conditions di Java dan Python sama, yang membedakan adalah di Python kita mengenal elif, 
-    di Java menggunakan else if, simak contoh dibawah ini.
+    Flow Conditions di Java dan Python sama, yang membedakan adalah di Python kita mengenal **elif**, 
+    di Java menggunakan **else if**, simak contoh dibawah ini.
 
     **Python**
     
@@ -110,16 +111,16 @@ Oleh karena itu, yuk simak perbedaan intruksi-intruksi di Python dan Java.
     System.out.println(huruf);
     ```
 
-    >Perhatian
+    >**Perhatian**
     >
     >Di Python, untuk mendefinisikan isi sebuah conditions (if elif else), kita memberi titik dua  ( : ) 
     pada conditions, lalu isinya berada dibawahnya dengan indentasi. 
     >
     >Di Java, isi dari sebuah conditions ada didalam 
-    kurung kurawal ( **{ }** ) indentasi hanya sebagai aestetik agar program lebih mudah dibaca, ini juga berlaku untuk 
-    fungsi, class, dan lain-lain.
+    kurung kurawal ( **{ }** ). penggunaan indentasi hanya sebagai aestetik agar program lebih mudah dibaca, 
+    ini juga berlaku untuk fungsi, class, dan lain-lain.
 
-3.  Loop
+3.  **Loop**
     
     Untuk memahami perbedaan loop di Java dengan Python, simak kode di bawah ini.
     
@@ -149,7 +150,7 @@ Oleh karena itu, yuk simak perbedaan intruksi-intruksi di Python dan Java.
     }
     ```
 
-    Perbedaan paling mencolok ada pada for loop di Java yang memiliki format :
+    Perbedaan paling mencolok ada pada `for` loop di Java yang memiliki format :
     
     ```java
     for (int variabel; syarat; peubah nilai){
@@ -176,7 +177,7 @@ Hal yang pertama kita buat adalah sebuah **class**, karena di Java, setiap progr
 sebuah class. Pastikan nama class nya sama dengan nama file nya (jika nama filenya **Halo.java**, maka nama class nya 
 **Halo**).
 
-Lalu, kita buat sebuah fungsi _main_, Buat apa fungsi main? Fungsi main berguna sebagai entry-point (titik masuk) 
+Lalu, kita buat sebuah fungsi _main_, _**Buat apa fungsi main?**_ Fungsi main berguna sebagai entry-point (titik masuk) 
 jalannya sebuah program, saat kalian jalankan program kalian, Java akan mencari letak fungsi main, lalu menjalankan 
 instruksi yang ada didalamnya. 
 
@@ -200,25 +201,25 @@ public class Halo{
 
 > **_System.out.println()_** digunakan untuk mencetak sebuah informasi ke layar, di Python kita mengenal _print()_
 
-Untuk menjalankan program kalian, pertama save dulu file kalian, lalu buka folder dimana file kalian berada, pada 
-address bar nya, ketik `cmd`, lalu tekan Enter, Command Prompt akan terbuka dengan directory menunjuk lokasi file 
+Untuk menjalankan program kalian, pertama _save_ dulu file kalian, lalu buka folder dimana file kalian berada, pada 
+address bar nya, ketik `cmd`, lalu tekan _Enter_, Command Prompt akan terbuka dengan directory menunjuk ke lokasi file 
 kalian. 
 
-Kalian juga bisa membuka Command Prompt di Start Menu, namun kalian harus mengarahkan direktorinya ke folder
+Kalian juga bisa membuka _Command Prompt_ di _Start Menu_, namun kalian harus mengarahkan direktorinya ke folder
 dimana program kalian berada secara manual 
 
->(gunakan perintah `cd` untuk berpindah direktori dan `<drive>:` untuk 
-berpindah partisi, misal `D:`)
+>gunakan perintah `cd` untuk berpindah direktori, (misal D:\Kuliah), dan `<drive>:` untuk 
+berpindah partisi (misal `D:`).
 
 Untuk menjalankan program, kalian perlu melakukan 2 perintah di Command Prompt, yaitu :
 
 1.  `javac NamaFile.java`
 
-    Ini akan meng-compile file Java kalian dan menghasilkan file bernama sama dengan tipe file .class
+    Ini akan meng-_compile_ file Java kalian dan menghasilkan file bernama sama dengan tipe file `.class`
 
 2.  `java NamaFile`
     
-    Ini akan mengeksekusi file yang telah kalian compile, semua output akan terlihat di Command Prompt
+    Ini akan mengeksekusi file yang telah kalian compile, semua output akan terlihat di _Command Prompt_
 
 Dan program Java pertama kalian berhasil dijalankan ! yay!
 
@@ -271,34 +272,41 @@ Untuk melakukan hal tersebut, harap ikuti langkah-langkah berikut ini:
 2. Buka command prompt/shell.
 
 3. Ubah direktori sekarang menjadi direktori dari folder “TutorialDDP2”.
+   
+   > Misal : D:\DDP2\TutorialDDP2
 
-4. Jalankan perintah git init pada command prompt/shell.
+4. Jalankan perintah `git init` pada command prompt/shell.
 
-5. Jalankan perintah git status untuk memastikan bahwa inisiasi repository Git sudah berhasil dilakukan.
+   > ini akan menginisiasi Git pada direkori yang ditunjuk oleh _Command Prompt_, pastikan kalian tidak salah mengisiasi
+   folder
+
+5. Jalankan perintah `git status` untuk memastikan bahwa inisiasi repository Git sudah berhasil dilakukan.
 
 6. Atur username dan email yang akan diasosiasikan dengan pekerjaanmu di repository Git dengan perintah berikut:
-           git config --global user.name “<nama-lengkapmu”
-           git config --global user.email “<masukkan-emailmu>”
+           `git config --global user.name “<nama-lengkapmu”`
+           `git config --global user.email “<masukkan-emailmu>”`
            
-7. Setelah melakukan konfigurasi, silakan pindahkan hasil pekerjaanmu pada tutorial sebelumnya ke dalam folder 
-   “TutorialDDP2”.
+   > ini untuk memberi informasi tentang pengguna repo, masukan email dan nama kalian.
+           
+7. Setelah melakukan konfigurasi, silakan pindahkan file `Halo.java`  yang kalian buat pada tutorial sebelumnya 
+   ke dalam folder “TutorialDDP2”.
               
-8. Setelah itu, jalankan perintah git status pada command prompt/shell, maka nanti akan muncul daftart untracked 
-   files dari folder tersebut. Oleh karena itu, jalankan perintah git add <nama-file> untuk setiap untracked files.
+8. Setelah itu, jalankan perintah `git status` pada _command prompt/shell_, maka nanti akan muncul daftar _untracked 
+   files_ dari folder tersebut. Oleh karena itu, jalankan perintah `git add <nama-file>` untuk setiap _untracked files_.
                  
-9. Setelah itu, jalankan perintah git commit -m “<isi-dengan-commentmu>”. Hal tersebut berfungsi sebagai penanda 
+9. Setelah itu, jalankan perintah `git commit -m “<isi-dengan-pesanmu>”`. Hal tersebut berfungsi sebagai penanda 
    terhadap perubahan yang terjadi di dalam files yang kamu baut sebelumnya. 
                     
-10. Dengan begitu, kamu sudah berhasil mengimplementasikan Git di local repository. Unutk tahapan berikutnya, 
+10. Dengan begitu, kamu sudah berhasil mengimplementasikan Git di _local repository_. Unutk tahapan berikutnya, 
     kamu akan membagikan hasil kerjamu kepada orang lain melalui GitLab, yang terkoneksi dengan local repository yang 
-    kamu miliki. Buka GitLab melalui browser kalian.
+    kamu miliki. Buka [GitLab](https://gitlab.com) melalui browser kalian.
                         
-11. Buat sebuah project baru, kamu bisa atur nama project sesukamu, dan atur Visibility Level menjadi Private, 
+11. Buat sebuah project baru, kamu bisa atur nama project sesukamu, dan atur _Visibility Level_ menjadi **Private**, 
     sehingga hasil pekerjaan kalian tidak bisa dimanfaatkan pihak yang tidak bertanggung jawab.
                            
 12. Silakan tekan tombol copy yang berada di sebelah baris yang berisi link menuju repository kamu.
                                 
-13. Buka kembali command prompt/shell kamu, lalu ketikkan perintah:
+13. Buka kembali _command prompt/shell kamu_, lalu ketikkan perintah:
     
     ```git
     git remote add origin <CLONEURL>
@@ -309,13 +317,20 @@ Untuk melakukan hal tersebut, harap ikuti langkah-langkah berikut ini:
     ```git
     git remote add origin https://gitlab.com/dekdepe/ddp-2.git
     ```
+    
+    > git remote add origin merupakan perintah untuk menambahkan address/link ke git kalian, dengan format
+    >
+    > `git remote add <nama link> <branch> <link>` 
+    > `origin` biasanya digunakan untuk link repo di gitlab kalian, sedangkan `upstream` biasanya digunakan untuk link
+    > _sumber_ seperti repo ini. selebihnya akan dijelaskan nanti yaa.
                                     
-14. Jalankan perintah git remote -v, maka akan muncul alamat repository kalian di bagian origin.
+14. Jalankan perintah `git remote -v`, maka akan muncul alamat repository kalian di bagian `origin`.
                                         
-15. Setelah itu, buka repository resmi dari perkuliahan DDP 2 di GitLab melalui link ini. Setelah itu, lakukan hal 
-yang sama seperti pada langkah nomor 12.
+15. Setelah itu, buka repository resmi dari perkuliahan DDP 2 di GitLab melalui link 
+    [ini](https://gitlab.com/DDP2-CSUI/ddp-lab). Setelah itu, lakukan hal 
+    yang sama seperti pada langkah nomor 12.
                                             
-16. Buka kembali command prompt/shell kamu, lalu ketikkan perintah:
+16. Buka kembali _command prompt/shell_ kamu, lalu ketikkan perintah:
     
     ```git
     git remote add upstream <CLONEURL>
@@ -327,7 +342,7 @@ yang sama seperti pada langkah nomor 12.
     git remote add upstream https://gitlab.com/DDP2-CSUI/ddp-lab
     ```
                                                
-17.  Jalankan perintah git remote -v, maka akan muncul alamat repository kalian di bagian origin dan alamat 
+17.  Jalankan perintah `git remote -v`, maka akan muncul alamat repository kalian di bagian origin dan alamat 
      repository resmi DDP 2 di bagian upstream.
 
 >Perhatian
@@ -420,6 +435,30 @@ Setelah kalian selesai mengerjakan soal-soal di atas, coba compile dan jalankan 
 program yang telah dibuat. Pastikan program kalian berjalan dengan baik, output sesuai yang diharapkan tanpa ada 
 error.
 
-Untuk submisi, masukan file java ke local repo kalian di folder dengan nama “tutorial_1” lalu push ke repo di 
-gitlab kalian. Pastikan file `.class` tidak ikut di push.
+Untuk submisi tugas, didalam folder repo kalian, buat folder baru dengan nama `lab_1`, lalu masukkan semua file `.java` 
+dari tugas diatas kedalam folder itu. Lalu add, commit, dan push semua file tersebut ke _online repo_ kalian.
 
+Pastikan file `.class` tidak ikut di push.
+
+
+## Checklist
+
+### Komponen Wajib | 100 Poin
+
+1. Java
+    1. [ ] Memahami perbedaan struktur kode Java dan Python.
+    2. [ ] Mampu membuat dan menjalankan program Java menggunakan _text editor_ dan _Command Prompt_.
+    3. [ ] Mengerjakan soal 1 (Class : **_Jumlah_**)
+    4. [ ] Mengerjakan soal 2 (Class : **_HitungBerulang_**)
+    5. [ ] Mengerjakan soal 3 (Class : **_CekUmur_**)
+    6. [ ] Mengerjakan soal 4 (Class : **_GenapGanjil_**)
+    
+2. Git
+    1. [ ] Membuat _Local dan Online Repository_
+    2. [ ] Melakukan `git init` pada _Local Repository_
+    3. [ ] Set `origin` dan `upstream`
+    4. [ ] Melakukan perintah `add`, `commit`, dan `push`
+    
+### Komponen Bonus | 10 Poin
+
+_Belum ada bonus yaa hehe :)_
