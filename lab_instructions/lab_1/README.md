@@ -387,7 +387,7 @@ Class nya sendiri (1 soal 1 file Java) dengan nama yang telah ditentukan di tiap
     angka1 = 40
     angka2 = 2
     hasil = angka1 + angka2
-    print hasil
+    print(hasil)
     ```
 
 2. Class : **_HitungBerulang_**
