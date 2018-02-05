@@ -265,37 +265,30 @@ akan menyimpan file yang telah kamu buat secara remote di GitLab.
 
 Untuk melakukan hal tersebut, harap ikuti langkah-langkah berikut ini:
 
-1. Buatlah sebuah folder yang akan menjadi local repository yang kamu gunakan,. Nama folder bebas.
+1.  Buatlah sebuah folder yang akan menjadi local repository yang kamu gunakan,. Nama folder bebas.
+    > Catatan: dalam soal tutorial ini, nama folder yang digunakan adalah “TutorialDDP2”, kalian boleh menggantinya.
 
-   > Catatan: dalam soal tutorial ini, nama folder yang digunakan adalah “TutorialDDP2”, kalian boleh menggantinya.
+2.  Buka command prompt/shell.
 
-2. Buka command prompt/shell.
+3.  Ubah direktori sekarang menjadi direktori dari folder “TutorialDDP2”.
+    > Misal : D:\DDP2\TutorialDDP2
 
-3. Ubah direktori sekarang menjadi direktori dari folder “TutorialDDP2”.
-   
-   > Misal : D:\DDP2\TutorialDDP2
+4.  Jalankan perintah `git init` pada command prompt/shell.
 
-4. Jalankan perintah `git init` pada command prompt/shell.
+    > ini akan menginisiasi Git pada direkori yang ditunjuk oleh _Command Prompt_, pastikan kalian tidak salah menginisiasi folder
 
-   > ini akan menginisiasi Git pada direkori yang ditunjuk oleh _Command Prompt_, pastikan kalian tidak salah mengisiasi
-   folder
+5.  Jalankan perintah `git status` untuk memastikan bahwa inisiasi repository Git sudah berhasil dilakukan.
 
-5. Jalankan perintah `git status` untuk memastikan bahwa inisiasi repository Git sudah berhasil dilakukan.
-
-6. Atur username dan email yang akan diasosiasikan dengan pekerjaanmu di repository Git dengan perintah berikut:
+6.  Atur username dan email yang akan diasosiasikan dengan pekerjaanmu di repository Git dengan perintah berikut:
            `git config --global user.name “<nama-lengkapmu”`
            `git config --global user.email “<masukkan-emailmu>”`
+    > ini untuk memberi informasi tentang pengguna repo, masukan email dan nama kalian.
            
-   > ini untuk memberi informasi tentang pengguna repo, masukan email dan nama kalian.
-           
-7. Setelah melakukan konfigurasi, silakan pindahkan file `Halo.java`  yang kalian buat pada tutorial sebelumnya 
-   ke dalam folder “TutorialDDP2”.
+7.  Setelah melakukan konfigurasi, silakan pindahkan file `Halo.java`  yang kalian buat pada tutorial sebelumnya ke dalam folder “TutorialDDP2”.
               
-8. Setelah itu, jalankan perintah `git status` pada _command prompt/shell_, maka nanti akan muncul daftar _untracked 
-   files_ dari folder tersebut. Oleh karena itu, jalankan perintah `git add <nama-file>` untuk setiap _untracked files_.
+8.  Setelah itu, jalankan perintah `git status` pada _command prompt/shell_, maka nanti akan muncul daftar _untracked files_ dari folder tersebut. Oleh karena itu, jalankan perintah `git add <nama-file>` untuk setiap _untracked files_.
                  
-9. Setelah itu, jalankan perintah `git commit -m “<isi-dengan-pesanmu>”`. Hal tersebut berfungsi sebagai penanda 
-   terhadap perubahan yang terjadi di dalam files yang kamu buat sebelumnya. 
+9.  Setelah itu, jalankan perintah `git commit -m “<isi-dengan-pesanmu>”`. Hal tersebut berfungsi sebagai penanda terhadap perubahan yang terjadi di dalam files yang kamu buat sebelumnya. 
                     
 10. Dengan begitu, kamu sudah berhasil mengimplementasikan Git di _local repository_. Untuk tahapan berikutnya, 
     kamu akan membagikan hasil kerjamu kepada orang lain melalui GitLab, yang terkoneksi dengan local repository yang 
