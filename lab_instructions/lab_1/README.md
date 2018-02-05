@@ -434,7 +434,7 @@ Class nya sendiri (1 soal 1 file Java) dengan nama yang telah ditentukan di tiap
             
         hasil += angka
     
-    print(angka)
+    print(hasil)
     ```
 
 Setelah kalian selesai mengerjakan soal-soal di atas, coba compile dan jalankan programnya untuk mengecek kebenaran 
