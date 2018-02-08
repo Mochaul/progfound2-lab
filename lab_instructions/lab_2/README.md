@@ -624,14 +624,11 @@ WARNING: Keluarga ini tidak perlu direlokasi!
 ## Checklist
 Isi kurung siku komponen dengan x untuk menceklis komponen.
 ### Komponen Wajib | 100 Poin
-- [ ] **Validasi masukan**
-- [ ] ***Generate* nomor pengenal keluarga**
-- [ ] **Hitung anggaran makanan per tahun**
-- [ ] **Hitung umur kepala keluarga**
-- [ ] **Mengelompokkan keluarga ke apartemen**
+- [ ] **Meminta masukan dari user**
+- [ ] **Hitung rasio berat per volume**
+- [ ] **Cetak data sesuai dengan format yang ditentukan**
     
 ### Komponen Bonus | 10 Poin
-
 - [ ] **Validasi masukan**
 - [ ] ***Generate* nomor pengenal keluarga**
 - [ ] **Hitung anggaran makanan per tahun**
