@@ -620,3 +620,20 @@ Lebar Tubuh (cm)               : <b>64</b>
 Tinggi Tubuh (cm)              : <b>288</b>
 WARNING: Keluarga ini tidak perlu direlokasi!
 </pre>
+
+## Checklist
+Isi kurung siku komponen dengan x untuk menceklis komponen.
+### Komponen Wajib | 100 Poin
+- [ ] **Validasi masukan**
+- [ ] ***Generate* nomor pengenal keluarga**
+- [ ] **Hitung anggaran makanan per tahun**
+- [ ] **Hitung umur kepala keluarga**
+- [ ] **Mengelompokkan keluarga ke apartemen**
+    
+### Komponen Bonus | 10 Poin
+
+- [ ] **Validasi masukan**
+- [ ] ***Generate* nomor pengenal keluarga**
+- [ ] **Hitung anggaran makanan per tahun**
+- [ ] **Hitung umur kepala keluarga**
+- [ ] **Mengelompokkan keluarga ke apartemen**
