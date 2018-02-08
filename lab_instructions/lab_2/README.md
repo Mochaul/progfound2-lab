@@ -14,13 +14,9 @@ Pada tutorial sebelumnya, Anda telah mempelajari mengenai beberapa perbedaan syn
 3. Memahami konsep dasar **String** dan operasi String.
 4. Memahami dasar-dasar **_Input_ dan _Output_** dalam Java (Scanner, System.out, parsing).
 
-## **Before You Start...**
-Sebelum Anda mulai mengerjakan soal tutorial Anda diminta untuk menyiapkan sebuah repo git yang berada pada https://gitlab.com. Repository ini akan di set CI nya agar proses build dan test code akan berjalan otomatis pada platform Gitlab. CI merupakan development practice yang memerlukan programmer untuk menintegrasikan code ke dalam sebuah repo. Dimana code tersebut akan dibuild dan ditest secara otomatis oleh Continuous Integration (CI). Dengan menggunakan CI, Anda akan lebih mudah untuk melacak error. Baca lebih lanjut mengenai CI dan CD di https://about.gitlab.com/features/gitlab-ci-cd/.
-
-### **Persiapkan SetUp di Lokal**
+### **Before You Start...**
 1. Lakukan `git pull upstream master` dengan menggunakan Command Prompt pada folder repository lokal Anda.
 2. Anda dapat mengimplementasikan source code java tutorial 2 pada folder `ddp-lab/tutorial-2/main/java`.
-	Pada tutorial ini, asisten telah menyiapkan source code test untuk menguji source code java yang Anda buat. Source code test tersebut berada pada folder `ddp-lab/tutorial-2/test/java`.
 3. Implementasikan kode Anda sesuai apa yang diminta soal tutorial dan lab nanti.
 4. Setelah selesai mengimplementasikan kode tersebut, lakukan add, commit, dan push code kalian tersebut.
 5. Selamat Anda berhasil!
@@ -518,7 +514,7 @@ Oleh karena itu, Dek Depe juga meminta bantuanmu sekali lagi untuk melanjutkan p
 - [ ] **Validasi masukan**
 
 	Validasi dilakukan setelah pengguna selesai memasukkan semua masukan yang dibutuhkan. Jika masukan tidak sesuai dengan ketentuan di bawah maka:
-	- [ ] Tampilkan pesan setelah semua input selesai namun sebelum cetak data:
+	- [ ] Tampilkan pesan **langsung** saat user memasukkan input yang tidak valid (di luar batasan yang ditentukan):
 		<pre>WARNING: Keluarga ini tidak perlu direlokasi!</pre>
 	- [ ] Keluar dari program (hint: gunakan branching statement yang sesuai)
 	Berikut ini adalah ketentuan masukan yang harus divalidasi:
@@ -627,7 +623,7 @@ Isi kurung siku komponen dengan x untuk menceklis komponen.
 - [ ] **Meminta masukan dari user**
 - [ ] **Hitung rasio berat per volume**
 - [ ] **Cetak data sesuai dengan format yang ditentukan**
-    
+
 ### Komponen Bonus | 10 Poin
 - [ ] **Validasi masukan**
 - [ ] ***Generate* nomor pengenal keluarga**
