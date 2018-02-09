@@ -564,7 +564,20 @@ Oleh karena itu, Dek Depe juga meminta bantuanmu sekali lagi untuk melanjutkan p
 			> Kabupaten: **Margonda**<br>
 			> RANGE Anggaran Makanan/Tahun: Rp **100.000.000** s.d. **TAK HINGGA**<br>
 			> RANGE Umur Kepala Keluarga: **19** tahun s.d. **1018** tahun
+- [ ] **Cetak rekomendasi sesuai dengan format yang ditentukan**
+	<pre>
+		REKOMENDASI APARTEMEN
+		--------------------
+		MENGETAHUI: Identitas keluarga: < Nama Kepala Keluarga > - < Nomor >
+		MENIMBANG:  Anggaran makanan tahunan: Rp < Anggaran >
+					Umur kepala keluarga: < Umur > tahun
+		MEMUTUSKAN: keluarga < Nama Kepala Keluarga > akan ditempatkan di:
+		<Nama Tempat>, kabupaten < Nama Kabupaten >
+	</pre>
 
+> **Hint**
+> - Gunakan fungsi .split() untuk memisahkan tanggal, bulan, dan tahun lahir.
+> - Gunakan casting untuk memasukkan ASCII huruf dalam rumus.
 
 ### **Contoh Input dan Output**
 Berikut ini adalah contoh interaksi program yang mungkin terjadi (yang dicetak tebal adalah masukan):
@@ -630,3 +643,4 @@ Isi kurung siku komponen dengan x untuk menceklis komponen.
 - [ ] **Hitung anggaran makanan per tahun**
 - [ ] **Hitung umur kepala keluarga**
 - [ ] **Mengelompokkan keluarga ke apartemen**
+- [ ] **Cetak rekomendasi sesuai dengan format yang ditentukan**
