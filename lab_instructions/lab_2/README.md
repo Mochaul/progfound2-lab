@@ -572,7 +572,7 @@ Oleh karena itu, Dek Depe juga meminta bantuanmu sekali lagi untuk melanjutkan p
 		MENIMBANG:  Anggaran makanan tahunan: Rp < Anggaran >
 					Umur kepala keluarga: < Umur > tahun
 		MEMUTUSKAN: keluarga < Nama Kepala Keluarga > akan ditempatkan di:
-		<Nama Tempat>, kabupaten < Nama Kabupaten >
+		< Nama Tempat >, kabupaten < Nama Kabupaten >
 	</pre>
 
 > **Hint**
