@@ -521,7 +521,7 @@ Therefore, Dek Depe also asks your help once again to continue the pre-made prog
 		- [ ] 0 < **body weight** ≤ 150 kg, is a **real number**.
 		- [ ] 0 < **the number of family members** ≤ 20, is a **whole**.
 
-- [ ] ***Generate * family ID number**
+- [ ] **Generate * family ID number**
 	- [ ] Use format: `[first letter name of head of family][Result of calculation]`.
 	- [ ] To calculate, use the formula:
 		`` `
@@ -535,20 +535,20 @@ Therefore, Dek Depe also asks your help once again to continue the pre-made prog
 		width = 26
 		high = 37
 		`` `
-		Then ** family number ** is: `a8795`.
+		Then **family number** is: `a8795`.
 
-- [] **Calculate the food budget per year**
-	- [] Use the formula: `Rp 50000 * 365 * (number of family members)`.
-	- [] Make sure you are using the right data type **when calculating**.
-	- [] The final data type of the calculation is **round number** (note that the data type should be as efficient as possible → the smallest data type that fits the needs).
+- [ ] **Calculate the food budget per year**
+	- [ ] Use the formula: `Rp 50000 * 365 * (number of family members)`.
+	- [ ] Make sure you are using the right data type **when calculating**.
+	- [ ] The final data type of the calculation is **round number** (note that the data type should be as efficient as possible → the smallest data type that fits the needs).
 
-- [] **Calculate the age of the head of the family**
-	- [] Take birth year from date of birth.
-	- [] Use the formula: **2018 - (year of birth)**.
-	- [] The final data type of the calculation is **round number** (note that the data type should be as efficient as possible → the smallest data type that fits the needs).
+- [ ] **Calculate the age of the head of the family**
+	- [ ] Take birth year from date of birth.
+	- [ ] Use the formula: **2018 - (year of birth)**.
+	- [ ] The final data type of the calculation is **round number** (note that the data type should be as efficient as possible → the smallest data type that fits the needs).
 
-- [] **Group families into apartments**
-	- [] Here is a list of apartments along with the criteria:
+- [ ] **Group families into apartments**
+	- [ ] Here is a list of apartments along with the criteria:
 		-> Name: **PPMT**<br>
 			> Regency: **Rotunda**<br>
 			> RANGE Food / Year Budget: **FREE**<br>
@@ -561,7 +561,7 @@ Therefore, Dek Depe also asks your help once again to continue the pre-made prog
 			> County: **Margonda**<br>
 			> RANGE Food / Year Budget: Rp **100.000.000** s.d. **NOT TOO** <br>
 			> RANGE Age of Family Head: **19** year s.d. **1018** year
-- [] **Print recommendations according to the format specified**
+- [ ] **Print recommendations according to the format specified**
 	<pre>
 	RECOMMENDATIONS OF APARTMENTS
 	--------------------
@@ -580,16 +580,16 @@ Therefore, Dek Depe also asks your help once again to continue the pre-made prog
 The following are examples of possible program interactions (in bold are entries):
 <pre> CENSUS DATA PRINTING PROGRAM
 --------------------
-Name of Head of Family: <b> Master Shifu </b>
-Home Address: <b> Ninja </b>
-Body length (cm): <b> 36 </b>
-Body width (cm): <b> 71 </b>
-Height of body (cm): <b> 189 </b>
-Body weight (kg): <b> 68.5 </b>
-Number of Family Members: <b> 7 </b>
-Date of Birth: <b> 12-03-1971 </b>
-Additional Notes: <b> </b>
-Number of Data Prints: <b> 2 </b>
+Name of Head of Family 		: <b> Master Shifu </b>
+Home Address 				: <b> Ninja </b>
+Body length (cm) 			: <b> 36 </b>
+Body width (cm) 			: <b> 71 </b>
+Height of body (cm) 		: <b> 189 </b>
+Body weight (kg) 			: <b> 68.5 </b>
+Number of Family Members 	: <b> 7 </b>
+Date of Birth 				: <b> 12-03-1971 </b>
+Additional Notes 			: <b> </b>
+Number of Data Prints 		: <b> 2 </b>
 
 Printing 1 of 2 for: <b> environmental community Fasilkom </b>
 PREPARED DATA PRINTED FOR THE ENVIRONMENTAL COMMUNITY FACILITY COMMUNITY
