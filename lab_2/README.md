@@ -431,7 +431,7 @@ Note: [Note]
 Here is an example of program interaction (in bold is the input):
 <pre> CENSUS DATA PRINTING PROGRAM
 --------------------
-Name of Family Head 		: <b> Butterfield </b>
+Name of Family Head 		: <b> Butterfield </b>	
 Home Address 				: <b> RSE </b>
 Body Length (cm)			: <b> 30 </b>
 Body Width (cm)				: <b> 60 </b>
@@ -501,132 +501,132 @@ No additional notes
 ### **Any templates?**
 So ... it turned out that Dek Depe had friends who were willing to ease you in completing this job, but because he was busy, he was only able to make his **template** alone. **Template** is in `/lab_2/src/main/java/SistemSensus.java`.
 
-How to use it? Instantly modify the template, fill it with your answer code :) Further guides are already in the template code!
+How to use it? Instantly modify the template, fill it with your answer code :) Further guides are already in the template code	!
 
 ## **Soal Bonus: "Rekomendasi Apartemen"**
 ### **What's the story?**
-Berkat bantuanmu, Kak Pewe berhasil melaksanakan sensus terhadap slums di Provinsi Tamfir tepat waktu. Setelah dilakukan penataan lingkungan selama satu bulan, ternyata tidak semua orang bisa menempati daerah tersebut, sehingga ada yang perlu direlokasi. Mak Dis selaku kepala Dinas Perumahan Rakyat Provinsi Tamfir telah memberikan rekomendasi tiga apartemen yang akan dijadikan tempat relokasi, beserta ketentuan dalam menentukan tempat relokasi. Kak Pewe diminta untuk mendata ulang terhadap orang-orang yang memenuhi prasyarat untuk dapat direlokasi. Dan ia tentu meminta bantuan adiknya, Dek Depe, sekali lagi.
+Thanks to your help, Kak Pewe successfully executed the census of slums in Tamfir Province on time. After the environmental arrangement for one month, it turns out not everyone can occupy the area, so there is a need for relocation. Mak Dis as the head of the Tamfir Provincial People's Housing Service has recommended three apartments to be relocated, along with the provision of relocation sites. Kak Pewe was asked to reconstruct those who fulfill the prerequisites to be relocated. And he certainly asked for his sister's help, Dek Depe, again.
 
-Oleh karena itu, Dek Depe juga meminta bantuanmu sekali lagi untuk melanjutkan program yang telah dibuat sebelumnya, lalu menambahkan fitur baru sesuai checklist berikut:
+Therefore, Dek Depe also asks your help once again to continue the pre-made program, then add new features according to the following checklist:
 
 ### **What you need to do**
-- [ ] **Validasi masukan**
+- [ ] **Validate input**
 
-	Validasi dilakukan setelah pengguna selesai memasukkan semua masukan yang dibutuhkan. Jika masukan tidak sesuai dengan ketentuan di bawah maka:
-	- [ ] Tampilkan message **langsung** saat user memasukkan input yang tidak valid (di luar batasan yang ditentukan):
-		<pre>WARNING: Keluarga ini tidak perlu direlokasi!</pre>
-	- [ ] Keluar dari program (hint: gunakan branching statement yang sesuai)
-	Berikut ini adalah ketentuan masukan yang harus divalidasi:
-		- [ ] 0 < **panjang tubuh** ≤ 250 cm, merupakan bilangan **bulat**.
-		- [ ] 0 < **lebar tubuh** ≤ 250 cm, merupakan bilangan **bulat**.
-		- [ ] 0 < **tinggi tubuh** ≤ 250 cm, merupakan bilangan **bulat**.
-		- [ ] 0 < **berat tubuh** ≤ 150 kg, merupakan bilangan **riil**.
-		- [ ] 0 < **jumlah anggota keluarga** ≤ 20, merupakan bilangan **bulat**.
+	Validation is done after the user has finished entering all required input. If the input does not meet the conditions below then:
+	- [ ] Show message **directly** when user input invalid input (beyond the specified limit):
+	<pre> WARNING: This family does not need to be relocated! </pre>
+	- [ ] Exit the program (hint: use the appropriate branching statement)
+	The following are the input conditions that should be validated:
+		- [ ] 0 < **body length** ≤ 250 cm, is a **round**.
+		- [ ] 0 < **body widht** ≤ 250 cm, is a **round**.
+		- [ ] 0 < **body height** ≤ 250 cm, is a **round**.
+		- [ ] 0 < **body weight** ≤ 150 kg, is a **real number**.
+		- [ ] 0 < **the number of family members** ≤ 20, is a **whole**.
 
-- [ ] ***Generate* number pengenal keluarga**
-	- [ ] Gunakan format: `[letter pertama nama kepala keluarga][Hasil kalkulasi]`.
-	- [ ] Untuk kalkulasi, gunakan rumus:
-		```
-		((Panjang * Tinggi * Lebar) + Jumlah ASCII tiap letter nama) mod 10000.
-		```
+- [ ] ***Generate * family ID number**
+	- [ ] Use format: `[first letter name of head of family][Result of calculation]`.
+	- [ ] To calculate, use the formula:
+		`` `
+		((Length * Height * Width) + Number of ASCII per letter name) mod 10000.
+		`` `
 
-		**Contoh Kasus:**
-		```java
-		nama = “are NG”
-		panjang = 71
-		lebar = 26
-		tinggi = 37
-		```
-		Maka **number keluarga** adalah: `a8795`.
+		**Sample case:**
+		`` `java
+		name = "are NG"
+		length = 71
+		width = 26
+		high = 37
+		`` `
+		Then ** family number ** is: `a8795`.
 
-- [ ] **Hitung anggaran makanan per tahun**
-	- [ ] Gunakan rumus: `Rp 50000 * 365 * (jumlah anggota keluarga)`.
-	- [ ] Pastikan kamu menggunakan tipe data yang tepat **saat menghitung**.
-	- [ ] Tipe data akhir hasil perhitungan adalah **bilangan bulat** (perhatikan bahwa tipe data harus seefisien mungkin → tipe data terkecil yang pas dengan kebutuhan).
+- [] **Calculate the food budget per year**
+	- [] Use the formula: `Rp 50000 * 365 * (number of family members)`.
+	- [] Make sure you are using the right data type **when calculating**.
+	- [] The final data type of the calculation is **round number** (note that the data type should be as efficient as possible → the smallest data type that fits the needs).
 
-- [ ] **Hitung umur kepala keluarga**
-	- [ ] Ambil tahun lahir dari tanggal lahir.
-	- [ ] Gunakan rumus: **2018 - (tahun lahir)**.
-	- [ ] Tipe data akhir hasil perhitungan adalah **bilangan bulat** (perhatikan bahwa tipe data harus seefisien mungkin → tipe data terkecil yang pas dengan kebutuhan).
+- [] **Calculate the age of the head of the family**
+	- [] Take birth year from date of birth.
+	- [] Use the formula: **2018 - (year of birth)**.
+	- [] The final data type of the calculation is **round number** (note that the data type should be as efficient as possible → the smallest data type that fits the needs).
 
-- [ ] **Mengelompokkan keluarga ke apartemen**
-	- [ ] Berikut ini adalah daftar apartemen beserta kriterianya:
-		- > Nama: **PPMT**<br>
-			> Kabupaten: **Rotunda**<br>
-			> RANGE Anggaran Makanan/Tahun: **BEBAS**<br>
-			> RANGE Umur Kepala Keluarga: **0** tahun s.d. **18** tahun
-		- > Nama: **Teksas**<br>
-			> Kabupaten: **Sastra**<br>
-			> RANGE Anggaran Makanan/Tahun: Rp **0** s.d. Rp **100.000.000**<br>
-			> RANGE Umur Kepala Keluarga: **19** tahun s.d. **1018** tahun
-		- > Nama: **Mares**<br>
-			> Kabupaten: **Margonda**<br>
-			> RANGE Anggaran Makanan/Tahun: Rp **100.000.000** s.d. **TAK HINGGA**<br>
-			> RANGE Umur Kepala Keluarga: **19** tahun s.d. **1018** tahun
-- [ ] **Cetak rekomendasi sesuai dengan format yang ditentukan**
+- [] **Group families into apartments**
+	- [] Here is a list of apartments along with the criteria:
+		-> Name: **PPMT**<br>
+			> Regency: **Rotunda**<br>
+			> RANGE Food / Year Budget: **FREE**<br>
+			> RANGE Age of Family Head: **0** year s.d. **18** years
+		-> Name: **Teksas**<br>
+			> Regency: **Literature**<br>
+			> RANGE Food / Year Budget: Rp **0** s.d. Rp **100.000.000**<br>
+			> RANGE Age of Family Head: **19** year s.d. **1018** year
+		-> Name: **Mares**<br>
+			> County: **Margonda**<br>
+			> RANGE Food / Year Budget: Rp **100.000.000** s.d. **NOT TOO** <br>
+			> RANGE Age of Family Head: **19** year s.d. **1018** year
+- [] **Print recommendations according to the format specified**
 	<pre>
-		REKOMENDASI APARTEMEN
-		--------------------
-		MENGETAHUI: Identitas keluarga: < Nama Kepala Keluarga > - < number >
-		MENIMBANG:  Anggaran makanan tahunan: Rp < Anggaran >
-					Umur kepala keluarga: < Umur > tahun
-		MEMUTUSKAN: keluarga < Nama Kepala Keluarga > akan ditempatkan di:
-		< Nama Tempat >, kabupaten < Nama Kabupaten >
+	RECOMMENDATIONS OF APARTMENTS
+	--------------------
+	KNOWN: Family ID: <Name of Family Head> - <number>
+	CONSIDER: Annual food budget: Rp <Budget>
+	Age of family head: <Age> years
+	HAS DECIDED: Family <Name of Head of Family> will be placed at:
+	<Place Name>, district <Name of Regency>
 	</pre>
 
 > **Hint**
-> - Gunakan fungsi .split() untuk memisahkan tanggal, bulan, dan tahun lahir.
-> - Gunakan casting untuk memasukkan ASCII letter dalam rumus.
+> - Use the .split () function to separate date, month and year of birth.
+> - Use casting to include ASCII letter in formula.
 
-### **Contoh Input dan Output**
-Berikut ini adalah contoh interaksi program yang mungkin terjadi (yang dicetak tebal adalah masukan):
-<pre>PROGRAM PENCETAK DATA SENSUS
+### **Example of Input and Output**
+The following are examples of possible program interactions (in bold are entries):
+<pre> CENSUS DATA PRINTING PROGRAM
 --------------------
-Nama Kepala Keluarga           : <b>master Shifu</b>
-Alamat Rumah                   : <b>Ninja</b>
-Panjang Tubuh (cm)             : <b>36</b>
-Lebar Tubuh (cm)               : <b>71</b>
-Tinggi Tubuh (cm)              : <b>189</b>
-Berat Tubuh (kg)               : <b>68.5</b>
-Jumlah Anggota Keluarga        : <b>7</b>
-Tanggal Lahir                  : <b>12-03-1971</b>
-Catatan Tambahan               : <b></b>
-Jumlah Cetakan Data            : <b>2</b>
+Name of Head of Family: <b> Master Shifu </b>
+Home Address: <b> Ninja </b>
+Body length (cm): <b> 36 </b>
+Body width (cm): <b> 71 </b>
+Height of body (cm): <b> 189 </b>
+Body weight (kg): <b> 68.5 </b>
+Number of Family Members: <b> 7 </b>
+Date of Birth: <b> 12-03-1971 </b>
+Additional Notes: <b> </b>
+Number of Data Prints: <b> 2 </b>
 
-Pencetakan 1 dari 2 untuk: <b>komunitas lingkungan hidup Fasilkom</b>
-DATA SIAP DICETAK UNTUK KOMUNITAS LINGKUNGAN HIDUP FASILKOM
+Printing 1 of 2 for: <b> environmental community Fasilkom </b>
+PREPARED DATA PRINTED FOR THE ENVIRONMENTAL COMMUNITY FACILITY COMMUNITY
 --------------------
-master Shifu - Ninja
-Lahir pada tanggal 12-03-1971
-Rasio Berat Per Volume     = 141 kg/m^3
-Tidak ada catatan tambahan
+Master Shifu - Ninja
+Born on 12-03-1971
+Ratio Weight Per Volume = 141 kg / m ^ 3
+No additional notes
 
-Pencetakan 2 dari 2 untuk: <b>Arsip pemerintah kabupaten Fasilkom</b>
-DATA SIAP DICETAK UNTUK ARSIP PEMERINTAH KABUPATEN FASILKOM
+Printing 2 of 2 for: <b> Archive of district government Fasilkom </b>
+DATA READY PRINTED FOR FASILKOM REGIONAL GOVERNMENTAL ARCHIVES
 --------------------
-master Shifu - Ninja
-Lahir pada tanggal 12-03-1971
-Rasio Berat Per Volume     = 141 kg/m^3
-Tidak ada catatan tambahan
+Master Shifu - Ninja
+Born on 12-03-1971
+Ratio Weight Per Volume = 141 kg / m ^ 3
+No additional notes
 
-REKOMENDASI APARTEMEN
+RECOMMENDATIONS OF APARTMENTS
 --------------------
-MENGETAHUI: Identitas keluarga: master Shifu - m4279
-MENIMBANG:  Anggaran makanan tahunan: Rp 127750000
-			Umur kepala keluarga: 47 tahun
-MEMUTUSKAN: keluarga master Shifu akan ditempatkan di:
-Mares, kabupaten Margonda
+KNOWLEDGE: Family Identity: Master Teacher - m4279
+CONSIDER: Annual food budget: Rp 127750000
+Age of family head: 47 years old
+DECIDES: Master's master family will be placed at:
+Mares, Margonda district
 </pre>
 
-Berikut ini adalah contoh jika masukan tidak memenuhi validasi (yang dicetak tebal adalah masukan):
-<pre>PROGRAM PENCETAK DATA SENSUS
+The following is an example if the input does not meet validation (which in bold is the input):
+<pre> CENSUS DATA PRINTING PROGRAM
 --------------------
-Nama Kepala Keluarga           : <b>Esta</b>
-Alamat Rumah                   : <b>Parbel</b>
-Panjang Tubuh (cm)             : <b>45</b>
-Lebar Tubuh (cm)               : <b>64</b>
-Tinggi Tubuh (cm)              : <b>288</b>
-WARNING: Keluarga ini tidak perlu direlokasi!
+Name of Head of Family: <b> Esta </b>
+Home Address: <b> Parbel </b>
+Body length (cm): <b> 45 </b>
+Body width (cm): <b> 64 </b>
+Height of body (cm): <b> 288 </b>
+WARNING: This family does not need to be relocated!
 </pre>
 
 ## Checklist
@@ -643,3 +643,4 @@ Fill the brackets with 'x' for checklisting the component.
 - [ ] **Count the age of the head of family**
 - [ ] **Group families to apartment**
 - [ ] **Print recommendation according to the determined format**
+
