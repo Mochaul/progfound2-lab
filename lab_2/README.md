@@ -47,25 +47,25 @@ In general, every programming language has 3 data types:
 	Primitive Data Type is a data type that only has one value at maximum.
 	![Primitive Data Types](https://only4techies.files.wordpress.com/2009/10/3.jpg)
 
-	Dalam bahasa pemrograman Java Anda dapat melakukan type casting, yaitu mengassign nilai tipe data suatu variabel dengan tipe data yang berbeda. Terdapat dua macam type casting, yaitu
-	- **Widening** (sudah dilakukan secara implisit ):
+	In Java programming language you can do type casting, that is to assign value of data type of a variable with different data type. There are two types of casting, ie
+	- **Widening** (has already been done implicitly ):
 		```java
 		int anInt = 18;
 		long aLong = anInt;
 		float aFloat = aLong;
 
-		// hasil type casting
+		// results for type casting
 		// anInt = 18
 		// aLong = 18
 		// aFloat = 18.0
 		```
-	- **Narrowing** (harus didefinisikan secara eksplisit):
+	- **Narrowing** (should be explicitly defined):
 		```java
 		double aDouble = 18.1;
 		long aLong = (long) aDouble;
 		int anInt = (int) aLong;
 
-		// hasil type casting
+		// results for type casting
 		// aDouble = 18.1
 		// aLong = 18
 		// anInt = 18
@@ -73,47 +73,46 @@ In general, every programming language has 3 data types:
 
 2. **Derived Data Types**
 
-	Derived Data Types merupakan tipe data yang dapat di-parsing. Dalam bahasa pemrograman Java, terdapat teknik parsing. Teknik parsing merupakan teknik untuk mengubah tipe data non primitive menjadi tipe data primitive, begitu juga sebaliknya. Dimana hasil parsing tersebut di-assign ke variabel lain.
+	Derived Data Types is a data type that can be parsed. In the Java programming language, there are parsing techniques. Parsing technique is a technique for converting non primitive data types into primitive data types, and vice versa. Where the parsed results are assigned to other variables.
 	```java
-	// mengassign var angka dengan hasil parsing
-	// string to integer var stringAngka
-	String stringAngka = “2018”;
-	int angka = Integer.parseInt(stringAngka);
+	// to assign var numbers with parsed results
+	// string to integer var stringNumber
+	String stringNumber = "2018";
+	int number = Integer.parseInt(stringNumber);
 	```
 
 3. **User Defined Data Types**
 
-	User Defined Data Type merupakan tipe data yang didefinisikan sendiri.
+	User Defined Data Type is a self-defined data type.
 
 ### **Control Flow**
-Secara umum, komputer akan mengeksekusi code secara berurutan dari baris atas ke bawah. Perintah pada bahasa pemrograman untuk mengubah urutan eksekusi program sesuai kebutuhan dinamakan sebagai Control Flow. Pada umumnya, bahasa pemrograman terdapat tiga jenis perintah control flow yaitu:
+In general, the computer will execute the code sequentially from the top row down. The command in the programming language to change the order of program execution as needed is named as Control Flow. In general, the programming language there are three types of control flow orders are:
 
 #### 1. **Decision Making**
-Anda tentu telah mengerti konsep dan syntax decision making pada bahasa pemrograman Python. Dibandingkan dengan bahasa pemrograman Python, decision making pada bahasa pemrograman Java hanya berbeda dari segi syntax.
-
+You must have understood the concept and syntax decision making in the Python programming language. Compared with the Python programming language, the decision making on the Java programming language differs only in terms of syntax.
 **Python**
 ```python
-if (nilai >= 80):
-	print("Nilai A")
-elif (nilai >= 60 and nilai < 80):
-	print("Nilai B")
+if (score >= 80):
+	print("Score A")
+elif (score >= 60 and score < 80):
+	print("Score B")
 else:
-	print("Nilai C")
+	print("Score C")
 ```
 
 **Java**
 ```java
-if (nilai >= 80){
-	System.out.println("Nilai A");
-} else if (nilai >= 60 && nilai < 80) {
-	System.out.println("Nilai B");
+if (score >= 80){
+	System.out.println("Score A");
+} else if (score >= 60 && score < 80) {
+	System.out.println("Score B");
 } else {
-	System.out.println("Nilai C");
+	System.out.println("Score C");
 }
 ```
 
 #### 2. **Looping**
-Konsep looping pun juga ada dalam bahasa pemrograman Java. Looping pada java diantaranya for loop, for each loop, do while loop, dan while loop.
+The concept of looping also exist in the Java programming language. Looping in java are for loop, for each loop, do while loop, and while loop.
 
 - **While**
 
@@ -151,16 +150,16 @@ Konsep looping pun juga ada dalam bahasa pemrograman Java. Looping pada java dia
 
 - **Do While**
 
-	Looping Do While tidak ada di Python. Berikut ini adalah contoh kode Java-nya:
+	Looping Do While is not in Python. Here is an example of its Java code:
 	```java
 	do {
-		System.out.println("Halo");
+		System.out.println("Hello");
 	} while (true);
 	```
 
 #### 3. **Branching Statement**
-Terdapat beberapa statement yang sangat berguna untuk branching pada loop yaitu statement break, continue, dan return.
-- **break** - digunakan untuk menghentikan loop
+There are some very useful statements for branching on loops: statement break, continue, and return.
+- ** break ** - is used to stop the loop
 
 	**Contoh Output:**
 	```
@@ -179,7 +178,7 @@ Terdapat beberapa statement yang sangat berguna untuk branching pada loop yaitu 
 
 	**Contoh Kode Java:**
 	```java
-	int[] arr = {0,1,2,3};
+	int[ ] arr = {0,1,2,3};
 	for(int i:arr) {
 		if(i == 3) {
 			break;
@@ -188,7 +187,7 @@ Terdapat beberapa statement yang sangat berguna untuk branching pada loop yaitu 
 	}
 	```
 
-- **continue** - digunakan untuk melompati suatu iterasi
+- **continue** - is used to skip an iteration
 
 	**Contoh Output:**
 	```
@@ -207,7 +206,7 @@ Terdapat beberapa statement yang sangat berguna untuk branching pada loop yaitu 
 
 	**Contoh Kode Java:**
 	```java
-	int[] arr = {0,1,2,3};
+	int[ ] arr = {0,1,2,3};
 	for(int i:arr) {
 		if(i == 1) {
 			continue;
@@ -216,7 +215,7 @@ Terdapat beberapa statement yang sangat berguna untuk branching pada loop yaitu 
 	}
 	```
 
-- **return** - digunakan untuk mengembalikan nilai
+- **return** - is used to return the value
 	**Contoh Output:**
 	```
 	2
@@ -224,38 +223,38 @@ Terdapat beberapa statement yang sangat berguna untuk branching pada loop yaitu 
 
 	**Contoh Kode Python:**
 	```python
-	def returnAngka(angka):
-			return angka
-	print(returnAngka(2))
+	def returnNumber(number):
+			return number
+	print(returnNumber(2))
 	```
 
 	**Contoh Kode Java:**
 	```java
-	public static int returnAngka(int angka) {
-		return angka;
+	public static int returnNumber(int number) {
+		return number;
 	}
-	public static void main(String[] args) {
-	System.out.println(returnAngka(2));
+	public static void main(String[ ] args) {
+		System.out.println(returnNumber);
 	}
 	```
 
 ### **String**
-Seperti Python, kalimat-kalimat yang bukan berupa angka merupakan tipe data String. String merupakan tipe data **reference** dan bersifat **immutable** (tidak bisa mengganti isi objek yang sama, harus membuat objek baru). Berikut ini adalah contoh perbandingan penggunaan String:
+Like Python, non-numeric sentences are String data types. String is a data type ** reference ** and is ** immutable ** (can not replace the contents of the same object, must create a new object). The following is a comparison example of using String:
 
 **Python**
 ```python
-pesan = “DDP2”
-pesanKecil = “saya usep”
+message = "DDP2"
+messageSmall = "saya usep"
 
-pesanDipotong = pesan[:3]
-pesanBesar = pesanKecil.upper()
-ukuran = len(pesanKecil)
-huruf = pesanKecil[1]
+messageCut = message[:3]
+messageBig = MessageSmall.upper()
+size = len (messageSmall)
+letter = messageSmall [1]
 
-print(pesanDipotong)
-print(pesanBesar)
-print(ukuran)
-print(huruf)
+print(messageCut)
+print(messageBig)
+print(size)
+print(letter)
 ```
 
 Output program di atas:
@@ -268,18 +267,18 @@ a
 
 **Java**
 ```java
-String pesan = “DDP2”;
-String pesanKecil = “saya usep”;
+String message = “DDP2”;
+String messageSmall = “saya usep”;
 
-String pesanDipotong = pesan.substring(0,3);
-String pesanBesar = pesanKecil.toUpperCase();
-int ukuran = pesanKecil.length();
-char huruf = pesanKecil.charAt(1);
+String messageCut = message.substring(0,3);
+String messageBig = messageSmall.toUpperCase();
+int size = messageSmall.length();
+char letter = messageSmall.charAt(1);
 
-System.out.println(pesanDipotong);
-System.out.println(pesanBesar);
-System.out.println(ukuran);
-System.out.println(huruf);
+System.out.println(messageCut);
+System.out.println(messageBig);
+System.out.println(size);
+System.out.println(letter);
 System.out.println(5 + 3 + ““ + 53);
 ```
 
@@ -292,22 +291,21 @@ a
 853
 ```
 
-### **Input dan Output Sederhana**
-Pada umumnya, setiap program membutuhkan masukan dari pengguna, dan mengembalikannya lagi berupa keluaran yang diinginkan oleh pengguna. Dalam bahasa pemrograman Java, terdapat dua variabel sistem yang berfungsi untuk Input/Output, yaitu **System.in** sebagai **input**, dan **System.out** sebagai **output**. Cara menggunakannya adalah sebagai berikut:
-
+### **Simple Input and Output **
+In general, each program requires user input, and returns it back to the desired output by the user. In the Java programming language, there are two system variables that work for Input / Output, ie ** System.in ** as ** input **, and ** System.out ** as ** output **. How to use it is as follows:
 #### 1. **Output**
-Output pada command-line Java sebenarnya sangat mudah untuk digunakan, kita dapat menggunakan beberapa method pada System.out, seperti **contoh** di bawah ini:
+The output in the Java command-line is actually very easy to use, we can use some methods in System.out, like ** example ** below:
 
 ```java
-String namaSapi = “Cang”;
-float beratSapi = 1532.3;
+String cowName = “Cang”;
+float cowWeight = 1532.3;
 
-// println -> cetak dengan diakhiri baris baru
+// println -> print that end with new line
 System.out.println(“Nama: “);
-System.out.println(namaSapi);
-// print -> cetak tanpa diakhiri baris baru
+System.out.println(cowName);
+// print -> print that end without new line
 System.out.print(“Berat: “);
-System.out.print(beratSapi);
+System.out.print(cowWeight);
 ```
 
 **Keluaran program**:
@@ -318,21 +316,21 @@ Berat: 1532.3
 ```
 
 #### 2. **Input**
-Input pada Java membutuhkan objek input reader tersendiri untuk membaca System.in. Pada DDP2, kalian akan menggunakan objek Scanner. Berikut ini adalah **contoh** penggunaannya:
+Input on Java requires a separate input reader object to read System.in. In DDP2, you will use the Scanner object. Here is an ** example ** of use:
 
 ```java
-// Inisialisasi objek Scanner dan simpan di suatu variabel
+// Initialize the Scanner object and save it in a variable
 Scanner input = new Scanner(System.in);
 
-String nama = input.nextLine();
-String panggilan1 = input.next();
-String panggilan2 = input.next();
+String name = input.nextLine();
+Call string1 = input.next();
+String call2 = input.next();
 
-// Tutup objek Scanner setelah selesai digunakan (best practice)
-input.close();
+// Close the Scanner object once it is finished (best practice)
+input.close ();
 ```
 
-Apabila pengguna mengetik seperti ini di console:
+If the user types like this in the console:
 ```java
 Muhammad Abdurrahman
 Abd Aab
@@ -343,91 +341,91 @@ Maka **isi variabel** setelah program dijalankan adalah:
 > - `panggilan1`  →  `“Abd”`
 > - `panggilan2`  →  `“Aab”`
 
-#### 3. **Mengubah String ke bilangan (tipe primitif) dan bilangan ke String**
-Layaknya Python, dalam bahasa pemrograman Java kita juga dapat melakukan konversi dari **String** ke format bilangan yang berupa **tipe primitif** seperti int, float, dsb.
-- **Integer.parseInt()**, untuk mengubah **String → int**
-- **Byte.parseByte()**, untuk mengubah **String → byte**
-- **Short.parseShort()**, untuk mengubah **String → short**
-- **Long.parseLong()**, untuk mengubah **String → long**
-- **Float.parseFloat()**, untuk mengubah **String → float**
-- **Double.parseDouble()**, untuk mengubah **String → double**
-- **Boolean.parseBoolean()**, untuk mengubah **String → boolean**
-- **String.valueOf()**, untuk mengubah **tipe primitif → String**
+#### 3. **Change the String to a number (primitive type) and number to String**
+Just like Python, in the Java programming language we can also convert from ** String ** to the format of numbers in the form of ** primitive types ** such as int, float, etc..
+- **Integer.parseInt()**, to change **String → int**
+- **Byte.parseByte()**, to change **String → byte**
+- **Short.parseShort()**, to change **String → short**
+- **Long.parseLong()**, to change **String → long**
+- **Float.parseFloat()**, to change **String → float**
+- **Double.parseDouble()**, to change **String → double**
+- **Boolean.parseBoolean()**, to change **String → boolean**
+- **String.valueOf()**, to change **tipe primitif → String**
 
 **Python**
 ```python
-nomor = “553”
-nomorInt = int(nomor)
-nomorFloat = float(nomor)
-nomor2 = str(nomorFloat
+number = “553”
+numberInt = int(number)
+numberFloat = float(number)
+number2 = str(numberFloat)
 ```
 
 **Java**
 ```java
-String nomor = “553”
-int nomorInt = Integer.parseInt(nomor);
-float nomorFloat = Float.parseFloat(nomor);
-String nomor2 = String.valueOf(nomorFloat);
+String number = “553”
+int numberInt = Integer.parseInt(number);
+float numberFloat = Float.parseFloat(number);
+String number2 = String.valueOf(numberFloat);
 ```
 
-**Isi variabel** setelah program dijalankan:
-> - `nomorInt`  →  `553`
-> - `nomorFloat`  →  `553.0`
-> - `nomor2`  →  `“553.0”`
+**Fill in variable** after program is executed:
+> - `numberInt`  →  `553`
+> - `numberFloat`  →  `553.0`
+> - `number2`  →  `“553.0”`
 
-## **Soal Tutorial: "Sensus Daerah Kumuh (Slum)"**
+## **Tutorial: "Census of Slums"**
 ### **What's the story?**
-Kak Pewe adalah seorang petugas bidang survei lapangan dari Dinas Kependudukan Provinsi Tamfir. Saat ini, Dinas Kependudukan Provinsi Tamfir akan melaksanakan pendataan (yang seringkali orang sebut dengan sensus) khusus penduduk di daerah-daerah kumuh di provinsi Tamfir. Sensus ini perlu dilakukan untuk mengatasi masalah kebersihan dan kesehatan lingkungan yang seringkali dikeluhkan oleh lingkungan megapolitan seperti provinsi Tamfir.
+Kak Pewe is a field survey officer from the Tamfir Provincial Population Department. Currently, the Tamfir Provincial Population Service will carry out data collection (which is often referred to by the census) as the special population in slum areas in Tamfir province. This census needs to be done to overcome the problems of hygiene and environmental health that are often complained of by the megapolitan environment such as the province of Tamfir.
 
-Tentu saja Kak Pewe sangat khawatir terhadap beratnya pekerjaan ini, yang harus ia selesaikan dalam waktu tiga hari, sebelum Pemerintah Pusat mengirimkan bantuan untuk merapikan daerah kumuh yang ada dan mempersiapkan relokasi untuk penduduk. Nah… Kak Pewe tahu kalau adiknya, Dek Depe punya banyak teman yang kini kuliah di Fasilkom UI.
+Of course Kak Pewe is very worried about the weight of this work, which he must complete within three days, before the Central Government sends aid to tidy up the existing slums and prepare for relocation for the population. Well... Kak Pewe knows that his sister, Dek Depe has many friends who are now studying at Fasilkom UI.
 
-Oleh karena itu, Kak Pewe meminta bantuan adiknya, Dek Depe, untuk mencari teman dalam mengerjakan tugas ini, dan kamu adalah orang yang tepat. Pada suatu hari, Dek Depe berkunjung ke Fasilkom UI, dan memberikanmu sebuah surat sederhana beserta lampirannya:
+Therefore, Kak Pewe sought the help of her sister, Dek Depe, to find her friends to do this task and you are the right person. One day, Dek Depe visits Fasilkom UI, and gives you a simple letter with its attachment:
 
-> “Wahai temanku, aku ingin meminta bantuan kamu untuk membuatkan program yang mampu mencetak data penduduk setelah dimasukkan. Tolong bantu aku, kakakku sangat membutuhkannya untuk memperbaiki lingkungan provinsi Tamfir. Semua ketentuan program yang harus dibuat sudah terlampir ya… Terima kasih :)”
+> "O my friend, I want to ask your help to create a program that can print the population data after it is entered. Please help me, my brother really need it to improve the environment of the Tamfir province. All the provisions of the program to be made are attached, Thanks :) "
 
 ### **A little trigger?**
-Sebelum kamu mengerjakan soal tutorial ini, ada baiknya kamu membaca penjelasan materi yang diberikan sebelumnya, lalu jawab pertanyaan berikut ini sebagai "pemanasan" sebelum mengerjakan tutorial :D
+Before you do this tutorial, it's good to read the explanation of the material given earlier, then answer the following questions as "warm up" before doing the tutorial: D
 
-> **Ingat kembali!**
-> - Bagaimana kita membuat program yang dapat menerima input dari user?
-> - Bagaimana mengubah input masukan yang berupa String menjadi tipe data tertentu?
-> - Sebutkan tipe-tipe data yang kamu ketahui! Jelaskan penggunaan tipe data tersebut!
-> - Apa itu keyword ‘static’? Jelaskan apa yang dimaksud dengan ‘static method’!
-> - Sebutkan dan jelaskan jenis-jenis loop pada bahasa pemrograman java!
-> - Bagaimana cara membuat program agar dapat mencetak output?
+> **Remember!**
+> - How do we create a program that can receive input from the user?
+> - How to change the input input in the form of a String into a certain data type?
+> - Name the data types you know! Describe the usage of that data type!
+> - What is a 'static' keyword? Explain what is meant by 'static method'!
+> - Mention and describe the types of loops in the java programming language!
+> - How do I create a program to print output?
 
 ### **What you need to do**
-- [ ] **Meminta masukan dari user**
-	- [ ] Nama Kepala Keluarga (kalimat, dapat lebih dari 1 kata).
-	- [ ] Alamat Rumah (kalimat, dapat lebih dari 1 kata).
-	- [ ] Panjang, Lebar, Tinggi Badan (bilangan bulat, satuan cm, dijamin ≤ 250 cm).
-	- [ ] Berat Badan (bilangan riil, satuan kg, dijamin ≤ 150 kg).
-	- [ ] Jumlah Anggota Keluarga (bilangan bulat, dijamin ≤ 20).
-	- [ ] Tanggal Lahir (format DD-MM-YYYY, 1000 < tahun < 2018, dijamin benar).
-	- [ ] Catatan Tambahan (kalimat, dapat lebih dari 1 kata).
-	- [ ] Jumlah Cetakan Data (bilangan bulat, dijamin ≤ 99).
-	- [ ] Pastikan tipe data yang digunakan setiap variabel masukan adalah yang paling efisien (tipe data terkecil yang pas dengan kebutuhan).
-	- [ ] Buat user interface permintaan masukan yang baik (sebaiknya gunakan format contoh, namun dapat menyesuaikan dengan kreativitas kalian).
+- [ ] **Request input from user **
+- [ ] Name of the Head of the Family (sentence, can be more than 1 word).
+- [ ] Home Address (sentence, can be more than 1 word).
+- [ ] Length, Width, Height (integer, cm unit, guaranteed ≤ 250 cm).
+- [ ] Weight (real number, unit kg, guaranteed ≤ 150 kg).
+- [ ] Number of Family Members (integer, guaranteed ≤20).
+- [ ] Date of Birth (DD-MM-YYYY format, 1000 <year <2018, guaranteed to be true).
+- [ ] Additional Note (sentence, can be more than 1 word).
+- [ ] Number of Data Prints (integer, guaranteed ≤ 99).
+- [ ] Make sure the data type used by each input variable is the most efficient (the smallest data type that fits the needs).
+- [ ] Create a good input requests user interface (we recommend using sample formats, but can adapt to your creativity).
 
-- [ ] **Hitung rasio berat per volume**
-	- [ ] Gunakan rumus: (Berat (kg)) / (Panjang (m) * Lebar (m) * Tinggi (m)).
-	- [ ] Pastikan kamu telah menyesuaikan satuan input dari cm ke m saat menghitung.
-	- [ ] Pastikan kamu menggunakan tipe data yang tepat saat menghitung.
-	- [ ] Tipe data akhir hasil perhitungan adalah bilangan bulat (perhatikan bahwa tipe data harus seefisien mungkin → tipe data terkecil yang pas dengan kebutuhan).
+- [ ] ** Calculate the weight ratio per volume **
+- [ ] Use the formula: (Weight (kg)) / (Length (m) * Width (m) * Height (m)).
+- [ ] Make sure you have adjusted input unit from cm to m when counting.
+- [ ] Make sure you use the correct data type when calculating.
+- [ ] The final data type of the calculation is an integer (note that the data type should be as efficient as possible → the smallest data type that fits the needs).
 
-- [ ] **Cetak data sesuai dengan format yang ditentukan**
-	- [ ] Lakukan looping sebanyak jumlah cetakan.
-	- [ ] Pada setiap iterasi, terdapat masukan untuk meminta nama penerima data, lalu cetak data keluarga. Gunakan format berikut: (masukan dicetak tebal)
-		<pre>Pencetakan [Nomor] dari [Jumlah Cetakan] untuk: <b>[Penerima Data]</b>
-		DATA SIAP DICETAK UNTUK [PENERIMA DATA (UPPERCASE)]
-		-----------------
-		[Nama Kepala Keluarga] - [Alamat Rumah]
-		Lahir pada tanggal [Tanggal Lahir]
-		Rasio Berat Per Volume     = [Rasio] kg/m^3
-		Catatan: [Catatan]
-		</pre>
-	- [ ] Jika tidak ada catatan, ganti baris `Catatan: [Catatan]` menjadi:
-		<pre>Tidak ada catatan tambahan</pre>
+- [ ] ** Print data according to the format specified **
+- [ ] Do looping as many as the number of prints.
+- [ ] At each iteration, there is an input to request the recipient's name, then print the family data. Use the following format: (input in bold)
+<pre> Printing [number] from [Number of Prints] to: <b> [Data Recipient] </ b>
+DATA READY PRINTED FOR [DATA RECEIVER (UPPERCASE)]
+-----------------
+[Name of Family Head] - [Home Address]
+Born on [Date of Birth]
+Ratio Weight Per Volume = [Ratio] kg / m ^ 3
+Note: [Note]
+</ pre>
+- [ ] If there is no record, replace the `Note: [Note]` to:
+<pre> No additional notes </ pre>
 
 ### **Contoh Input dan Output**
 Berikut ini adalah contoh interaksi program (yang dicetak tebal adalah masukan):
@@ -515,7 +513,7 @@ Oleh karena itu, Dek Depe juga meminta bantuanmu sekali lagi untuk melanjutkan p
 - [ ] **Validasi masukan**
 
 	Validasi dilakukan setelah pengguna selesai memasukkan semua masukan yang dibutuhkan. Jika masukan tidak sesuai dengan ketentuan di bawah maka:
-	- [ ] Tampilkan pesan **langsung** saat user memasukkan input yang tidak valid (di luar batasan yang ditentukan):
+	- [ ] Tampilkan message **langsung** saat user memasukkan input yang tidak valid (di luar batasan yang ditentukan):
 		<pre>WARNING: Keluarga ini tidak perlu direlokasi!</pre>
 	- [ ] Keluar dari program (hint: gunakan branching statement yang sesuai)
 	Berikut ini adalah ketentuan masukan yang harus divalidasi:
@@ -525,11 +523,11 @@ Oleh karena itu, Dek Depe juga meminta bantuanmu sekali lagi untuk melanjutkan p
 		- [ ] 0 < **berat tubuh** ≤ 150 kg, merupakan bilangan **riil**.
 		- [ ] 0 < **jumlah anggota keluarga** ≤ 20, merupakan bilangan **bulat**.
 
-- [ ] ***Generate* nomor pengenal keluarga**
-	- [ ] Gunakan format: `[Huruf pertama nama kepala keluarga][Hasil kalkulasi]`.
+- [ ] ***Generate* number pengenal keluarga**
+	- [ ] Gunakan format: `[letter pertama nama kepala keluarga][Hasil kalkulasi]`.
 	- [ ] Untuk kalkulasi, gunakan rumus:
 		```
-		((Panjang * Tinggi * Lebar) + Jumlah ASCII tiap huruf nama) mod 10000.
+		((Panjang * Tinggi * Lebar) + Jumlah ASCII tiap letter nama) mod 10000.
 		```
 
 		**Contoh Kasus:**
@@ -539,7 +537,7 @@ Oleh karena itu, Dek Depe juga meminta bantuanmu sekali lagi untuk melanjutkan p
 		lebar = 26
 		tinggi = 37
 		```
-		Maka **nomor keluarga** adalah: `a8795`.
+		Maka **number keluarga** adalah: `a8795`.
 
 - [ ] **Hitung anggaran makanan per tahun**
 	- [ ] Gunakan rumus: `Rp 50000 * 365 * (jumlah anggota keluarga)`.
@@ -569,7 +567,7 @@ Oleh karena itu, Dek Depe juga meminta bantuanmu sekali lagi untuk melanjutkan p
 	<pre>
 		REKOMENDASI APARTEMEN
 		--------------------
-		MENGETAHUI: Identitas keluarga: < Nama Kepala Keluarga > - < Nomor >
+		MENGETAHUI: Identitas keluarga: < Nama Kepala Keluarga > - < number >
 		MENIMBANG:  Anggaran makanan tahunan: Rp < Anggaran >
 					Umur kepala keluarga: < Umur > tahun
 		MEMUTUSKAN: keluarga < Nama Kepala Keluarga > akan ditempatkan di:
@@ -578,7 +576,7 @@ Oleh karena itu, Dek Depe juga meminta bantuanmu sekali lagi untuk melanjutkan p
 
 > **Hint**
 > - Gunakan fungsi .split() untuk memisahkan tanggal, bulan, dan tahun lahir.
-> - Gunakan casting untuk memasukkan ASCII huruf dalam rumus.
+> - Gunakan casting untuk memasukkan ASCII letter dalam rumus.
 
 ### **Contoh Input dan Output**
 Berikut ini adalah contoh interaksi program yang mungkin terjadi (yang dicetak tebal adalah masukan):
