@@ -521,7 +521,7 @@ Therefore, Dek Depe also asks your help once again to continue the pre-made prog
 		- [ ] 0 < **body weight** ≤ 150 kg, is a **real number**.
 		- [ ] 0 < **the number of family members** ≤ 20, is a **whole**.
 
-- [ ] **Generate * family ID number**
+- [ ] **Generate family ID number**
 	- [ ] Use format: `[first letter name of head of family][Result of calculation]`.
 	- [ ] To calculate, use the formula:
 		`` `
