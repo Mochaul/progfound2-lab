@@ -48,7 +48,7 @@ In general, every programming language has 3 data types:
 	![Primitive Data Types](https://only4techies.files.wordpress.com/2009/10/3.jpg)
 
 	In Java programming language you can do type casting, that is to assign value of data type of a variable with different data type. There are two types of casting, ie
-	- **Widening** (has already been done implicitly ):
+	- **Widening** (has already been done implicitly):
 		```java
 		int anInt = 18;
 		long aLong = anInt;
@@ -90,6 +90,7 @@ In general, the computer will execute the code sequentially from the top row dow
 
 #### 1. **Decision Making**
 You must have understood the concept and syntax decision making in the Python programming language. Compared with the Python programming language, the decision making on the Java programming language differs only in terms of syntax.
+
 **Python**
 ```python
 if (score >= 80):
@@ -115,7 +116,6 @@ if (score >= 80){
 The concept of looping also exist in the Java programming language. Looping in java are for loop, for each loop, do while loop, and while loop.
 
 - **While**
-
 	Python:
 	```pyton
 	i = 20;
@@ -134,7 +134,6 @@ The concept of looping also exist in the Java programming language. Looping in j
 	```
 
 - **For**
-
 	Python:
 	```python
 	for x in range(20):
@@ -149,7 +148,6 @@ The concept of looping also exist in the Java programming language. Looping in j
 	```
 
 - **Do While**
-
 	Looping Do While is not in Python. Here is an example of its Java code:
 	```java
 	do {
@@ -159,16 +157,16 @@ The concept of looping also exist in the Java programming language. Looping in j
 
 #### 3. **Branching Statement**
 There are some very useful statements for branching on loops: statement break, continue, and return.
-- ** break ** - is used to stop the loop
+- **break** - is used to stop the loop
 
-	**Contoh Output:**
+	**Example Output:**
 	```
 	0
 	1
 	2
 	```
 
-	**Contoh Kode Python:**
+	**Example Code of Python:**
 	```python
 	for i in range(4):
 		if i == 3:
@@ -176,7 +174,7 @@ There are some very useful statements for branching on loops: statement break, c
 	print(i)
 	```
 
-	**Contoh Kode Java:**
+	**Example Code of Java:**
 	```java
 	int[ ] arr = {0,1,2,3};
 	for(int i:arr) {
@@ -189,14 +187,14 @@ There are some very useful statements for branching on loops: statement break, c
 
 - **continue** - is used to skip an iteration
 
-	**Contoh Output:**
+	**Example Output:**
 	```
 	0
 	2
 	3
 	```
 
-	**Contoh Kode Python:**
+	**Example Code of Python:**
 	```python
 	for i in range(3):
 		if i == 1:
@@ -204,7 +202,7 @@ There are some very useful statements for branching on loops: statement break, c
 	print(i)
 	```
 
-	**Contoh Kode Java:**
+	**Example Code of Java:**
 	```java
 	int[ ] arr = {0,1,2,3};
 	for(int i:arr) {
@@ -216,19 +214,19 @@ There are some very useful statements for branching on loops: statement break, c
 	```
 
 - **return** - is used to return the value
-	**Contoh Output:**
+	**Example Output:**
 	```
 	2
 	```
 
-	**Contoh Kode Python:**
+	**Example Code of Python:**
 	```python
 	def returnNumber(number):
 			return number
 	print(returnNumber(2))
 	```
 
-	**Contoh Kode Java:**
+	**Example Code of Java:**
 	```java
 	public static int returnNumber(int number) {
 		return number;
@@ -257,7 +255,7 @@ print(size)
 print(letter)
 ```
 
-Output program di atas:
+The program output above:
 ```python
 DDP
 SAYA USEP
@@ -282,7 +280,7 @@ System.out.println(letter);
 System.out.println(5 + 3 + ““ + 53);
 ```
 
-Output program di atas:
+The program output above:
 ```java
 DDP
 SAYA USEP
@@ -291,8 +289,8 @@ a
 853
 ```
 
-### **Simple Input and Output **
-In general, each program requires user input, and returns it back to the desired output by the user. In the Java programming language, there are two system variables that work for Input / Output, ie ** System.in ** as ** input **, and ** System.out ** as ** output **. How to use it is as follows:
+### **Simple Input and Output**
+In general, each program requires user input, and returns it back to the desired output by the user. In the Java programming language, there are two system variables that work for Input / Output, ie **System.in** as **input**, and **System.out** as **output**. How to use it is as follows:
 #### 1. **Output**
 The output in the Java command-line is actually very easy to use, we can use some methods in System.out, like ** example ** below:
 
@@ -308,7 +306,7 @@ System.out.print(“Berat: “);
 System.out.print(cowWeight);
 ```
 
-**Keluaran program**:
+**Program Output**:
 ```java
 Nama:
 Cang
@@ -316,7 +314,7 @@ Berat: 1532.3
 ```
 
 #### 2. **Input**
-Input on Java requires a separate input reader object to read System.in. In DDP2, you will use the Scanner object. Here is an ** example ** of use:
+Input on Java requires a separate input reader object to read System.in. In DDP2, you will use the Scanner object. Here is an **example** of use:
 
 ```java
 // Initialize the Scanner object and save it in a variable
@@ -395,7 +393,7 @@ Before you do this tutorial, it's good to read the explanation of the material g
 > - How do I create a program to print output?
 
 ### **What you need to do**
-- [ ] **Request input from user **
+- [ ] **Request input from user**
 - [ ] Name of the Head of the Family (sentence, can be more than 1 word).
 - [ ] Home Address (sentence, can be more than 1 word).
 - [ ] Length, Width, Height (integer, cm unit, guaranteed ≤ 250 cm).
@@ -407,13 +405,13 @@ Before you do this tutorial, it's good to read the explanation of the material g
 - [ ] Make sure the data type used by each input variable is the most efficient (the smallest data type that fits the needs).
 - [ ] Create a good input requests user interface (we recommend using sample formats, but can adapt to your creativity).
 
-- [ ] ** Calculate the weight ratio per volume **
+- [ ] **Calculate the weight ratio per volume**
 - [ ] Use the formula: (Weight (kg)) / (Length (m) * Width (m) * Height (m)).
 - [ ] Make sure you have adjusted input unit from cm to m when counting.
 - [ ] Make sure you use the correct data type when calculating.
 - [ ] The final data type of the calculation is an integer (note that the data type should be as efficient as possible → the smallest data type that fits the needs).
 
-- [ ] ** Print data according to the format specified **
+- [ ] **Print data according to the format specified**
 - [ ] Do looping as many as the number of prints.
 - [ ] At each iteration, there is an input to request the recipient's name, then print the family data. Use the following format: (input in bold)
 <pre> Printing [number] from [Number of Prints] to: <b> [Data Recipient] </b>
@@ -423,7 +421,7 @@ DATA READY PRINTED FOR [DATA RECEIVER (UPPERCASE)]
 Born on [Date of Birth]
 Ratio Weight Per Volume = [Ratio] kg / m ^ 3
 Note: [Note]
-</ pre>
+</pre>
 - [ ] If there is no record, replace the `Note: [Note]` to:
 <pre> No additional notes </pre>
 
