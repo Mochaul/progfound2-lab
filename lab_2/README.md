@@ -416,7 +416,7 @@ Before you do this tutorial, it's good to read the explanation of the material g
 - [ ] ** Print data according to the format specified **
 - [ ] Do looping as many as the number of prints.
 - [ ] At each iteration, there is an input to request the recipient's name, then print the family data. Use the following format: (input in bold)
-<pre> Printing [number] from [Number of Prints] to: <b> [Data Recipient] </ b>
+<pre> Printing [number] from [Number of Prints] to: <b> [Data Recipient] </b>
 DATA READY PRINTED FOR [DATA RECEIVER (UPPERCASE)]
 -----------------
 [Name of Family Head] - [Home Address]
@@ -425,83 +425,83 @@ Ratio Weight Per Volume = [Ratio] kg / m ^ 3
 Note: [Note]
 </ pre>
 - [ ] If there is no record, replace the `Note: [Note]` to:
-<pre> No additional notes </ pre>
+<pre> No additional notes </pre>
 
-### **Contoh Input dan Output**
-Berikut ini adalah contoh interaksi program (yang dicetak tebal adalah masukan):
-<pre>PROGRAM PENCETAK DATA SENSUS
+### **Example of Input and Output**
+Here is an example of program interaction (in bold is the input):
+<pre> CENSUS DATA PRINTING PROGRAM
 --------------------
-Nama Kepala Keluarga           : <b>Butterfield</b>
-Alamat Rumah                   : <b>RSE</b>
-Panjang Tubuh (cm)             : <b>30</b>
-Lebar Tubuh (cm)               : <b>60</b>
-Tinggi Tubuh (cm)              : <b>170</b>
-Berat Tubuh (kg)               : <b>75</b>
-Jumlah Anggota Keluarga        : <b>1</b>
-Tanggal Lahir                  : <b>22-01-2000</b>
-Catatan Tambahan               : <b>Belum berkeluarga, orang kaya</b>
-Jumlah Cetakan Data            : <b>3</b>
+Name of Family Head 		: <b> Butterfield </b>
+Home Address 				: <b> RSE </b>
+Body Length (cm)			: <b> 30 </b>
+Body Width (cm)				: <b> 60 </b>
+Body Height (cm)			: <b> 170 </b>
+Body Weight (kg)			: <b> 75 </b>
+Number of Family Members	: <b> 1 </b>
+Date of Birth				: <b> 22-01-2000 </b>
+Additional notes 			: <b> Not married, rich man </b>
+Number of Data prints 		: <b> 3 </b>
 
-Pencetakan 1 dari 3 untuk: <b>Arsip pemerintah provinsi Tamfir</b>
-DATA SIAP DICETAK UNTUK ARSIP PEMERINTAH PROVINSI TAMFIR
---------------------
-Butterfield - RSE
-Lahir pada tanggal 22-01-2000
-Rasio Berat Per Volume     = 245 kg/m^3
-Catatan: Belum berkeluarga, orang kaya
-
-Pencetakan 2 dari 3 untuk: <b>Badan Kesehatan Lingkungan Nasional</b>
-DATA SIAP DICETAK UNTUK BADAN KESEHATAN LINGKUNGAN NASIONAL
+Printing 1 of 3 for: <b> Tamfir provincial government archives </b>
+DATA PREPARED FOR PRINTED GOVERNMENT ARCHIVES TAMFIR PROVINCE
 --------------------
 Butterfield - RSE
-Lahir pada tanggal 22-01-2000
-Rasio Berat Per Volume     = 245 kg/m^3
-Catatan: Belum berkeluarga, orang kaya
+Born on 22-01-2000
+Ratio Weight Per Volume = 245 kg / m ^ 3
+Note: Not married, rich man
 
-Pencetakan 3 dari 3 untuk: <b>gubernur provinsi Tamfir</b>
-DATA SIAP DICETAK UNTUK GUBERNUR PROVINSI TAMFIR
+Printing 2 of 3 for: <b> National Environmental Health Agency </b>
+DATA READY PRINTED FOR THE NATIONAL ENVIRONMENTAL HEALTH BODY
 --------------------
 Butterfield - RSE
-Lahir pada tanggal 22-01-2000
-Rasio Berat Per Volume     = 245 kg/m^3
-Catatan: Belum berkeluarga, orang kaya
+Born on 22-01-2000
+Ratio Weight Per Volume = 245 kg / m ^ 3
+Note: Not married, rich man
+
+Printing 3 of 3 for: <b> provincial governor of Tamfir </b>
+DATA READY PRINTED FOR TAMFIR PROVINCIAL GOVERNOR
+--------------------
+Butterfield - RSE
+Born on 22-01-2000
+Ratio Weight Per Volume = 245 kg / m ^ 3
+Note: Not married, rich man
 </pre>
 
-Berikut ini adalah contoh lain interaksi program yang mungkin terjadi  (yang dicetak tebal adalah masukan):
-<pre>PROGRAM PENCETAK DATA SENSUS
+Here is another example of possible program interactions (in bold is the input):
+<pre> CENSUS DATA PRINTING PROGRAM
 --------------------
-Nama Kepala Keluarga           : <b>master Shifu</b>
-Alamat Rumah                   : <b>Ninja</b>
-Panjang Tubuh (cm)             : <b>36</b>
-Lebar Tubuh (cm)               : <b>71</b>
-Tinggi Tubuh (cm)              : <b>189</b>
-Berat Tubuh (kg)               : <b>68.5</b>
-Jumlah Anggota Keluarga        : <b>7</b>
-Tanggal Lahir                  : <b>12-03-1971</b>
-Catatan Tambahan               : <b></b>
-Jumlah Cetakan Data            : <b>2</b>
+Name of Family Head: <b> master Shifu </b>
+Home Address: <b> Ninja </b>
+Body Length (cm): <b> 36 </b>
+Body Width (cm): <b> 71 </b>
+Body Height (cm): <b> 189 </b>
+Body Weight (kg): <b> 68.5 </b>
+Number of Family Members: <b> 7 </b>
+Date of Birth: <b> 12-03-1971 </b>
+Additional Notes: <b> </b>
+Number of Data Prints: <b> 2 </b>
 
-Pencetakan 1 dari 2 untuk: <b>komunitas lingkungan hidup Fasilkom</b>
-DATA SIAP DICETAK UNTUK KOMUNITAS LINGKUNGAN HIDUP FASILKOM
+Printing 1 of 2 for: <b> environmental community Fasilkom </b>
+PREPARED DATA PRINTED FOR THE ENVIRONMENTAL COMMUNITY FACILITY COMMUNITY
 --------------------
-master Shifu - Ninja
-Lahir pada tanggal 12-03-1971
-Rasio Berat Per Volume     = 141 kg/m^3
-Tidak ada catatan tambahan
+Master Shifu - Ninja
+Born on 12-03-1971
+Ratio Weight Per Volume = 141 kg / m ^ 3
+No additional notes
 
-Pencetakan 2 dari 2 untuk: <b>Arsip pemerintah kabupaten Fasilkom</b>
-DATA SIAP DICETAK UNTUK ARSIP PEMERINTAH KABUPATEN FASILKOM
+Printing 2 of 2 for: <b> Archive of district government Fasilkom </b>
+DATA READY PRINTED FOR FASILKOM REGIONAL GOVERNMENTAL ARCHIVES
 --------------------
-master Shifu - Ninja
-Lahir pada tanggal 12-03-1971
-Rasio Berat Per Volume     = 141 kg/m^3
-Tidak ada catatan tambahan
+Master Shifu - Ninja
+Born on 12-03-1971
+Ratio Weight Per Volume = 141 kg / m ^ 3
+No additional notes
 </pre>
 
 ### **Any templates?**
-Jadi... ternyata Dek Depe punya teman yang bersedia untuk mempermudah kamu dalam menyelesaikan pekerjaan ini, namun karena ia sibuk, ia hanya mampu membuat **template**nya saja. **Template** terdapat pada `/lab_2/src/main/java/SistemSensus.java`.
+So ... it turned out that Dek Depe had friends who were willing to ease you in completing this job, but because he was busy, he was only able to make his **template** alone. **Template** is in `/lab_2/src/main/java/SistemSensus.java`.
 
-Bagaimana cara menggunakannya? Langsung modifikasi template tersebut, isi dengan kode-kode jawaban kalian :) Panduan lebih lanjutnya sudah ada di dalam kode templatenya ya!
+How to use it? Instantly modify the template, fill it with your answer code :) Further guides are already in the template code!
 
 ## **Soal Bonus: "Rekomendasi Apartemen"**
 ### **What's the story?**
