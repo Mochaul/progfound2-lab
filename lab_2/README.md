@@ -1,47 +1,55 @@
-# **Tutorial 2: Basic Concepts of Java Programming (Tutorial Problem)**
+# Tutorial 2: Basic Concepts of Java Programming
 
-Programming Foundations 2 -  | Faculty of Computer Science, University of Indonesia, Even Semester 2017/2018
+CSGE601021 Programming Foundations 2 @ Faculty of Computer Science Universitas
+Indonesia, Term 2 2017/2018
 
 **Created by AGA | IA**
 
 * * *
 
-In the previous tutorial, you have learned about some of the syntax differences in Java and Python programming. You have also learned about Git, a version control system. Now, you will learn more about the programming concepts in Java programming language.
+In the previous tutorial, you have learned about some of the syntax differences in Java and Python programming. You have also learned about Git, which is a version control system. Now, you will learn more about the programming concepts in Java programming language.
 
-## **Learning Objectives**
-1. Understand the concept of **data type** in Java (primitive data type, reference data type, and casting).
-2. Understand the **control flow** in Java (conditionals, iteratives, branching statements).
-3. Understand the basic concept of **String** and String operation.
-4. Understand the concepts of **_Input_ and _Output_** in Java (Scanner, System.out, parsing).
+## Learning Objectives
 
+1. Understand the concept of **data type** in Java (primitive data type, reference data type, and type casting)
+2. Understand the **control flow** in Java (conditionals, iteration, branching statements)
+3. Understand the basic concept of **String** and `String` operations
+4. Understand the concepts of **_Input_ and _Output_** in Java (`Scanner`, `System.out`, parsing)
 
-### **Before You Start...**
-1. Do a `git pull upstream master` by using the Command Prompt at your local repository folder.
-2. You can implement the second java tutorial source code in folder `ddp-lab/tutorial-2/main/java`.
-3. Implement your code accordingly to what the lab questions asked you to do.
-4. After you finish implementing your code, add, commit, then push your code.
-5. Done.
+## Before You Start...
 
-## **Tutorial Materials**
-### **Data Type**
+1. Do a `git pull upstream master` by using the Command Prompt at your local repository folder
+2. You can implement the second java tutorial source code in folder `ddp-lab/tutorial-2/main/java`
+3. Implement your code accordingly to what the lab questions asked you to do
+4. After you finish implementing your code, add, commit, then push your code
+5. Done
+
+## Tutorial Materials
+
+### Data Type
+
 Data type is what type of value can be assigned to a variable, and what operations can be applied to that variable. Operations that can be applied to a variable can be mathematical operations, relationships, and logic.
-Unlike the Python language, in Java language, we have to explicitly declare variable data types to be initiated.
 
-**Python**
+Unlike Python, Java uses static type system so we have to explicitly specify the type each time we declare a variable.
+
+> Python
+
 ```python
 iniString = “DDP 2”
 iniInt = 2018
 iniFloat = 4.4
 ```
 
-**Java**
+> Java
+
 ```java
 String iniString = “DDP 2”;
 int iniInt = 2018;
 float iniFloat = 4.4;
 ```
 
-In general, every programming language has 3 data types:
+Many programming language has 3 data types:
+
 1. **Primitive Data Types**
 
 	Primitive Data Type is a data type that only has one value at maximum.
@@ -85,13 +93,14 @@ In general, every programming language has 3 data types:
 
 	User Defined Data Type is a self-defined data type.
 
-### **Control Flow**
+### Control Flow
 In general, the computer will execute the code sequentially from the top row down. The command in the programming language to change the order of program execution as needed is named as Control Flow. In general, the programming language there are three types of control flow orders are:
 
-#### 1. **Decision Making**
+#### 1. Decision Making
 You must have understood the concept and syntax decision making in the Python programming language. Compared with the Python programming language, the decision making on the Java programming language differs only in terms of syntax.
 
-**Python**
+> Python
+
 ```python
 if (score >= 80):
 	print("Score A")
@@ -100,8 +109,8 @@ elif (score >= 60 and score < 80):
 else:
 	print("Score C")
 ```
+> Java
 
-**Java**
 ```java
 if (score >= 80){
 	System.out.println("Score A");
@@ -155,7 +164,7 @@ The concept of looping also exist in the Java programming language. Looping in j
 	} while (true);
 	```
 
-#### 3. **Branching Statement**
+#### 3. Branching Statement
 There are some very useful statements for branching on loops: statement break, continue, and return.
 - **break** - is used to stop the loop
 
@@ -236,7 +245,7 @@ There are some very useful statements for branching on loops: statement break, c
 	}
 	```
 
-### **String**
+### String
 Like Python, non-numeric sentences are String data types. String is a data type ** reference ** and is ** immutable ** (can not replace the contents of the same object, must create a new object). The following is a comparison example of using String:
 
 **Python**
@@ -289,9 +298,12 @@ a
 853
 ```
 
-### **Simple Input and Output**
+### Simple Input and Output
+
 In general, each program requires user input, and returns it back to the desired output by the user. In the Java programming language, there are two system variables that work for Input / Output, ie **System.in** as **input**, and **System.out** as **output**. How to use it is as follows:
-#### 1. **Output**
+
+#### 1. Output
+
 The output in the Java command-line is actually very easy to use, we can use some methods in System.out, like ** example ** below:
 
 ```java
@@ -313,7 +325,8 @@ Cang
 Berat: 1532.3
 ```
 
-#### 2. **Input**
+#### 2. Input
+
 Input on Java requires a separate input reader object to read System.in. In DDP2, you will use the Scanner object. Here is an **example** of use:
 
 ```java
@@ -339,7 +352,8 @@ Maka **isi variabel** setelah program dijalankan adalah:
 > - `panggilan1`  →  `“Abd”`
 > - `panggilan2`  →  `“Aab”`
 
-#### 3. **Change the String to a number (primitive type) and number to String**
+#### 3. Change the String to a number (primitive type) and number to String
+
 Just like Python, in the Java programming language we can also convert from ** String ** to the format of numbers in the form of ** primitive types ** such as int, float, etc..
 - **Integer.parseInt()**, to change **String → int**
 - **Byte.parseByte()**, to change **String → byte**
@@ -351,6 +365,7 @@ Just like Python, in the Java programming language we can also convert from ** S
 - **String.valueOf()**, to change **tipe primitif → String**
 
 **Python**
+
 ```python
 number = “553”
 numberInt = int(number)
@@ -359,6 +374,7 @@ number2 = str(numberFloat)
 ```
 
 **Java**
+
 ```java
 String number = “553”
 int numberInt = Integer.parseInt(number);
@@ -367,12 +383,15 @@ String number2 = String.valueOf(numberFloat);
 ```
 
 **Fill in variable** after program is executed:
+
 > - `numberInt`  →  `553`
 > - `numberFloat`  →  `553.0`
 > - `number2`  →  `“553.0”`
 
-## **Tutorial: "Census of Slums"**
-### **What's the story?**
+## Tutorial: "Slum Census"
+
+### What's the story?
+
 Kak Pewe is a field survey officer from the Tamfir Provincial Population Department. Currently, the Tamfir Provincial Population Service will carry out data collection (which is often referred to by the census) as the special population in slum areas in Tamfir province. This census needs to be done to overcome the problems of hygiene and environmental health that are often complained of by the megapolitan environment such as the province of Tamfir.
 
 Of course Kak Pewe is very worried about the weight of this work, which he must complete within three days, before the Central Government sends aid to tidy up the existing slums and prepare for relocation for the population. Well... Kak Pewe knows that his sister, Dek Depe has many friends who are now studying at Fasilkom UI.
@@ -381,8 +400,9 @@ Therefore, Kak Pewe sought the help of her sister, Dek Depe, to find her friends
 
 > "O my friend, I want to ask your help to create a program that can print the population data after it is entered. Please help me, my brother really need it to improve the environment of the Tamfir province. All the provisions of the program to be made are attached, Thanks :) "
 
-### **A little trigger?**
-Before you do this tutorial, it's good to read the explanation of the material given earlier, then answer the following questions as "warm up" before doing the tutorial: D
+### A little trigger?
+
+Before you do this tutorial, it's good to read the explanation of the material given earlier, then answer the following questions as "warm up" before doing the tutorial :D
 
 > **Remember!**
 > - How do we create a program that can receive input from the user?
@@ -392,14 +412,15 @@ Before you do this tutorial, it's good to read the explanation of the material g
 > - Mention and describe the types of loops in the java programming language!
 > - How do I create a program to print output?
 
-### **What you need to do**
+### What you need to do
+
 - [ ] **Request input from user**
 - [ ] Name of the Head of the Family (sentence, can be more than 1 word).
 - [ ] Home Address (sentence, can be more than 1 word).
 - [ ] Length, Width, Height (integer, cm unit, guaranteed ≤ 250 cm).
 - [ ] Weight (real number, unit kg, guaranteed ≤ 150 kg).
-- [ ] Number of Family Members (integer, guaranteed ≤20).
-- [ ] Date of Birth (DD-MM-YYYY format, 1000 <year <2018, guaranteed to be true).
+- [ ] Number of Family Members (integer, guaranteed ≤ 20).
+- [ ] Date of Birth (DD-MM-YYYY format, 1000 < year < 2018, guaranteed to be true).
 - [ ] Additional Note (sentence, can be more than 1 word).
 - [ ] Number of Data Prints (integer, guaranteed ≤ 99).
 - [ ] Make sure the data type used by each input variable is the most efficient (the smallest data type that fits the needs).
@@ -414,6 +435,7 @@ Before you do this tutorial, it's good to read the explanation of the material g
 - [ ] **Print data according to the format specified**
 - [ ] Do looping as many as the number of prints.
 - [ ] At each iteration, there is an input to request the recipient's name, then print the family data. Use the following format: (input in bold)
+
 <pre> Printing [number] from [Number of Prints] to: <b> [Data Recipient] </b>
 DATA READY PRINTED FOR [DATA RECEIVER (UPPERCASE)]
 -----------------
@@ -437,8 +459,8 @@ Body Height (cm)			: <b> 170 </b>
 Body Weight (kg)			: <b> 75 </b>
 Number of Family Members	: <b> 1 </b>
 Date of Birth				: <b> 22-01-2000 </b>
-Additional notes 			: <b> Not married, rich man </b>
-Number of Data prints 		: <b> 3 </b>
+Additional Notes 			: <b> Not married, rich man </b>
+Number of Data Prints 		: <b> 3 </b>
 
 Printing 1 of 3 for: <b> Tamfir provincial government archives </b>
 DATA PREPARED FOR PRINTED GOVERNMENT ARCHIVES TAMFIR PROVINCE
@@ -496,18 +518,22 @@ Ratio Weight Per Volume = 141 kg / m ^ 3
 No additional notes
 </pre>
 
-### **Any templates?**
+### Any templates?
+
 So ... it turned out that Dek Depe had friends who were willing to ease you in completing this job, but because he was busy, he was only able to make his **template** alone. **Template** is in `/lab_2/src/main/java/SistemSensus.java`.
 
-How to use it? Instantly modify the template, fill it with your answer code :) Further guides are already in the template code	!
+How to use it? Instantly modify the template, fill it with your answer code :) Further guides are already in the template code!
 
-## **Soal Bonus: "Rekomendasi Apartemen"**
-### **What's the story?**
+## Bonus Tutorial: "Apartment Recommendation"
+
+### What's the story?
+
 Thanks to your help, Kak Pewe successfully executed the census of slums in Tamfir Province on time. After the environmental arrangement for one month, it turns out not everyone can occupy the area, so there is a need for relocation. Mak Dis as the head of the Tamfir Provincial People's Housing Service has recommended three apartments to be relocated, along with the provision of relocation sites. Kak Pewe was asked to reconstruct those who fulfill the prerequisites to be relocated. And he certainly asked for his sister's help, Dek Depe, again.
 
 Therefore, Dek Depe also asks your help once again to continue the pre-made program, then add new features according to the following checklist:
 
-### **What you need to do**
+### What you need to do
+
 - [ ] **Validate input**
 
 	Validation is done after the user has finished entering all required input. If the input does not meet the conditions below then:
@@ -576,7 +602,8 @@ Therefore, Dek Depe also asks your help once again to continue the pre-made prog
 > - Use the .split () function to separate date, month and year of birth.
 > - Use casting to include ASCII letter in formula.
 
-### **Example of Input and Output**
+### Example of Input and Output
+
 The following are examples of possible program interactions (in bold are entries):
 <pre> CENSUS DATA PRINTING PROGRAM
 --------------------
@@ -617,6 +644,7 @@ Mares, Margonda district
 </pre>
 
 The following is an example if the input does not meet validation (which in bold is the input):
+
 <pre> CENSUS DATA PRINTING PROGRAM
 --------------------
 Name of Head of Family: <b> Esta </b>
@@ -628,13 +656,18 @@ WARNING: This family does not need to be relocated!
 </pre>
 
 ## Checklist
-Fill the brackets with 'x' for checklisting the component.
+
+For each evaluation component that you have completed, please mark the brackets
+with `x` symbol.
+
 ### Required Components | 100 Points
+
 - [ ] **Ask the user for input**
 - [ ] **Count the weight per volume ratio**
 - [ ] **Print data according to the format**
 
 ### Bonus Components | 10 Points
+
 - [ ] **Input validation**
 - [ ] **Generate family identifier number**
 - [ ] **Count the budget of food per year**

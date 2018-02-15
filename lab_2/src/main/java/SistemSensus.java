@@ -1,94 +1,107 @@
 import java.util.Scanner;
 
 /**
- * @author Template Author: Ichlasul Affan dan Arga Ghulam Ahmad
- * Template ini digunakan untuk Tutorial 02 DDP2 Semester Genap 2017/2018.
- * Anda sangat disarankan untuk menggunakan template ini.
- * Namun Anda diperbolehkan untuk menambahkan hal lain berdasarkan kreativitas Anda
- * selama tidak bertentangan dengan ketentuan soal.
+ * @author Template Author: Ichlasul Affan and Arga Ghulam Ahmad
  *
- * Cara penggunaan template ini adalah:
- * 1. Isi bagian kosong yang ditandai dengan komentar dengan kata TODO
- * 2. Ganti titik-titik yang ada pada template agar program dapat berjalan dengan baik.
+ * This template is used for Programming Foundations 2 Tutorial 2 Term 2 2017/2018.
+ * It is recommended to use this template as the base for completing Tutorial 2.
+ * You are allowed to make modifications to the template as long it still matches
+ * with the tutorial specification.
  *
- * Code Author (Mahasiswa):
- * @author ....., NPM ....., Kelas ....., GitLab Account: .....
+ * How to use this template:
+ * 1. Complete the code that labelled with TODO word
+ * 2. Replace the area with dots with correct statement or expression so that
+ * the program can be compiled and produced output according to the specification.
+ *
+ * Code Author (Student):
+ * @author ....., Student ID ....., Class ....., GitLab Account: .....
  */
 
 public class SistemSensus {
+
 	public static void main(String[] args) {
-		// Buat input scanner baru
+		// Create a new Scanner object to read input from standard input
 		Scanner input = new Scanner(System.in);
 
-
-		// TODO Bagian ini digunakan untuk soal Tutorial "Sensus Daerah Kumuh"
-		// User Interface untuk meminta masukan
-		System.out.print("PROGRAM PENCETAK DATA SENSUS\n" +
+        // TODO This section corresponds to tutorial problem about "Slum Census"
+		// The interface to get input from user
+		System.out.print("CENSUS DATA PRINTING PROGRAM\n" +
 				"--------------------\n" +
-				"Nama Kepala Keluarga   : ");
-		String nama = .....;
-		System.out.print("Alamat Rumah           : ");
-		String alamat = .....;
-		System.out.print("Panjang Tubuh (cm)     : ");
-		... panjang = .....;
-		System.out.print("Lebar Tubuh (cm)       : ");
-		... lebar = .....;
-		System.out.print("Tinggi Tubuh (cm)      : ");
-		... tinggi = .....;
-		System.out.print("Berat Tubuh (kg)       : ");
-		... berat = .....;
-		System.out.print("Jumlah Anggota Keluarga: ");
-		... makanan = .....;
-		System.out.print("Tanggal Lahir          : ");
-		String tanggalLahir = .....;
-		System.out.print("Catatan Tambahan       : ");
-		String catatan = .....;
-		System.out.print("Jumlah Cetakan Data    : ");
-		... jumlahCetakan = .....;
+				"Name of Family Head   : ");
+		String name = .....;
+		System.out.print("Home Address           : ");
+		String address = .....;
+		System.out.print("Body Length (cm)     : ");
+		... length = .....;
+		System.out.print("Body Width (cm)       : ");
+		... width = .....;
+		System.out.print("Body Height (cm)      : ");
+		... height = .....;
+		System.out.print("Body Weight (kg)       : ");
+		... weight = .....;
+		System.out.print("Number of Family Members: ");
+		... members = .....;
+		System.out.print("Date of Birth          : ");
+		String birthDate = .....;
+		System.out.print("Additional Notes       : ");
+		String notes = .....;
+		System.out.print("Number of Data Prints    : ");
+		... numberPrints = .....;
 
 
-		// TODO Bagian ini digunakan untuk soal Tutorial "Sensus Daerah Kumuh"
-		// TODO Hitung rasio berat per volume (rumus lihat soal)
-		... rasio = (...) (...);
+        // TODO This section corresponds to tutorial problem about "Slum Census"
+        // TODO Calculate body weight ratio per volume (see the formula in the 
+        // tutorial description
+		... ratio = (...) (...);
 
 		for (.....) {
-			// TODO Minta masukan terkait nama penerima hasil cetak data
-			System.out.print("Pencetakan " + ... + " dari " + jumlahCetakan + " untuk: ");
-			String penerima = .....; // Lakukan baca input lalu langsung jadikan uppercase
+            // TODO Provide input related to person that will receive the
+            // print result
+			System.out.print("Pencetakan " + ... + " dari " + numberPrints + " untuk: ");
+			String receiver = .....; // Read input and transform input to upper
+                                     // case characters
 
-			// TODO Periksa ada catatan atau tidak
-			if (.....) catatan = .....;
-			else catatan = .....;
+			// TODO Check whether it has notes or not
+			if (.....) notes = .....;
+			else notes = .....;
 
-			// TODO Cetak hasil (ganti string kosong agar keluaran sesuai)
-			String hasil = "";
+            // TODO Print result
+            // TODO Replace the empty string to match the expected output
+			String result = "";
 			.....;
 		}
 
 
-		// TODO Bagian ini digunakan untuk soal bonus "Rekomendasi Apartemen"
-		// TODO Hitung nomor keluarga dari parameter yang telah disediakan (rumus lihat soal)
+        // TODO This section corresponds to the bonus tutorial about "Apartment 
+        // Recommendation"
+        // TODO Calculate the family number from the available parameters
+        // See the formula in the tutorial description
 
 
 
-		// TODO Gabungkan hasil perhitungan sesuai format sehingga membentuk nomor keluarga
-		String nomorKeluarga = "";
+        // TODO Combine the calculation results into a family number according
+        // to the expected format
+		String familyNumber = "";
 
-		// TODO Hitung anggaran makanan per tahun (rumus lihat soal)
-		... anggaran = (...) (...);
+        // TODO Calculate the food budget per year
+        // See the formula in the tutorial description
+		... budget = (...) (...);
 
-		// TODO Hitung umur dari tanggalLahir (rumus lihat soal)
-		... tahunLahir = .....; // lihat hint jika bingung
-		... umur = (...) (...);
+        // TODO Calculate age from birthDate
+        // See the formula in the tutorial description
+		... birthYear = .....; // See hint if it is not clear enough
+		... age = (...) (...);
 
-		// TODO Lakukan proses menentukan apartemen (kriteria lihat soal)
+        // TODO Do the process of determining the apartment
+        // See the criteria in the tutorial description
 
 
 
 
 
-		// TODO Cetak rekomendasi (ganti string kosong agar keluaran sesuai)
-		String rekomendasi = "";
+        // TODO Print recommendation
+        // TODO Replace the empty string to match the expected output
+		String recommendation = "";
 		.....;
 
 		input.close();
