@@ -126,7 +126,7 @@ Dek Depe sangat penasaran, dan ingin tahu berapa total kelinci yang ada di Rabbi
 
 Nama program kamu **wajib** RabbitHouse.java
 
-Program kamu menerima dua baris input. Baris pertama berisi tipe mode yang diterima. Untuk soal wajib, baris pertama pasti **normal**. Baris kedua merupakan String nama kelinci. String nama kelinci tidak akan lebih dari **sepuluh huruf**.
+Program kamu menerima **satu** baris input, yang terdapat **dua perintah** berupa String, dipisah oleh spasi. Perintah pertama berisi tipe mode yang diterima. Untuk soal wajib, perintah pertama pasti **normal**. Perintah kedua merupakan String nama kelinci. String nama kelinci tidak akan lebih dari **sepuluh huruf**.
 
 Output adalah jumlah kelinci saat semua kelinci selesai berkembang biak.
 
@@ -157,6 +157,11 @@ Contoh keluaran 2:
 
 ## **Soal Bonus : "Palindrome Problem"**
 
+------
+Untuk soal bonus, tidak ada restriksi. Boleh menggunakan looping
+
+------
+
 ### **What's the story?**
 
 Kamu telah berhasil membuat program yang dapat menghitung jumlah kelinci di Rabbit House. Namun, Kak Pewe menceritakan mengenai sebuah penyakit langka pada kelinci, yakni penyakit Palindromitis. Penyakit ini adalah penyakit genetik. Artinya semua keturunan seekor kelinci Palindromitis akan memiliki penyakit tersebut juga.
@@ -171,9 +176,9 @@ Nama keempat kelinci tersebut bukan palindrom, maka keempat kelinci tersebut aka
 
 ### **Spesifikasi program**
 
-Jika kamu ingat, program kamu menerima dua baris input : tipe mode dan nama kelinci.
+Jika kamu ingat, program kamu menerima dua **perintah** : tipe mode dan nama kelinci.
 
-Jika kamu memasukan *palindrom* ke baris pertama, program kamu harus meng-apply aturan palindrom.
+Jika kamu memasukan *palindrom* ke perintah pertama, program kamu harus meng-apply aturan palindrom.
 
 Contoh masukan *palindrom* 1:
 
