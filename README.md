@@ -1,19 +1,21 @@
 # Tutorial & Lab Repository
-Programming Foundations 2 -  | Faculty of Computer Science, University of Indonesia, Even Semester 2017/2018
-***
 
+CSGE601021 Programming Foundations 2 @ Faculty of Computer Science Universitas
+Indonesia, Term 2 2017/2018
 
-## Table of Content
+* * *
 
-This repository will contain Tutorial & Lab materials from Programming Foundations 2.
+This repository contains Tutorial & Lab materials for Programming Foundations 2.
+
+## Table of Contents
 
 1. Lab
     1. [Lab 1](https://gitlab.com/DDP2-CSUI/ddp-lab-ki/blob/master/lab_instructions/lab_1/README.md) - Introduction to Java & Git
-    2. [Lab 2](https://gitlab.com/DDP2-CSUI/ddp-lab-ki/blob/master/lab_instructions/lab_2/README.md) - Basic concepts of Java Programming
+    2. [Lab 2](https://gitlab.com/DDP2-CSUI/ddp-lab-ki/blob/master/lab_instructions/lab_2/README.md) - Basic Concepts of Java Programming
 
-***
+* * *
 
-Tools that will be used in this courses are :
+Tools that will be used in this courses are:
 
 - Java Development Kit (JDK) 8
 - Git
@@ -22,8 +24,21 @@ Tools that will be used in this courses are :
 - Gradle
 - GitLab Account
 
-Make sure that you install and have the needed tools above, see this manual for installation and configuration if you haven't installed it [here](https://drive.google.com/file/d/1c1AA-9ju1S82-NYyV7EMyPNwScPpMQsr/view?usp=sharing)
+Make sure that you install and have the needed tools above. See this [manual][Manual]
+for installation and configuration guide.
 
-Contact Information :
+## Contact Information
 
-- Line Dek Depe : [@nhz2170m](https://line.me/R/ti/p/%40nhz2170m)
+Lecturer:
+
+- [Daya Adianto](https://gitlab.com/addianto)
+    - Office Hours: Monday/Friday, 4 PM - 5 PM at 3303
+
+TA:
+
+- [Mochamad Aulia Akbar Pratomo](https://gitlab.com/Mochaul)
+- [Rizki Maulana Rahmadi](https://gitlab.com/kikirmd)
+- LINE@ Dek Depe (in Bahasa): [@nhz2170m][LINE]
+
+[Manual]: https://drive.google.com/file/d/1c1AA-9ju1S82-NYyV7EMyPNwScPpMQsr/view?usp=sharing
+[LINE]: https://line.me/R/ti/p/%40nhz2170m)
