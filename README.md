@@ -10,6 +10,7 @@ Repository ini akan berisi materi-materi Tutorial & Lab DDP 2.
 1. Lab
     1. [Lab 1](https://gitlab.com/DDP2-CSUI/ddp-lab/blob/master/lab_instructions/lab_1/README.md) - Pengenalan Java & Git
     2. [Lab 2](https://gitlab.com/DDP2-CSUI/ddp-lab/blob/master/lab_instructions/lab_2/README.md) - Konsep Dasar Pemrograman Java
+    3. [Lab 3](https://gitlab.com/DDP2-CSUI/ddp-lab/blob/master/lab_instructions/lab_3/README.md) - Rekursif
 
 ***
 
