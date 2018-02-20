@@ -5,8 +5,6 @@ Programming Foundations 2 -  | Faculty of Computer Science, University of Indone
 **Created by DS | KD**
 
 * * *
-Pada tutorial sebelumnya, Anda telah mempelajari mengenai konsep pemrograman Java dan berbagai operasi data di Java. Anda juga telah menyinggung sedikit materi mengenai method (return pada bagian branching statement). Kali ini, Anda akan mempelajari lebih mengenai method, dan mengenai suatu fungsi yang disebut recursive method.
-
 In the previous tutorial, you have learned about Java programming concepts and various data operations in Java. You have also mentioned a little material about the method (return on the branching statement). This time, you will learn more about the method, and about a function that is called the recursive method.
 
 ## **Learning Objectives**
@@ -21,8 +19,6 @@ In the previous tutorial, you have learned about Java programming concepts and v
 ## **Tutorial Materials**
 
 ### **Methods in Java**
-
-Di DDP 1, Anda sudah belajar cara mendefinisikan sebuah fungsi menggunakan bahasa Python. Definisi fungsi pada Java mirip dengan definisi fungsi di Python, hanya kita harus mendefinisikan tipe data parameter fungsi tersebut, dan tipe data yang akan dikembalikan oleh fungsi tersebut.
 
 In Programming Foundation 1, you've learned how to define a function using Python. The definition of a function in Java is similar to the definition of a function in Python, only we have to define the function parameter data type, and the data type to be returned by that function.
 
@@ -56,10 +52,10 @@ Do you see a pattern? The above factorial function is called four times, with th
 In order for the recursive function to not continue non-stop, we need a base or base case that does not use a recursive call, or does not invoke the recursive function again. Consider the following code example:
 ```Java
 int factorial(int number){
-    if (number <= 1) {                 //basis
+    if (number <= 1) {                 //base
         return 1;
     }
-    else {                             //rekurens
+    else {                             //recurrence
         return number * factorial(number - 1);
     }
 }
@@ -71,7 +67,7 @@ As for recurrence, the above function returns the value of the number itself mul
 
 ### **Let's do this!?**
 
-Before we get into the tutorial problem, we will warm-up first. For each question, look for the case *base case* and case *recurrence*
+Before we get into the tutorial problem, we will warm up first. For each question, look for the *base case* and *recurrence*
 
 1. A function that has an output that count backwords from n to 1
 
@@ -113,25 +109,17 @@ Before we get into the tutorial problem, we will warm-up first. For each questio
 
 ### **What's the story?**
 
-Berkat bantuanmu dan Dek Depe pekan lalu, tugas Kak Pewe sebagai petugas survei Provinsi Tamfir telah terlaksana dengan baik. Sebagai ucapan terima kasih, Kak Pewe mengundang kamu dan Dek Depe untuk mengunjungi Rabbit House Provinsi Tamfir yang dikelola oleh Kak Pewe. “Rabbit House ini bukan hanya sebuah kafe untuk minum kopi, namun juga merupakan rumah yang dapat mempercepat perkembangbiakan kelinci!” kata Kak Pewe.
-
-Rumah kelinci tersebut mempunyai beberapa peraturan:
-1. Kak Pewe akan mengaktifkan rumah itu dengan memasukkan sebuah kelinci dengan nama.
-2. Kelinci tersebut akan berkembang biak sekali, menghasilkan kelinci-kelinci yang merupakan setiap permutasi dari nama kelinci dewasa yang dihilangkan satu huruf.
-3. Tiap kelinci baru akan langsung berkembang biak lagi sesuai aturan nomor 2.
-4. Tiap kelinci akan berkembang biak sekali saja. Jika sudah berkembang biak, tidak dapat berkembang biak lagi. Kelinci baru akan terus berkembang biak hingga tidak ada kelinci baru yang dapat berkembang biak lagi (kelinci bernama satu huruf tidak dapat berkembang biak lagi). 
-
-Thanks to your help and Dek Depe last week, Kak Pewe's job as a Tamfir Province survey officer has been done very well. As a thank you, Kak Pewe invited you and Dek Depe to visit Rabbit House Tamfir Province managed by Kak Pewe. "Rabbit House is not just a cafe for coffee, but also a home that can speed up the breeding of rabbits!" Said Kak Pewe.
+Thanks to your help and Dek Depe last week, Kak Pewe's job as a Tamfir Province survey officer has been done very well. As a thank you, Kak Pewe invited you and Dek Depe to visit the Rabbit House Tamfir Province managed by Kak Pewe. "Rabbit House is not just a cafe for coffee, but also a home that can speed up the breeding of rabbits!" said Kak Pewe.
 
 The rabbit house has several rules:
-1. Kak Pewe will activate the house by entering a rabbit by name.
+1. Kak Pewe will activate the house by entering a rabbit with a name.
 2. The rabbit will breed once, producing rabbits that are every permutation of an adult rabbit's name which has omitted one letter.
 3. Each new rabbit will immediately reproduce again according to rule number 2.
 4. Each rabbit will breed once. If it has multiplied, it can not breed again. New rabbits will continue to breed until no new rabbits can breed again (one-lettered rabbits can not breed anymore).
 
 Example:
 Suppose Kak Pewe put a rabbit named **PEWEW** into the Rabbit House. The rabbit will breed five rabbits: **EWEW**, **PWEW**, **PEEW**, **PEWW**, and **PEWE**.
-The four rabbits will breed again. A rabbit named **EWEW** will breed and produce four rabbits: **WEW**, **EEW**, **EWW**, **EWE**. This will happen until all rabbits can not breed (if a rabbit has a 1-letter long name, it can not breed).
+The four rabbits will breed again. A rabbit named **EWEW** will breed and produce four rabbits: **WEW**, **EEW**, **EWW**, and **EWE**. This will happen until all rabbits can not breed (if a rabbit has a 1-letter long name, it can not breed).
 
 Dek Depe is very curious, and wanted to know how many rabbits are in the Rabbit House after a single rabbit has been put. He asks you as his friend who has learned about the recursive method to implement a recursive program that can calculate how many rabbits will be produced if a single rabbit has been put into the Rabbit House.
 
@@ -139,7 +127,7 @@ Dek Depe is very curious, and wanted to know how many rabbits are in the Rabbit 
 
 The name your program **must** be RabbitHouse.java
 
-Your program will receive **one** line of input, which contained **two command** which are String, that are seperated by a space. The first command contains the type of mode that it recieved. For comulsory task, the first command will always be **normal**. The second command is the rabbit name in String. The String name of the rabbit will not be longer than **ten letter**.
+Your program will receive **one** line of input, which contained **two command** which are String, that are seperated by a space. The first command contains the type of mode that it recieved. For compulsory task, the first command will always be **normal**. The second command is the rabbit name in String. The String name of the rabbit will not be longer than **ten letter**.
 
 Output is the total rabbit after all of the rabbit have finished breeding. 
 
@@ -158,7 +146,7 @@ Each of  the 5 rabbits yields 4 rabbits. **(5 X 4 = 20)**
 Each of the 20 yields 3 rabbit **(20 x 3 = 60)**  
 Each of the 60 yields 2 rabbit **(60 x 2 = 120)**  
 
-Sehingga 120 + 60 + 20 + 5 + 1 (si Pewew) = 206
+Until 120 + 60 + 20 + 5 + 1 (the Pewew) = 206
 
 Input example 2:
 
@@ -182,9 +170,9 @@ You have successfully created a program that can count the number of rabbits in 
 If the name of a rabbit affected by Palindromitis is a palindrome, then the rabbit will die. Palindrom is a word that if read from the front or back, like "ADA" or "MAKAM" is the same.
 Your task now is to add conditions to your program above in order to meet the conditions if the rabbit has the Palindromitis disease.
 
-Contoh:
+Example:
 Kak Pewe put a single rabit that has the Palindromitis named **PEWEW** into the Rabbit House. Since **PEWEW** is not a palindrome, that rabbit will breed and will produce 4 rabbits which are : **EWEW**, **PWEW**, **PEEW**, **PEWW**, and **PEWE**. 
-The four names of the rabbits are not a palindrome, thus the four rabbit will continue to breed. Rabbit named **EWEW** will breed and produce four rabbits: **WEW**, **EEW**, **EWW**, **EWE**.
+The four names of the rabbits are not a palindrome, thus the four rabbit will continue to breed. The rabbit named **EWEW** will breed and produce four rabbits: **WEW**, **EEW**, **EWW**, **EWE**.
 **WEW** and **EWE** are palindrome, thus the two rabbit will die. **EEW** and **EWW** are not palindrome, hence the two rabbits will live and continue to breed.
 
 ### **Program Speficication**
@@ -214,10 +202,10 @@ Fill in the square brackets with x to check the components.
 ### Required Component | 100 Poin
 - [ ] **Ask input from the user**
 - [ ] **Validate the input**
-- [ ] **Make a recursive functuin that count the total amount of rabbits**
-- [ ] **Calls he function in the main method and print the results in the console**
+- [ ] **Make a recursive function that count the total amount of rabbits**
+- [ ] **Calls the function in the main method and print the results in the console**
 
-###  Bonus Coponent | 10 Poin
+###  Bonus Component | 10 Poin
 - [ ] **Make a condition for the rabbit that has a palindrome name**
 - [ ] **Set the function to run if the input receives a "palindrom" String before the rabbit name**
 
@@ -228,7 +216,7 @@ After you have pushed your work, you will relised that there is a red cross logo
 
 ![alt text](https://i.imgur.com/ZNfetmP.png "Ilustrasi git 1")
 
-You may notice that we started using the git system since semester 2, following your older generation who started using the git system since semester 3. One of the uses of using git is that we can use the Continuos Integration feature?
+You may notice that we started using the git system since semester 2, following your older generation who started using the git system since semester 3. One of the uses of using git is that we can use the Continuos Integration feature.
 
 What is Continuous Integration? Continuos Integration is a concept in which when you push, the results of your push will directly be build (compile) and be tested (direct test). If it fails, you will be notified.
 
