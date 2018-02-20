@@ -71,14 +71,15 @@ public class SistemSensus {
 		// TODO Hitung rasio berat per volume (rumus lihat soal)
 		int rasio = (int)(berat / (panjang*lebar*tinggi/1000000.0));
 
+        String catatan_output;
 		for (int i=0; i < jumlahCetakan; i++) {
 			// TODO Minta masukan terkait nama penerima hasil cetak data
 			System.out.print("\nPencetakan " + (int)(i + 1) + " dari " + jumlahCetakan + " untuk: ");
 			String penerima = input.nextLine().toUpperCase(); // Lakukan baca input lalu langsung jadikan uppercase
 
 			// TODO Periksa ada catatan atau tidak
-			if (catatan.length() == 0) catatan = "tidak ada catatan tambahan";
-			else catatan = "Catatan: " + catatan;
+			if (catatan.length() == 0) catatan_output = "tidak ada catatan tambahan";
+			else catatan_output = "Catatan: " + catatan;
 
 			// TODO Cetak hasil (ganti string kosong agar keluaran sesuai)
 			String hasil = "DATA SIAP DICETAK UNTUK " + penerima + "\n" +
@@ -86,7 +87,7 @@ public class SistemSensus {
 						   nama + " - " + alamat + "\n" + 
 						   "Lahir pada tanggal " + tanggalLahir + "\n" +
 						   "Rasio Berat Per Volume     = " + rasio + " kg/m3" + "\n" +
-						   catatan;
+						   catatan_output;
 			System.out.println(hasil);
 		}
 
