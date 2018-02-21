@@ -1,56 +1,82 @@
-# **Tutorial 3: Recursive (Tutorial Problem)**
+# Tutorial 3: Recursive (Tutorial Problem)
 
-Programming Foundations 2 -  | Faculty of Computer Science, University of Indonesia, Even Semester 2017/2018
+CSGE601021 Programming Foundations 2 @ Faculty of Computer Science Universitas
+Indonesia, Term 2 2017/2018
 
 **Created by DS | KD**
 
 * * *
-In the previous tutorial, you have learned about Java programming concepts and various data operations in Java. You have also mentioned a little material about the method (return on the branching statement). This time, you will learn more about the method, and about a function that is called the recursive method.
 
-## **Learning Objectives**
-1. Understand how to create **method** in Java.
-2. Understand the concept of **recursive method**.
+In the previous tutorial, you have learned about Java programming concepts and
+various data operations in Java. You have also mentioned a little material about
+the method (return on the branching statement). This time, you will learn more
+about method, and a function that is called a recursive method.
 
-### **Before You Start...**
-1. Do `git pull upstream master` by using the Command Prompt at your local repository folder.
-2. Implement your code accordingly to what the lab questions asked you to do in folder `lab_3/src/main/java`. We've provided an empty folder for you.
+If you want to skip directly to the tutorial programming exercise, you may proceed
+to tutorial section. Otherwise, please follow through the review notes that has
+been prepared by TA.
+
+## Learning Objectives
+
+1. Understand how to create **method** in Java
+2. Understand the concept of **recursive method**
+
+### Before You Start...
+
+1. Do `git pull upstream master` by using the command prompt/shell at your local
+repository folder
+2. Implement your code according to the specifications written in this document
+and put the Java file in `lab_3/src/main/java` directory
 3. After you finish implementing your code, add, commit, then push your code.
 
-## **Tutorial Materials**
+## Tutorial Materials
 
-### **Methods in Java**
+### Methods in Java
 
-In Programming Foundation 1, you've learned how to define a function using Python. The definition of a function in Java is similar to the definition of a function in Python, only we have to define the function parameter data type, and the data type to be returned by that function.
+In Programming Foundation 1, you have learned how to define a function using
+Python. The definition of a function in Java is similar to the definition of a
+function in Python, only we have to define the function parameter data type,
+and the data type to be returned by that function.
 
-### Python
+> If we want to be more pedantic, there are differences between function and
+> method. Can you guess what the differences are?
 
-```Python
-def total(number1, number2):
+In Python:
+
+```python
+def add(number1, number2):
     return number1 + number2
 ```
 
-### Java
+In Java:
 
 ```Java
-public static int jumlah(int number1, int number2){
+public static int add(int number1, int number2){
     return number1 + number2;
 }
 ```
 
-> **Notes**
-> To call a method in main, the method must use the keyword static. This will be studied more deeply in the next tutorial.
+> Note: To call a method in main method's block, the method must have `static`
+> keyword as well. It will be discussed more deeply in the next tutorial.
 
-### **Recursive Method**
+### Recursive Method
 
-In this tutorial, you will learn a function called the recursive method. A function can be said to be recursive if the function calls itself. Usually a recursive function is used to solve problems that can be reduced to a smaller similar problem.
+In this tutorial, you will learn a function called the recursive method. A function
+can be said to be recursive if the function calls itself. Usually a recursive
+function is used to solve problems that can be reduced to a smaller identical problem.
 
-One example is to calculate the factorial of a number. Notice the following picture:
+One example is to calculate the factorial of a number. Notice the following figure:
 
 ![alt text](https://i.imgur.com/hriRLZ7.png "Ilustrasi faktorial")
 
-Do you see a pattern? The above factorial function is called four times, with the parameter becomes smaller. We can conclude that in the factorial function (n), it will be called the factorial function (n-1) until it completes.
-In order for the recursive function to not continue non-stop, we need a base or base case that does not use a recursive call, or does not invoke the recursive function again. Consider the following code example:
-```Java
+Do you see a pattern? The above factorial function is called four times, with
+the parameter becomes smaller. We can conclude that in the factorial function
+(n), it will be called the factorial function (n-1) until it completes. In
+order for recursive function to not continue non-stop, we need a base or base
+case that does not use a recursive call, or does not invoke the recursive
+function again. Consider the following code example:
+
+```java
 int factorial(int number){
     if (number <= 1) {                 //base
         return 1;
@@ -61,11 +87,20 @@ int factorial(int number){
 }
 ```
 
-Basically, the recursive function can be divided into bases and recurrences. In the code above, the base case of the function is if the parameter number is a number less than or equal to one, because 1! = 1, and 0! = 1 (assuming the input is not negative, because the negative factorial is undefined). This base case does not use a recursive call because it aims to stop recursive calls if they occur.
+Basically, the recursive function can be divided into bases and recurrences. In
+the code above, the base case of the function is if the parameter number is a
+number less than or equal to one, because 1! = 1, and 0! = 1 (assuming the
+input is not negative, because the negative factorial is undefined). This base
+case does not use a recursive call because it aims to stop recursive calls if
+they occur.
 
-As for recurrence, the above function returns the value of the number itself multiplied by the function call back, but the parameter becomes number-1. The value at which the next call will narrow to closing to the base. The factorial call (4) will return a value of 4 multiplied by the factorial (3), which will return a value of 3 times by factorial (2), to factorial base (1).
+As for recurrence, the above function returns the value of the number itself
+multiplied by the function call back, but the parameter becomes number-1. The
+value at which the next call will narrow to closing to the base. The factorial
+call (4) will return a value of 4 multiplied by the factorial (3), which will
+return a value of 3 times by factorial (2), to factorial base (1).
 
-### **Let's do this!?**
+### Let's do this!?
 
 Before we get into the tutorial problem, we will warm up first. For each question, look for the *base case* and *recurrence*
 
@@ -98,16 +133,17 @@ Before we get into the tutorial problem, we will warm up first. For each questio
     ```
 
 
-## **Tutorial: "Kak Pewe's Rabbit House"**
+## Tutorial: "Kak Pewe's Rabbit House"
 
 ![alt text](https://i.imgur.com/vdT6fB9.png "Gambar Rabbit House")
 
 ------
+
 **WARNING** For this tutorial, it is forbidden to use loop (for, while, etc.)
 
 ------
 
-### **What's the story?**
+### What's the Story?
 
 Thanks to your help and Dek Depe last week, Kak Pewe's job as a Tamfir Province survey officer has been done very well. As a thank you, Kak Pewe invited you and Dek Depe to visit the Rabbit House Tamfir Province managed by Kak Pewe. "Rabbit House is not just a cafe for coffee, but also a home that can speed up the breeding of rabbits!" said Kak Pewe.
 
@@ -123,7 +159,7 @@ The four rabbits will breed again. A rabbit named **EWEW** will breed and produc
 
 Dek Depe is very curious, and wanted to know how many rabbits are in the Rabbit House after a single rabbit has been put. He asks you as his friend who has learned about the recursive method to implement a recursive program that can calculate how many rabbits will be produced if a single rabbit has been put into the Rabbit House.
 
-### **Program Specification**
+### Program Specifications
 
 The name your program **must** be RabbitHouse.java
 
@@ -156,14 +192,14 @@ Output example 2:
 
 >1
 
-## **Soal Bonus : "Palindrome Problem"**
+## Bonus Tutorial: "Palindrome Problem"
 
 ------
 For the bonus task, there is no restriction. Looping is allowed.
 
 ------
 
-### **What's the story?**
+### What's the Story?
 
 You have successfully created a program that can count the number of rabbits in the Rabbit House. However, Kak Pewe says that there is a rare disease in rabbit, the Palindromitis disease. This disease is a genetic disease. That means all the offspring of a Palindromitis rabbit will have the disease as well.
 
@@ -175,7 +211,7 @@ Kak Pewe put a single rabit that has the Palindromitis named **PEWEW** into the 
 The four names of the rabbits are not a palindrome, thus the four rabbit will continue to breed. The rabbit named **EWEW** will breed and produce four rabbits: **WEW**, **EEW**, **EWW**, **EWE**.
 **WEW** and **EWE** are palindrome, thus the two rabbit will die. **EEW** and **EWW** are not palindrome, hence the two rabbits will live and continue to breed.
 
-### **Program Speficication**
+### Program Specifications
 
 If you remember, your program will recieve two **command** : the mode type and the rabbit name.
 
