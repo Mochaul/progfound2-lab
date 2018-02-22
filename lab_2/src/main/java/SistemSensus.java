@@ -1,29 +1,26 @@
 import java.util.Scanner;
 
 /**
- * @author Template Author: Ichlasul Affan dan Arga Ghulam Ahmad
- * Template ini digunakan untuk Tutorial 02 DDP2 Semester Genap 2017/2018.
- * Anda sangat disarankan untuk menggunakan template ini.
- * Namun Anda diperbolehkan untuk menambahkan hal lain berdasarkan kreativitas Anda
- * selama tidak bertentangan dengan ketentuan soal.
+ * @author Template Author: Ichlasul Affan and Arga Ghulam Ahmad
  *
- * Cara penggunaan template ini adalah:
- * 1. Isi bagian kosong yang ditandai dengan komentar dengan kata TODO
- * 2. Ganti titik-titik yang ada pada template agar program dapat berjalan dengan baik.
+ * This template is used for Programming Foundations 2 Tutorial 2 Term 2 2017/2018.
+ * It is recommended to use this template as the base for completing Tutorial 2.
+ * You are allowed to make modifications to the template as long it still matches
+ * with the tutorial specification.
  *
  * Code Author (Mahasiswa):
  * @author Nicolaus Christian Gozali, NPM 1706020446, Kelas ProgF 2, GitLab Account: nicolauscg
  */
 
 public class SistemSensus {
+
 	public static void main(String[] args) {
-		// Buat input scanner baru
+		// Create a new Scanner object to read input from standard input
 		Scanner input = new Scanner(System.in);
 
-
-		// TODO Bagian ini digunakan untuk soal Tutorial "Sensus Daerah Kumuh"
-		// User Interface untuk meminta masukan
-		System.out.print("PROGRAM PENCETAK DATA SENSUS\n" +
+        // TODO This section corresponds to tutorial problem about "Slum Census"
+		// The interface to get input from user
+		System.out.print("CENSUS DATA PRINTING PROGRAM\n" +
 				"--------------------\n" +
 				"Nama Kepala Keluarga   : ");
 		String nama = input.nextLine();
