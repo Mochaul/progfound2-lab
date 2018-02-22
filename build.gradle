@@ -1,0 +1,46 @@
+description = """
+Gradle build script for Programming Foundations 2 lab exercises.
+"""
+
+// Project-wide constants
+ext.checkstyle_version = '8.8'
+ext.java_version = '1.8'
+ext.junit5_jupiter_version = '5.1.0'
+ext.junit5_platform_version = '1.1.0'
+ext.junit5_vintage_version = '5.1.0'
+ext.project_group = 'id.ac.ui.cs.progfound2'
+ext.project_rootdir = project.rootDir.toString()
+
+// For all projects
+allprojects {
+    // Set basic information
+    group "${project_group}"
+}
+
+// For all subprojects
+subprojects {
+    // Use Java plugin
+    apply plugin: 'java'
+    sourceCompatibility = java_version
+    targetCompatibility = java_version
+
+    // Use & configure Checkstyle plugin to check code writing style
+    // Also known as 'linter'
+    apply plugin: 'checkstyle'
+    checkstyle {
+        configFile = file(new File("${project_rootdir}/config/google_csui_checks.xml"))
+        toolVersion = checkstyle_version
+        ignoreFailures = true
+    }
+
+    repositories {
+        mavenCentral()
+    }
+
+    dependencies {
+        testCompile group: 'org.junit.jupiter', name: 'junit-jupiter-api', version: junit5_jupiter_version
+        testRuntime group: 'org.junit.jupiter', name: 'junit-jupiter-engine', version: junit5_jupiter_version
+        testRuntime group: 'org.junit.platform', name: 'junit-platform-launcher', version: junit5_platform_version
+        testRuntime group: 'org.junit.vintage', name: 'junit-vintage-engine', version: junit5_vintage_version
+    }
+}

@@ -10,8 +10,9 @@ This repository contains Tutorial & Lab materials for Programming Foundations 2.
 ## Table of Contents
 
 1. Lab
-    1. [Lab 1](https://gitlab.com/DDP2-CSUI/ddp-lab-ki/blob/master/lab_instructions/lab_1/README.md) - Introduction to Java & Git
-    2. [Lab 2](https://gitlab.com/DDP2-CSUI/ddp-lab-ki/blob/master/lab_instructions/lab_2/README.md) - Basic Concepts of Java Programming
+    1. [Lab 1](lab_1/README.md) - Introduction to Java & Git
+    2. [Lab 2](lab_2/README.md) - Basic Concepts of Java Programming
+    3. [Lab 3](lab_3/README.md) - Recursion
 
 * * *
 
