@@ -245,7 +245,7 @@ jumlah uang = 198 * 100 = 19800
 >>
 Rumus perhitungan kebahagiaan baru:
 ```
-kebahagiaanBaru = [JUMLAH_UANG]/6000
+kebahagiaanBaru = kebahagiaanSekarang + [JUMLAH_UANG]/6000
 Perlu diingat nilai kebahagiaan adalah bilangan riil dan nilainya tidak boleh melebihi batas maksimum
 ```
 
@@ -329,6 +329,7 @@ Apabila (BebanKerjaTotal > Kebahagiaan), maka manusia tersebut tidak dapat beker
 DurasiBaru = Kebahagiaan/bebanKerja (DurasiBaru dalam integer)
 BebanKerjaTotal = DurasiBaru * bebanKerja
 Pendapatan = BebanKerjaTotal * 10000
+Karena (BebanKerjaTotal > Kebahagiaan), kemudian (Kebahagiaan - BebanKerjaTotal < 0), maka Kebahagiaan di-set menjadi nilai MINIMUM
 ```
 
 >
@@ -396,7 +397,7 @@ Perlu diingat nilai kebahagiaan tidak boleh kurang dari nilai minimumnya
 
 >>
 ```
-"[NAMA] terkena penyakit penyakit :O"
+"[NAMA] terkena penyakit [NAMA_PENYAKIT] :O"
 ```
 
 :boom: **toString()**
