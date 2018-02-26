@@ -329,7 +329,7 @@ Apabila (BebanKerjaTotal > Kebahagiaan), maka manusia tersebut tidak dapat beker
 DurasiBaru = Kebahagiaan/bebanKerja (DurasiBaru dalam integer)
 BebanKerjaTotal = DurasiBaru * bebanKerja
 Pendapatan = BebanKerjaTotal * 10000
-Karena (BebanKerjaTotal > Kebahagiaan), kemudian (Kebahagiaan - BebanKerjaTotal < 0), maka Kebahagiaan di-set menjadi nilai MINIMUM
+Kebahagiaan = Kebahagiaan - BebanKerjaTotal
 ```
 
 >
