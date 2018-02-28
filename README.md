@@ -13,6 +13,7 @@ This repository contains Tutorial & Lab materials for Programming Foundations 2.
     1. [Lab 1](lab_1/README.md) - Introduction to Java & Git
     2. [Lab 2](lab_2/README.md) - Basic Concepts of Java Programming
     3. [Lab 3](lab_3/README.md) - Recursion
+    4. [Lab 4](lab_4/README.md) - Object Oriented Programming
 
 * * *
 

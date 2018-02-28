@@ -1,4 +1,5 @@
 # Created by https://www.gitignore.io/api/java,gradle,eclipse,intellij+all
+# Author: dayaadianto@cs.ui.ac.id
 
 ### Eclipse ###
 
@@ -159,4 +160,8 @@ gradle-app.setting
 # # Work around https://youtrack.jetbrains.com/issue/IDEA-116898
 # gradle/wrapper/gradle-wrapper.properties
 
+<<<<<<< HEAD
 # End of https://www.gitignore.io/api/java,gradle,eclipse,intellij+all
+=======
+# End of https://www.gitignore.io/api/java,gradle,eclipse,intellij+all
+>>>>>>> 780da5113ed284e101c6d245285c6d13dfa1eddb

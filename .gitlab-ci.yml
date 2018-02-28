@@ -1,5 +1,7 @@
-# GitLab CI configuration file for Programming Foundations 2 lab exercises.
+# GitLab CI configuration file for DDP2 programming exercises.
 # Adapted from: https://gitlab.com/gitlab-org/gitlab-ci-yml/blob/master/Gradle.gitlab-ci.yml
+# Author: dayaadianto@cs.ui.ac.id
+
 image: gradle:4.4.1-jdk8-alpine
 
 variables:

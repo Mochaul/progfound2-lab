@@ -126,7 +126,7 @@ Fibonacci number is the sum of the two previous numbers)
     13
     ```
 
-3. A function that input the char `*` in between every letter in a string. 
+3. A function that input the char `*` in between every letter in a string.
 
     ```
     putAsterisks(“depechan”)
@@ -188,15 +188,15 @@ type of mode that it received. For mandatory task, the first command will
 always be `normal` The second command is the rabbit name in String. The String
 name of the rabbit will not be longer than **ten letter**.
 
-Output is the total rabbit after all of the rabbit have finished breeding. 
+Output is the total rabbit after all of the rabbit have finished breeding.
 
 Input example 1:
 
->normal PEWEW 
+>normal PEWEW
 
 Output example 1:
 
->206 
+>206
 
 Explanation:
 

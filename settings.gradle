@@ -1,2 +1,3 @@
 rootProject.name = 'progfound2-lab'
 include 'lab_3'
+include 'lab_4'
