@@ -1,6 +1,3 @@
-description = 'Build script for lab 2'
-version = '0.1.0'
-
 // All Gradle build file in every tutorial must have this buildscript
 // declaration followed by JUnit Gradle plugin. It is necessary redundancy.
 buildscript {
@@ -9,7 +6,7 @@ buildscript {
     }
 
     dependencies {
-        classpath "org.junit.platform:junit-platform-gradle-plugin:${junit5_platform_version}"
+        classpath "org.junit.platform:junit-platform-gradle-plugin:${junit_platform_version}"
     }
 }
 

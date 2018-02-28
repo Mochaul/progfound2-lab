@@ -451,7 +451,7 @@ Note: [Note]
 Here is an example of program interaction (in bold is the input):
 <pre> CENSUS DATA PRINTING PROGRAM
 --------------------
-Name of Family Head 		: <b> Butterfield </b>	
+Name of Family Head 		: <b> Butterfield </b>
 Home Address 				: <b> RSE </b>
 Body Length (cm)			: <b> 30 </b>
 Body Width (cm)				: <b> 60 </b>
@@ -674,4 +674,3 @@ with `x` symbol.
 - [ ] **Count the age of the head of family**
 - [ ] **Group families to apartment**
 - [ ] **Print recommendation according to the determined format**
-

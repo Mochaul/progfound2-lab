@@ -1,91 +1,76 @@
-import org.junit.jupiter.api.*;
+import static org.junit.jupiter.api.Assertions.fail;
 
-import java.lang.reflect.Field;
-import java.lang.reflect.Method;
+import java.io.ByteArrayInputStream;
+import java.io.ByteArrayOutputStream;
+import java.io.PrintStream;
 import java.util.Scanner;
-import java.io.*;
 
-import static org.junit.jupiter.api.Assertions.*;
+import org.junit.jupiter.api.BeforeEach;
+import org.junit.jupiter.api.DisplayName;
+import org.junit.jupiter.api.Test;
 
 /**
- * This code is redeveloped from Ichlasul Affan's code
+ * This code is redeveloped from Ichlasul Affan's code.
  */
-
 @DisplayName("RabbitHouse")
 public class RabbitHouseTest {
-	// Membuat variabel baru untuk output dan error output
-	private ByteArrayOutputStream outContent;
-	private ByteArrayOutputStream errContent;
-	
-	// Untuk setiap test, lakukan setup terlebih dahulu
-	@BeforeEach
-	void setUp() {
-		// make new ByteArrayOutputStream for output and error output
-		outContent = new ByteArrayOutputStream();
-		errContent = new ByteArrayOutputStream();
 
-		System.setOut(new PrintStream(outContent)); // Connect outContent ke System.out
-		System.setErr(new PrintStream(errContent)); // Connect errContent ke System.err
-	}
+    private ByteArrayOutputStream outContent;
+    private ByteArrayOutputStream errContent;
 
-	@Test
-	@DisplayName("Testcase Input Langsung: Contoh Soal 1")
-	void testInput1() {
-		// Setup masukan menggunakan ByteArrayInputStream
-		ByteArrayInputStream in = new ByteArrayInputStream("normal PEWEW\n".getBytes());
-		System.setIn(in);
+    @BeforeEach
+    void setUp() {
+        // Make new ByteArrayOutputStream for output and error output
+        outContent = new ByteArrayOutputStream();
+        errContent = new ByteArrayOutputStream();
 
-		// Buat scanner untuk input (mensimulasikan user)
-		Scanner keyboard = new Scanner(System.in);
+        System.setOut(new PrintStream(outContent)); // Connect outContent ke System.out
+        System.setErr(new PrintStream(errContent)); // Connect errContent ke System.err
+    }
 
-		// Jalankan fungsi main
-		RabbitHouse.main(new String[0]);
+    @Test
+    @DisplayName("Direct Input Testcase: Input Example 1")
+    void testInput1() {
+        ByteArrayInputStream in = new ByteArrayInputStream("normal PEWEW\n".getBytes());
+        System.setIn(in);
 
-		// Mengecek apakah hasil-hasil pemrosesan ada pada output
-		// Cek jawaban
-		if (!outContent.toString().contains("206")) {
-			fail("Gagal testcase 1 ");
-		}
-	}
+        Scanner keyboard = new Scanner(System.in);
 
-	@Test
-	@DisplayName("Testcase Input Langsung: Contoh Soal 2")
-	void testInput2() {
-		// Setup masukan menggunakan ByteArrayInputStream
-		ByteArrayInputStream in = new ByteArrayInputStream("normal EXODUS\n".getBytes());
-		System.setIn(in);
+        RabbitHouse.main(new String[0]);
 
-		// Buat scanner untuk input (mensimulasikan user)
-		Scanner keyboard = new Scanner(System.in);
+        if (!outContent.toString().contains("206")) {
+            fail("Testcase 1 failed");
+        }
+    }
 
-		// Jalankan fungsi main
-		RabbitHouse.main(new String[0]);
+    @Test
+    @DisplayName("Direct Input Testcase: Input Example 2")
+    void testInput2() {
+        ByteArrayInputStream in = new ByteArrayInputStream("normal EXODUS\n".getBytes());
+        System.setIn(in);
 
-		// Mengecek apakah hasil-hasil pemrosesan ada pada output
-		// Cek jawaban
-		if (!outContent.toString().contains("1237")) {
-			fail("Gagal testcase 2 ");
-		}
-	}
-	
-	@Test
-	@DisplayName("Testcase Input Langsung: Contoh Soal 3")
-	void testInput3() {
-		// Setup masukan menggunakan ByteArrayInputStream
-		ByteArrayInputStream in = new ByteArrayInputStream("normal J\n".getBytes());
-		System.setIn(in);
+        Scanner keyboard = new Scanner(System.in);
 
-		// Buat scanner untuk input (mensimulasikan user)
-		Scanner keyboard = new Scanner(System.in);
+        RabbitHouse.main(new String[0]);
 
-		// Jalankan fungsi main
-		RabbitHouse.main(new String[0]);
+        if (!outContent.toString().contains("1237")) {
+            fail("Testcase 2 failed");
+        }
+    }
 
-		// Mengecek apakah hasil-hasil pemrosesan ada pada output
-		// Cek jawaban
-		if (!outContent.toString().contains("1")) {
-			fail("Gagal testcase 3 ");
-		}
-	}
+    @Test
+    @DisplayName("Direct Input Testcase: Input Example 3")
+    void testInput3() {
+        ByteArrayInputStream in = new ByteArrayInputStream("normal J\n".getBytes());
+        System.setIn(in);
+
+        Scanner keyboard = new Scanner(System.in);
+
+        RabbitHouse.main(new String[0]);
+
+        if (!outContent.toString().contains("1")) {
+            fail("Testcase 3 failed");
+        }
+    }
 
 }
