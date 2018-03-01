@@ -5,17 +5,20 @@ public class Manusia {
     private int umur;
     private int uang = 50000;
     private double kebahagiaan = 50.0;
-    private boolean hidup;
+    private boolean hidup = true;
+    private static Manusia lastInstance = null;
 
     // CONSTRUCTOR //
     public Manusia(String nama, int umur){
         this.nama = nama;
         this.umur = umur;
+        lastInstance = this;
     }
     public Manusia(String nama, int umur, int uang){
         this.nama = nama;
         this.umur = umur;
         this.uang = uang;
+        lastInstance = this;
     }
     public Manusia(String nama, int umur, int uang, double kebahagiaan){
         this.nama = nama;
@@ -23,6 +26,7 @@ public class Manusia {
         this.uang = uang;
         this.kebahagiaan = kebahagiaan;
         this.adjustKebahagiaan(); // adjusts happiness if it is out of range, declaration at bottom
+        lastInstance = this;
     }
 
     // GETTER //
@@ -38,6 +42,12 @@ public class Manusia {
     public double getKebahagiaan(){
         return this.kebahagiaan;
     }
+    public boolean getHidup(){
+        return this.hidup;
+    }
+    public static Manusia getLastInstance(){
+        return lastInstance;
+    }
 
     // SETTER //
     public void setNama(String nama){
@@ -52,6 +62,9 @@ public class Manusia {
     public void setKebahagiaan(double kebahagiaan){
         this.kebahagiaan = kebahagiaan;
     }
+    public void setHidup(boolean hidup){
+        this.hidup = hidup;
+    }
 
     // METHODS //
     public void beriUang(Manusia man){
@@ -60,6 +73,14 @@ public class Manusia {
          * amount going to be given is equal to the sum of ascii value of each char in receiver's name
          * if sufficient, both instance's happiness increase
          */
+        if (this.getHidup() == false){
+            System.out.println(this.getNama() + " telah tiada");
+            return;
+        }else if (man.getHidup() == false){
+            System.out.println(man.getNama() + " telah tiada");
+            return;
+        }
+
         int amount = 0;
         for(int i = 0; i < man.getNama().length(); i++){
             amount += (int)man.getNama().charAt(i);
@@ -74,7 +95,7 @@ public class Manusia {
             // update sender and receiver happiness and adjusts it if out of range
             this.setKebahagiaan(this.getKebahagiaan() + amount/6000.0);
             this.adjustKebahagiaan();
-            man.setKebahagiaan(this.getKebahagiaan() + amount/6000.0);
+            man.setKebahagiaan(man.getKebahagiaan() + amount/6000.0);
             man.adjustKebahagiaan();
 
             System.out.println(this.getNama() + " memberi uang sebanyak " + amount + " kepada " + man.getNama() + ", mereka berdua senang :D");
@@ -89,6 +110,14 @@ public class Manusia {
          * amount going to be given as an argument
          * if sufficient, both instance's happiness increase
          */
+        if (this.getHidup() == false){
+            System.out.println(this.getNama() + " telah tiada");
+            return;
+        }else if (man.getHidup() == false){
+            System.out.println(man.getNama() + " telah tiada");
+            return;
+        }
+
         if (this.getUang() >= amount){
             // update sender and receiver cash if sufficient
             this.setUang(this.getUang() - amount);
@@ -97,7 +126,7 @@ public class Manusia {
             // update sender and receiver happiness and adjusts it if out of range
             this.setKebahagiaan(this.getKebahagiaan() + amount/6000.0);
             this.adjustKebahagiaan();
-            man.setKebahagiaan(this.getKebahagiaan() + amount/6000.0);
+            man.setKebahagiaan(man.getKebahagiaan() + amount/6000.0);
             man.adjustKebahagiaan();
 
             System.out.println(this.getNama() + " memberi uang sebanyak " + amount + " kepada " + man.getNama() + ", mereka berdua senang :D");
@@ -109,6 +138,11 @@ public class Manusia {
         /**
          * increases cash and decreases happiness by working
          */
+        if (this.getHidup() == false){
+            System.out.println(this.getNama() + " telah tiada");
+            return;
+        }
+
         if (this.getUmur() < 18 ){ // cannot work if age is less than 18
             System.out.println(this.getNama() + " belum boleh bekerja karena masih dibawah umur D:");
             return;
@@ -140,6 +174,11 @@ public class Manusia {
         /**
          * increases happiness but reduces cash by going to recreation place
          */
+        if (this.getHidup() == false){
+            System.out.println(this.getNama() + " telah tiada");
+            return;
+        }
+
         int biaya = namaTempat.length() * 10000;
 
         if (this.getUang() >= biaya){
@@ -155,6 +194,11 @@ public class Manusia {
         /**
          * decreases happiness because of sickness
          */
+        if (this.getHidup() == false){
+            System.out.println(this.getNama() + " telah tiada");
+            return;
+        }
+
         this.setKebahagiaan(this.getKebahagiaan() - namaPenyakit.length());
         this.adjustKebahagiaan();
         System.out.println(this.getNama() + " terkena penyakit " + namaPenyakit + " :O");
@@ -172,6 +216,33 @@ public class Manusia {
                "Uang\t\t: " + this.getUang() + "\n" +
                "Kebahagiaan\t: " + this.getKebahagiaan();
 
+    }
+    public void meninggal(){
+        /**
+         * an instance dies, unable to perform any methods except toString()
+         * the instance's money is set to 0, and given to the last instance of Manusia if alive
+         */
+        if (getHidup() == true){
+            // update instance properties
+            this.setNama("Almarhum " + this.getNama());
+            this.setHidup(false);
+            System.out.println(this.getNama() + " meninggal dengan tenang, kebahagiaan : " + this.getKebahagiaan());
+            
+            // if last instance alive
+            if (Manusia.getLastInstance().getHidup() == true){
+                // give all cash to last instance of Manusia
+                Manusia.getLastInstance().setUang(Manusia.getLastInstance().getUang() + this.getUang());
+                this.setUang(0);
+                System.out.println("Semua harta " + this.getNama() + " disumbangkan untuk " + Manusia.getLastInstance().getNama());
+            }
+            // if last instance already die
+            else if (Manusia.getLastInstance() == this || Manusia.getLastInstance().getHidup() == false){
+                this.setUang(0);
+                System.out.println("Semua harta " + this.getNama() + " hangus");
+            }
+        }else{
+            System.out.println(this.getNama() + " sudah meninggal");
+        }
     }
 
     // HELPER FUNCTION //
