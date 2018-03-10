@@ -6,7 +6,7 @@ public class Number {
     private int value;
     private int x;
     private int y;
-    private boolean isChecked;
+    private boolean isChecked = false;
 
     public Number(int value, int x, int y) {
         this.value = value;
@@ -15,7 +15,7 @@ public class Number {
     }
 
     public int getValue() {
-        return value;
+        return this.value;
     }
 
     public void setValue(int value) {
@@ -23,7 +23,7 @@ public class Number {
     }
 
     public int getX() {
-        return x;
+        return this.x;
     }
 
     public void setX(int x) {
@@ -31,7 +31,7 @@ public class Number {
     }
 
     public int getY() {
-        return y;
+        return this.y;
     }
 
     public void setY(int y) {
@@ -39,7 +39,7 @@ public class Number {
     }
 
     public boolean isChecked() {
-        return isChecked;
+        return this.isChecked;
     }
 
     public void setChecked(boolean isChecked) {
