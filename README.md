@@ -15,6 +15,7 @@ This repository contains Tutorial & Lab materials for Programming Foundations 2.
     3. [Lab 3](lab_instructions/lab_3/README.md) - Recursion
     4. [Lab 4](lab_instructions/lab_4/README.md) - Object Oriented Programming
     5. [Lab 5](lab_instructions/lab_5/README.md) - Array and ArrayList
+    5. [Lab 6](lab_instructions/lab_6/README.md) - OO Case Study
 
 * * *
 
