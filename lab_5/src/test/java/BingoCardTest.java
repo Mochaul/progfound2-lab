@@ -52,7 +52,7 @@ public class BingoCardTest {
             }
         }
 
-        card = new BingoCard(numbers, states);
+        card = new BingoCard(numbers);
         // End of method body that can be modified by students
     }
 

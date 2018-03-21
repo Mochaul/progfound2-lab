@@ -45,12 +45,12 @@ public class BingoCard {
                         output = num + " has been crossed";
                     else{
                         this.numbers[i][j].setChecked(true);
-                        output = "Crossed " + num;
+                        output = num + " crossed";
                     }
                 }
             }
         }
-        if(output.equals("")) output = num + " is not found on the card";
+        if(output.equals("")) output = num + " does not exist in the card";
         // check for horizontal and vertical bingo
         for (int k=0; k<5; k++){
             if(this.numbers[k][0].isChecked() && this.numbers[k][1].isChecked() && this.numbers[k][2].isChecked() && this.numbers[k][3].isChecked() && this.numbers[k][4].isChecked()){

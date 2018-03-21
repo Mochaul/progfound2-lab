@@ -1,7 +1,10 @@
-
 import java.util.ArrayList;
 import java.util.Arrays;
 //Please add more necessary import here
+import customer.Customer;
+import movie.Movie;
+import theater.Theater;
+import ticket.Ticket;
 /**
  * @author Johanes Iman
  * @version 2.4
@@ -38,8 +41,24 @@ public class Lab6 {
         Ticket tiketDekDepe2 = dekDepe.orderTicket(theaters[0], "The Greatest Showman", "Selasa", "3 Dimensi");
         
         //Customer can find movie in a theater by querying its movie title
+        // System.out.println("//////ERROR HEAD");
         sisDea.findMovie(theaters[1], "Si Juki The Movie");
         sisDea.findMovie(theaters[1], "Dilan 1990");
+        
+        // System.out.println("//////ERROR EXPECTED");
+        // System.out.println("Film Si Juki The Movie yang dicari Sis Dea tidak ada di bioskop CompFest XXI");
+        /////////////
+        // System.setOut(new PrintStream(out));
+        // sisDea.findMovie(compFestXXI, "Si Juki The Movie");
+        // String output = out.toString().trim();
+        // assertTrue(output.equals("Film Si Juki The Movie yang dicari Sis Dea tidak ada di bioskop CompFest XXI"));
+
+        // System.setOut(new PrintStream(out));
+        // sisDea.findMovie(compFestXXI, "Dilan 1990");
+        // output = out.toString().trim();
+        // assertTrue(output.contains("Dilan 1990") && output.contains("Romantis/Drama")
+        // && output.contains("Remaja") && output.contains("Film Lokal"));
+        //////////////
 
         Ticket tiketSisDea1 = sisDea.orderTicket(theaters[1], "Dilan 1990", "Selasa", "Biasa");
         Ticket tiketSisDea2 = sisDea.orderTicket(theaters[1], "Dilan 1990", "Sabtu", "Biasa");
@@ -51,13 +70,13 @@ public class Lab6 {
         Theater.printTotalRevenueEarned(theaters);
 
         /*==========Codes for BONUS problem==========*/
-        kakPewe.cancelTicket(theaters[0]);//Kak Pewe make refund to  CGT Blitz
-        kakPewe.cancelTicket(theaters[1]);
-        kakPewe.watchMovie(tiketPewe1);
-        kakPewe.cancelTicket(theaters[0]);
-        sisDea.cancelTicket(theaters[0]);
+        // kakPewe.cancelTicket(theaters[0]);//Kak Pewe make refund to  CGT Blitz
+        // kakPewe.cancelTicket(theaters[1]);
+        // kakPewe.watchMovie(tiketPewe1);
+        // kakPewe.cancelTicket(theaters[0]);
+        // sisDea.cancelTicket(theaters[0]);
 
-        Theater.printTotalRevenueEarned(theaters);//Bankrupt duh!
+        // Theater.printTotalRevenueEarned(theaters);//Bankrupt duh!
 
     }
     //Create array of movie with information of each movie's title, parental rating, duration, genre, and the status whether its "Import" or "Lokal" movie

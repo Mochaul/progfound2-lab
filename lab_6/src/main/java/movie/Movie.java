@@ -1,3 +1,4 @@
+package movie;
 public class Movie{
     String title;
     String genre;
@@ -12,7 +13,7 @@ public class Movie{
         return this.rating;
     }
     
-    public Movie(String title, String genre, int duration, String rating, String type){
+    public Movie(String title, String rating, int duration, String genre, String type){
         this.title = title;
         this.genre = genre;
         this.duration = duration;
@@ -26,7 +27,7 @@ public class Movie{
                              "Genre       : %s\n" +
                              "Duration    : %d minutes\n" +
                              "Rating      : %s\n" +
-                             "Type        : %s\n" +
+                             "Type        : Film %s\n" +
                              "------------------------------------------------------------------"
                               ,this.title , this.genre, this.duration, this.rating, this.type);
     }

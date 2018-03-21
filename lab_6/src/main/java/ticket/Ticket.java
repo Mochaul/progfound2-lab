@@ -1,3 +1,5 @@
+package ticket;
+import movie.Movie;
 public class Ticket {
     Movie movie;
     String day; // day of show, monday to sunday

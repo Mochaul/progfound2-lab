@@ -1,5 +1,7 @@
+package theater;
+import ticket.Ticket;
+import movie.Movie;
 import java.util.ArrayList;
-
 public class Theater{
     String name;
     int balance;
