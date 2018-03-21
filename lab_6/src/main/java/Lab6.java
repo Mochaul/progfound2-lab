@@ -25,28 +25,28 @@ public class Lab6 {
                              new Theater("CompFest XXI", 25000, new ArrayList<>(Arrays.asList(tickets2)), movies2)};
 
         //create customers with name, gender, and age
-        Customer dekDepe = new Customer("Dek Depe","Perempuan",10);
-        Customer sisDea = new Customer("Sis Dea","Perempuan",15);
-        Customer kakPewe = new Customer("Kak Pewe","Laki-Laki",20);
+        Customer dekDepe = new Customer("Dek Depe","Female",10);
+        Customer sisDea = new Customer("Sis Dea","Female",15);
+        Customer kakPewe = new Customer("Kak Pewe","Male",20);
 
         //Theater can print detailed information about itself, following the format as told in the problem description
         theaters[0].printInfo();
         theaters[1].printInfo();
         
-        //Customer can order ticket by giving information about the theater, the movie title, the airtime (day), and the option "3 Dimensi" or "Biasa"
-        Ticket tiketDekDepe1 = dekDepe.orderTicket(theaters[0], "Black Panther", "Senin", "3 Dimensi");
-        Ticket tiketDekDepe2 = dekDepe.orderTicket(theaters[0], "The Greatest Showman", "Selasa", "3 Dimensi");
+        //Customer can order ticket by giving information about the theater, the movie title, the airtime (day), and the option "3 Dimensions" or "Ordinary"
+        Ticket tiketDekDepe1 = dekDepe.orderTicket(theaters[0], "Black Panther", "Monday", "3 Dimensions");
+        Ticket tiketDekDepe2 = dekDepe.orderTicket(theaters[0], "The Greatest Showman", "Tuesday", "3 Dimensions");
         
         //Customer can find movie in a theater by querying its movie title
         sisDea.findMovie(theaters[1], "Si Juki The Movie");
         sisDea.findMovie(theaters[1], "Dilan 1990");
 
-        Ticket tiketSisDea1 = sisDea.orderTicket(theaters[1], "Dilan 1990", "Selasa", "Biasa");
-        Ticket tiketSisDea2 = sisDea.orderTicket(theaters[1], "Dilan 1990", "Sabtu", "Biasa");
-        Ticket tiketSisDea3 = sisDea.orderTicket(theaters[0], "Si Juki The Movie", "Jumat", "3 Dimensi");
+        Ticket tiketSisDea1 = sisDea.orderTicket(theaters[1], "Dilan 1990", "Tuesday", "Ordinary");
+        Ticket tiketSisDea2 = sisDea.orderTicket(theaters[1], "Dilan 1990", "Saturday", "Ordinary");
+        Ticket tiketSisDea3 = sisDea.orderTicket(theaters[0], "Si Juki The Movie", "Friday", "3 Dimensions");
 
-        Ticket tiketPewe1 = kakPewe.orderTicket(theaters[0],"Si Juki The Movie", "Kamis", "Biasa");
-        Ticket tiketPewe2 = kakPewe.orderTicket(theaters[1],"Black Panther", "Sabtu", "3 Dimensi");
+        Ticket tiketPewe1 = kakPewe.orderTicket(theaters[0],"Si Juki The Movie", "Thursday", "Ordinary");
+        Ticket tiketPewe2 = kakPewe.orderTicket(theaters[1],"Black Panther", "Saturday", "3 Dimensions");
         //This is a static method where Koh Mas can print the total revenue he earned from his theaters
         Theater.printTotalRevenueEarned(theaters);
 
@@ -60,28 +60,28 @@ public class Lab6 {
         Theater.printTotalRevenueEarned(theaters);//Bankrupt duh!
 
     }
-    //Create array of movie with information of each movie's title, parental rating, duration, genre, and the status whether its "Import" or "Lokal" movie
+    //Create array of movie with information of each movie's title, parental rating, duration, genre, and the status whether its "Import" or "Local" movie
     public static Movie[] createMovieList() {
-        Movie[] movies = {new Movie("Black Panther","Remaja",134,"Action/Adventure","Import"),
-                new Movie("Dilan 1990","Remaja",110,"Romantis/Drama","Lokal"),
-                new Movie("The Greatest Showman","Umum",106,"Drama/Musical","Import"),
-                new Movie("Si Juki The Movie","Dewasa",100,"Jomblo","Lokal")};
+        Movie[] movies = {new Movie("Black Panther","Teenager",134,"Action/Adventure","Import"),
+                new Movie("Dilan 1990","Teenager",110,"Romantic/Drama","Local"),
+                new Movie("The Greatest Showman","General",106,"Drama/Musical","Import"),
+                new Movie("Si Juki The Movie","Adult",100,"Single","Local")};
         return movies;
     }
     //Create array of ticket with information of each ticket's movies, airtime, and the option whether it is in 3D (true) or not (false)  
     public static Ticket[] createTicket1(Movie[] movies) {
-        Ticket[] tickets1 = {new Ticket(movies[0],"Senin",false), new Ticket(movies[0],"Selasa",true),new Ticket(movies[0],"Sabtu",true),
-                new Ticket(movies[1],"Senin",true), new Ticket(movies[1],"Rabu",true),new Ticket(movies[1],"Minggu",true),
-                new Ticket(movies[2],"Selasa",true), new Ticket(movies[2],"Jumat",true),new Ticket(movies[2],"Minggu",true),
-                new Ticket(movies[3],"Kamis",false), new Ticket(movies[3],"Jumat",true),new Ticket(movies[3],"Sabtu",true)};
+        Ticket[] tickets1 = {new Ticket(movies[0],"Monday",false), new Ticket(movies[0],"Tuesday",true),new Ticket(movies[0],"Saturday",true),
+                new Ticket(movies[1],"Monday",true), new Ticket(movies[1],"Wednesday",true),new Ticket(movies[1],"Sunday",true),
+                new Ticket(movies[2],"Tuesday",true), new Ticket(movies[2],"Friday",true),new Ticket(movies[2],"Sunday",true),
+                new Ticket(movies[3],"Thursday",false), new Ticket(movies[3],"Friday",true),new Ticket(movies[3],"Saturday",true)};
         return tickets1;
     }
     //Create array of ticket with information of each ticket's movies, airtime, and the option whether it is in 3D (true) or not (false)
     public static Ticket[] createTicket2(Movie[] movies) {
-        Ticket[] tickets2 = {new Ticket(movies[0],"Senin",false), new Ticket(movies[0],"Selasa",true),new Ticket(movies[0],"Sabtu",true),
-                new Ticket(movies[0],"Rabu",false), new Ticket(movies[0],"Kamis",false),new Ticket(movies[0],"Minggu",false),
-                new Ticket(movies[1],"Senin",true), new Ticket(movies[1],"Jumat",false),new Ticket(movies[1],"Minggu",false),
-                new Ticket(movies[1],"Senin",false), new Ticket(movies[1],"Sabtu",false),new Ticket(movies[1],"Minggu",true)};
+        Ticket[] tickets2 = {new Ticket(movies[0],"Monday",false), new Ticket(movies[0],"Tuesday",true),new Ticket(movies[0],"Saturday",true),
+                new Ticket(movies[0],"Wednesday",false), new Ticket(movies[0],"Thursday",false),new Ticket(movies[0],"Sunday",false),
+                new Ticket(movies[1],"Monday",true), new Ticket(movies[1],"Friday",false),new Ticket(movies[1],"Sunday",false),
+                new Ticket(movies[1],"Monday",false), new Ticket(movies[1],"Saturday",false),new Ticket(movies[1],"Sunday",true)};
         return tickets2;
     }
 }

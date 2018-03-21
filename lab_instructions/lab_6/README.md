@@ -172,13 +172,13 @@ This program simulates the ticketing system at the cinemas owned by Koh Mas. The
 
 #### Film
 
-The movie has attribute title, age rating (consisting of <span style="color:blue"> "General" </span> for all ages, <span style="color:blue"> "Teenager" </span> for age at least 13 years old, and <span style="color:blue"> "Adult" </span> for a minimum age of 17), movie genre, duration in minutes, and status whether the films are **local or import**. This program can return results of detailed movie information in the following format:
+The movie has attribute title, age rating (consisting of <span style="color:blue"> "General" </span> for all ages, <span style="color:blue"> "Teenagers" </span> for age at least 13 years old, and <span style="color:blue"> "Adult" </span> for a minimum age of 17), movie genre, duration in minutes, and status whether the films are **local or import**. This program can return results of detailed movie information in the following format:
 ```
 ------------------------------------------------------------------ 
 Title 		: <Movie Title>
 Genre 		: <Genre Name>
 Duration 	: <Number> minutes
-Rating 		: <General/Teenager/Adult>
+Rating 		: <General/Teenagers/Adult>
 Type 		: <Local/Import>
 ------------------------------------------------------------------
 ```
@@ -189,7 +189,7 @@ Next is the ticket. Ticket has a specification in the form of film, showtimes (d
 ------------------------------------------------------------------ 
 Movies 		: <Movie Title>
 Showtimes 	: <Day>
-Type 		: <Normal/3 Dimensions>
+Type 		: <Ordinary/3 Dimensions>
 ------------------------------------------------------------------
 ```
 
@@ -252,7 +252,6 @@ List of Movie available  	: Black Panther, Dilan 1990
 Tickets for the movie Black Panther type 3 Dimension on Monday are not available at CGT Blitz
 Dek Depe has purchased tickets for The Greatest Showman types 3 Dimensions at CGT Blitz on Tuesday for Rp.72000
 Movie Si Juki The Movie searched by Sis Dea is not in the cinema CompFest XXI
-Movie <Movie Title> searched by <Customer Name> is not in cinema <Cinema Name>`
 ------------------------------------------------------------------
 Title 		: Dilan 1990
 Genre 		: Romantic / Drama
@@ -262,9 +261,9 @@ Type 		: Local Movie
 ------------------------------------------------------------------
 Tickets for the movie Dilan 1990 type Ordinary on Tuesday are not available in CompFest XXI
 Sis Dea has purchased tickets for Dilan 1990 type Ordinary at CompFest XXI on Saturday for Rp.100000
-Kak Pewe has purchased Si Juki's The Movie type Types at CGT Blitz on Thursday for Rp.60000
+Kak Pewe has purchased Si Juki The Movie type Ordinary at CGT Blitz on Thursday for Rp.60000
 Kak Pewe has purchased Black Panther type 3 Dimensions at CompFest XXI on Saturday for Rp.120000
-Koh Mas's total money: Rp. 377000
+Koh Mas's total money: Rp.377000
 ------------------------------------------------------------------
 Cinema 			: CGT Blitz
 Cash Balance-N 	: Rp.132000
