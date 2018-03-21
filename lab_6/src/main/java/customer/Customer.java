@@ -23,7 +23,7 @@ public class Customer{
             if(ticket.getMovie().getTitle().equals(title)){
                 // if there is matching day and type(3D or 2D) for this show
                 if(ticket.getDay().equals(day) && ( (ticket.getType() == true && type.toLowerCase().equals("3 dimensi")) || (ticket.getType() == false && type.toLowerCase().equals("biasa"))) ){
-  
+                    // if customer does not meet age requirements for movie
                     if( (ticket.getMovie().getRating().toLowerCase().equals("remaja") && this.age < 13) || (ticket.getMovie().getRating().toLowerCase().equals("dewasa") && this.age < 17) ){
                         System.out.println(String.format("%s masih belum cukup umur untuk menonton %s dengan rating %s", this.name, title, ticket.getMovie().getRating()));
                         return null;
@@ -44,7 +44,6 @@ public class Customer{
             Ticket ticket = theater.getTicket().get(i);
             if(ticket.getMovie().getTitle().equals(title)){
                 // if customer does not meet age requirements of movie
-                
                 if( (ticket.getMovie().getRating().toLowerCase().equals("remaja") && this.age < 13) || (ticket.getMovie().getRating().toLowerCase().equals("dewasa") && this.age < 17) ){
                     System.out.println(String.format("%s masih belum cukup umur untuk menonton %s dengan rating %s", this.name, title, ticket.getMovie().getRating()));
                 }else{
