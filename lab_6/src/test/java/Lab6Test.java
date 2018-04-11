@@ -39,9 +39,9 @@ public class Lab6Test {
         cgtBlitz = new Theater("CGT Blitz", 0, new ArrayList<>(Arrays.asList(tickets1)), movies);
         compFestXXI = new Theater("CompFest XXI", 25000, new ArrayList<>(Arrays.asList(tickets2)), movies2);
 
-        dekDepe = new Customer("Dek Depe","Perempuan",10);
-        sisDea = new Customer("Sis Dea","Perempuan",15);
-        kakPewe = new Customer("Kak Pewe","Laki-Laki",20);
+        dekDepe = new Customer("Dek Depe","Female",10);
+        sisDea = new Customer("Sis Dea","Female",15);
+        kakPewe = new Customer("Kak Pewe","Male",20);
 
         out = new ByteArrayOutputStream();
     }
@@ -73,12 +73,12 @@ public class Lab6Test {
     @DisplayName("Test Dek Depe Order tickets")
     void testDekDepeOrderTicket() {
         System.setOut(new PrintStream(out));
-        dekDepe.orderTicket(cgtBlitz, "Black Panther", "Senin", "3 Dimensi");
+        dekDepe.orderTicket(cgtBlitz, "Black Panther", "Monday", "3 Dimensions");
         String output = out.toString().trim();
-        assertTrue(output.equals("Tiket untuk film Black Panther jenis 3 Dimensi dengan jadwal Senin tidak tersedia di CGT Blitz"));
+        assertTrue(output.equals("Tickets for the movie Black Panther type 3 Dimension on Monday are not available at CGT Blitz"));
 
         assertEquals(tickets1[7],
-                dekDepe.orderTicket(cgtBlitz, "The Greatest Showman", "Jumat", "3 Dimensi"));
+                dekDepe.orderTicket(cgtBlitz, "The Greatest Showman", "Friday", "3 Dimensions"));
     }
 
     @Test
@@ -87,42 +87,42 @@ public class Lab6Test {
         System.setOut(new PrintStream(out));
         sisDea.findMovie(compFestXXI, "Si Juki The Movie");
         String output = out.toString().trim();
-        assertTrue(output.equals("Film Si Juki The Movie yang dicari Sis Dea tidak ada di bioskop CompFest XXI"));
+        assertTrue(output.equals("Movie Si Juki The Movie searched by Sis Dea is not in the cinema CompFest XXI"));
 
         System.setOut(new PrintStream(out));
         sisDea.findMovie(compFestXXI, "Dilan 1990");
         output = out.toString().trim();
-        assertTrue(output.contains("Dilan 1990") && output.contains("Romantis/Drama")
-        && output.contains("Remaja") && output.contains("Film Lokal"));
+        assertTrue(output.contains("Dilan 1990") && output.contains("Romantic/Drama")
+        && output.contains("Teenagers") && output.contains("Local Movie"));
     }
 
     @Test
     @DisplayName("Test Sis Dea Order tickets")
     void testSisDeaOrderTicket() {
         System.setOut(new PrintStream(out));
-        sisDea.orderTicket(compFestXXI, "Dilan 1990", "Selasa", "Biasa");
+        sisDea.orderTicket(compFestXXI, "Dilan 1990", "Tuesday", "Ordinary");
         String output = out.toString().trim();
-        assertTrue(output.equals("Tiket untuk film Dilan 1990 jenis Biasa dengan jadwal Selasa tidak tersedia di CompFest XXI"));
+        assertTrue(output.equals("Tickets for the movie Dilan 1990 type Ordinary on Tuesday are not available in CompFest XXI"));
 
         assertEquals(tickets2[8],
-                sisDea.orderTicket(compFestXXI, "Dilan 1990", "Minggu", "Biasa"));
+                sisDea.orderTicket(compFestXXI, "Dilan 1990", "Sunday", "Ordinary"));
 
         System.setOut(new PrintStream(out));
-        sisDea.orderTicket(cgtBlitz, "Si Juki The Movie", "Jumat", "3 Dimensi");
+        sisDea.orderTicket(cgtBlitz, "Si Juki The Movie", "Friday", "3 Dimensions");
         output = out.toString().trim();
-        assertTrue(output.contains("Sis Dea masih belum cukup umur untuk menonton Si Juki The Movie dengan rating Dewasa"));
+        assertTrue(output.contains("Sis Dea is not old enough to watch Si Juki The Movie"));
     }
 
     @Test
     @DisplayName("Test Kak Pewe Order tickets")
     void testKakPeweOrderTicket() {
         System.setOut(new PrintStream(out));
-        kakPewe.orderTicket(cgtBlitz,"Si Juki The Movie", "Kamis", "Biasa");
+        kakPewe.orderTicket(cgtBlitz,"Si Juki The Movie", "Thursday", "Ordinary");
         String output = out.toString().trim();
-        assertTrue(output.equals("Kak Pewe telah membeli tiket Si Juki The Movie jenis Biasa di CGT Blitz pada hari Kamis seharga Rp. 60000"));
+        assertTrue(output.equals("Kak Pewe has purchased Si Juki The Movie type Ordinary at CGT Blitz on Thursday for Rp.60000"));
 
         assertEquals(tickets2[2],
-                kakPewe.orderTicket(compFestXXI, "Black Panther", "Sabtu", "3 Dimensi"));
+                kakPewe.orderTicket(compFestXXI, "Black Panther", "Saturday", "3 Dimensions"));
     }
 
     @Test
@@ -132,25 +132,25 @@ public class Lab6Test {
         System.setOut(new PrintStream(out));
         Theater.printTotalRevenueEarned(theaters);
         String output = out.toString().trim();
-        assertTrue(output.contains("Total uang yang dimiliki Koh Mas : Rp.")
+        assertTrue(output.contains("Koh Mas's total money: Rp.")
         && output.contains("CGT Blitz") && output.contains("CompFest XXI"));
     }
 /*
     @Test
     @DisplayName("BONUS: Kak Pewe Cancel ticket, case success")
     void testCancelTicket() {
-        Ticket t = kakPewe.orderTicket(cgtBlitz,"Black Panther", "Sabtu", "3 Dimensi");
+        Ticket t = kakPewe.orderTicket(cgtBlitz,"Black Panther", "Saturday", "3 Dimensions");
         System.setOut(new PrintStream(out));
         kakPewe.cancelTicket(cgtBlitz);
         String output = out.toString().trim();
 //        logger.info("sukses: " + output);
-        assertTrue(output.equals("Tiket film Black Panther dengan waktu tayang Sabtu jenis 3 Dimensi dikembalikan ke bioskop CGT Blitz"));
+        assertTrue(output.equals("Tiket film Black Panther dengan waktu tayang Saturday jenis 3 Dimensions dikembalikan ke bioskop CGT Blitz"));
     }
 
     @Test
     @DisplayName("BONUS: Kak Pewe Cancel ticket, case fail theater not found")
     void testCancelTicketTheaterNotFound() {
-        Ticket t = kakPewe.orderTicket(cgtBlitz,"Si Juki The Movie", "Kamis", "Biasa");
+        Ticket t = kakPewe.orderTicket(cgtBlitz,"Si Juki The Movie", "Thursday", "Ordinary");
         System.setOut(new PrintStream(out));
         kakPewe.cancelTicket(compFestXXI);
         String output = out.toString().trim();
@@ -160,7 +160,7 @@ public class Lab6Test {
     @Test
     @DisplayName("BONUS: Kak Pewe Cancel ticket, case fail ticket has been used")
     void testCancelTicketHasBeenUsed() {
-        Ticket t = kakPewe.orderTicket(cgtBlitz,"Si Juki The Movie", "Kamis", "Biasa");
+        Ticket t = kakPewe.orderTicket(cgtBlitz,"Si Juki The Movie", "Thursday", "Ordinary");
         System.setOut(new PrintStream(out));
         kakPewe.watchMovie(t);
         String output = out.toString().trim();
@@ -176,7 +176,7 @@ public class Lab6Test {
     @Test
     @DisplayName("BONUS: Kak Pewe Cancel ticket, case fail theater gone bankrupt")
     void testCancelTicketBankrupt() {
-        Ticket t = kakPewe.orderTicket(compFestXXI,"Black Panther", "Sabtu", "3 Dimensi");
+        Ticket t = kakPewe.orderTicket(compFestXXI,"Black Panther", "Saturday", "3 Dimensions");
         System.setOut(new PrintStream(out));
         kakPewe.cancelTicket(cgtBlitz);
         String output = out.toString().trim();
