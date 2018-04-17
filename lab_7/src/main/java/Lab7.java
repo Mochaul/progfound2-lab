@@ -5,7 +5,7 @@ public class Lab7 {
         System.out.println(game1.add("Humas", "Human", 10)); //Humas ditambah ke game
         System.out.println(game1.add("Fooder", "Monster", 0)); //Fooder ditambah ke game
         System.out.println(game1.add("Mon", "Monster", 50)); //Mon ditambah ke game
-        System.out.println(game1.add("Mons", "Monster", 50)); //Mons ditambah ke game
+        System.out.println(game1.add("Mons", "Monster", 50)); //Mons ditambah ke game     
         System.out.println(game1.add("Mons", "Monster", 50)); //Sudah ada karakter bernama Mons
         System.out.println(game1.add("Mons", "Magician", 50)); //Sudah ada karakter bernama Mons
         System.out.println(game1.add("Magi", "Magician", 150)); //Magi ditambah ke game

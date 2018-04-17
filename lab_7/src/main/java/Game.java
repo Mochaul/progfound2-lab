@@ -10,6 +10,11 @@ public class Game{
      * @return Player chara object karakter yang dicari, return null apabila tidak ditemukan
      */
     public Player find(String name){
+        for (int i=0; i<player.size(); i++){
+            if (player.get(i).getName().equals(name)){
+                return player.get(i);
+            }
+        }
         return null;
     }
 
@@ -21,7 +26,27 @@ public class Game{
      * @return String result hasil keluaran dari penambahan karakter contoh "Sudah ada karakter bernama chara" atau "chara ditambah ke game"
      */
     public String add(String chara, String tipe, int hp){
-        return "";
+        if (this.find(chara) == null){
+            if (tipe.equals("Human")){
+                this.player.add(new Human(hp, chara));
+            }else if (tipe.equals("Magician")){
+                this.player.add(new Magician(hp, chara));
+            }else if (tipe.equals("Monster")){
+                this.player.add(new Monster(hp, chara, "AAAAAAaaaAAAAAaaaAAAAAA"));
+            }
+            return chara + " ditambah ke game";
+        }else if (this.find(chara) != null && !this.find(chara).isEaten());{
+            this.remove(chara);
+            if (tipe.equals("Human")){
+                this.player.add(new Human(hp, chara));
+            }else if (tipe.equals("Magician")){
+                this.player.add(new Magician(hp, chara));
+            }else if (tipe.equals("Monster")){
+                this.player.add(new Monster(hp, chara, "AAAAAAaaaAAAAAaaaAAAAAA"));
+            }
+        }
+        return "Sudah ada karakter " + chara;
+        
     }
 
     /**
@@ -33,7 +58,14 @@ public class Game{
      * @return String result hasil keluaran dari penambahan karakter contoh "Sudah ada karakter bernama chara" atau "chara ditambah ke game"
      */
     public String add(String chara, String tipe, int hp, String roar){
-        return "";
+        if (tipe.equals("monster") && this.find(chara) == null){
+            player.add(new Monster(hp, chara, roar));
+            return chara + " ditambah ke game";
+        }else if (this.find(chara) != null && !this.find(chara).isEaten());{
+            this.remove(chara);
+            player.add(new Monster(hp, chara, roar));
+        }
+        return "Sudah ada karakter bernama " + chara;
     }
 
     /**
@@ -42,7 +74,13 @@ public class Game{
      * @return String result hasil keluaran dari game
      */
     public String remove(String chara){
-        return "";
+        for (int i=0; i<this.player.size(); i++){
+            if (this.player.get(i).getName().equals(chara)){
+                this.player.remove(i);
+                return chara + " dihapus dari game";
+            }
+        }
+        return "Tidak ada " + chara;
     }
 
 
@@ -52,7 +90,19 @@ public class Game{
      * @return String result hasil keluaran dari game
      */
     public String status(String chara){
-       return "";
+       String result = "";
+       Player player = this.find(chara);
+       if (player != null){
+            result += String.format("%s %s\n", player.getType(), player.getName());
+            result += String.format("HP: %d\n", player.getHp());
+            if (player.getAlive()) result += "Masih hidup\n";
+            else result += "Sudah meninggal dunia dengan damai\n";
+            if (player.getDiet().size() > 0) result += "Memakan " + this.diet(chara);
+            else result += this.diet(chara);
+       }else{
+           result += chara + " tidak ditemukan";
+       }
+       return result;
     }
 
     /**
@@ -60,7 +110,15 @@ public class Game{
      * @return String result nama dari semua character, format sesuai dengan deskripsi soal atau contoh output
      */
     public String status(){
-        return "";        
+        String result = "";
+        if (this.player.size() > 0){
+            for (int i=0; i<this.player.size(); i++){
+                result += this.status(this.player.get(i).getName());
+            }
+        }else{
+            result += "Tidak ada pemain";
+        }
+        return result;        
     }
 
     /**
@@ -69,7 +127,22 @@ public class Game{
      * @return String result hasil dari karakter yang dimakan oleh chara
      */
     public String diet(String chara){
-        return "";
+        String result = "";
+        Player player = this.find(chara);
+        int dietSize = player.getDiet().size();
+        if (player != null){
+             if (dietSize > 0){
+                 result += player.getDiet().get(0).getType() + " " + player.getDiet().get(0).getName();
+                 for (int i=1; i<dietSize; i++){
+                     result += ", " + player.getDiet().get(i).getType() + " " + player.getDiet().get(i).getName();
+                 }  
+             }else{
+                 result += "Belum memakan siapa siapa\n";
+             } 
+        }else{
+            result += chara + "tidak ditemukan";
+        }
+        return result;    
     }
 
     /**
@@ -87,7 +160,12 @@ public class Game{
      * @return String result kembalian dari me Vs enemy, format sesuai deskripsi soal
      */
     public String attack(String meName, String enemyName){
-        return "";
+        Player me = this.find(meName);
+        Player enemy = this.find(enemyName);
+        if (me == null) return meName + " tidak ditemukan";
+        if (enemy == null) return enemyName + " tidak ditemukan";
+        me.attack(enemy);
+        return "Nyawa " + enemyName + " " + enemy.getHp();
     }
 
      /**
@@ -97,7 +175,11 @@ public class Game{
      * @return String result kembalian dari me Vs enemy, format sesuai deskripsi soal
      */
     public String burn(String meName, String enemyName){
-        return "";
+        Player me = this.find(meName);
+        Player enemy = this.find(enemyName);
+        if (me instanceof Magician) ((Magician)me).burn(enemy);
+        if (enemy.getHp() > 0) return "Nyawa " + enemyName + " " + enemy.getHp();
+        return "Nyawa " + enemyName + " " + enemy.getHp() + "\n dan matang";
     }
 
      /**
@@ -107,7 +189,18 @@ public class Game{
      * @return String result kembalian dari me Vs enemy, format sesuai deskripsi soal
      */
     public String eat(String meName, String enemyName){
-        return "";
+        Player me = this.find(meName);
+        Player enemy = this.find(enemyName);
+        if (me == null) return meName + " tidak ditemukan";
+        if (enemy == null) return enemyName + " tidak ditemukan";
+        
+        if(me.canEat(enemy)){
+            me.eat(enemy);
+            this.remove(enemyName);
+            return meName + " memakan " + enemyName + "\nNyawa " + me.getName() + " kini " + me.getHp();
+        }else{
+            return meName + " tidak bisa memakan " + enemyName;
+        }
     }
 
      /**
@@ -116,6 +209,8 @@ public class Game{
      * @return String result kembalian dari teriakan monster, format sesuai deskripsi soal
      */
     public String roar(String meName){
-        return "";
+        Player me = this.find(meName);
+        if (me != null) return me.roar();
+        else return "Tidak ada " + meName;
     }
 }
