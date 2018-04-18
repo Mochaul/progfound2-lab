@@ -165,7 +165,7 @@ Perhatikan kembali bahwa method super pada constructor kelas *Subclass* digunaka
 meng-construct kelas *Superclass*. Ini sangat berguna ketika superclass mempunyai semua atribut
 yang ada di subclass sehingga kita hanya perlu memanggil method super.
 Dan terakhir, kita juga dapat mengecek apakah suatu kelas merupakan instance dari kelas yang
-lain dengan memakai keyword `instanceof`. Silahkan mengimplementasikan program sederhana
+lain dengan memakai keyword `instanceof`. Silahkan Implements program sederhana
 berikut untuk lebih memahami fungsionalitas instanceof
 
 Notice again that the super method in class constructor *Subclass* is used to
@@ -231,19 +231,6 @@ Monster can eat anything that's dead. Monster can also do `roar`. `roar` from mo
 What is the meaning of RPG without Magician? Magician in this game **is a `human`** who has a special ability named `burn` who can attack and cook the Player he targets. **Damage from burn is 10**. Players who die from `burn` damage or Player who is already died and get hit by `burn` will mature. **Magician recieve 2x damage when it becomes a `target` from `attack` and `burn` method**
 
 #### Some Rules
-
-1. Nama unik untuk seluruh player. Bahkan ketika sudah mati sekalipun.
-2. player di remove dari game ketika sudah dimakan. **Nama player dianggap tidak valid untuk command eat, attack, burn, diet, status, remove, roar. Namun menjadi valid untuk command add**
-3. Minimal HP adalah 0
-4. player yang mati tidak bisa melakukan apa-apa selain merelakan dirinya dimakan(?)
-5. player yang mati tetap bisa diserang.
-6. **Untuk validasi keberadaan nama method eat, attack dan burn, cukup keluarkan "Tidak ada (Player) atau (target)"**
-7. **Untuk validasi keberadaan nama method diet, status, remove, roar, cukup keluarkan "Tidak ada (Player)"**
-8. **player yang mati tidak dapat melakukan eat, attack, burn. cetak "(Player) tidak bisa (memakan/menyerang/membakar) (target)"**
-9. **Command `diet()` akan mencetak semua player yang sudah dimakan. Cetak `diet()` berisi attribut `diet` seluruh player. Urutan dimulai pencetakan attribut `diet` dimulai dari player yang masuk ke game dari awal**
-10. **canEat() di test adalah method yang harus diimplementasi di seluruh player, yang menandakan apakah suatu player dapat memakan player_lain atau tidak**
-11. **Character diubah menjadi Player supaya konsisten dengan template**
-
 1. A name must be unique for the entire player. Even when it's dead.
 2. The player is removed from the game when it is eaten. **The player's name is considered invalid for command eat, attack, burn, diet, status, remove, roar. However it is valid for command add**
 3. Minimum HP is 0
@@ -253,33 +240,34 @@ What is the meaning of RPG without Magician? Magician in this game **is a `human
 7. **For validation of method of diet, status, remove, roar, simply output "There is no (Player)"**
 8. **The dead player can not eat, attack, burn. Print "(Player) can not (eat/attack/burn) (target)"**
 9. **Command `diet()` will print all players that has been eaten. Print `diet()` contains `diet` attributes of all players. The sequence begins printing the `diet` attribute starting from the player who entered the game from the beginning**
-10. **canEat () in test is a method that must be implemented throughout the player, indicating whether a player can eat pther player or not**
+10. **canEat() in test is a method that must be implemented throughout the player, indicating whether a player can eat pther player or not**
 11. **Character changed to Player to be consistent with template**
-#### Beberapa contoh output command
+
+#### Some example output command
 
 System.out.println(game1.add("Almarhum", "Human", 0)); 
 
-//Almarhum ditambah ke game
+//Almarhum is added to the game
 
 System.out.println(game1.add("Fooder", "Monster", 0)); 
 
-//Fooder ditambah ke game
+//Fooder is added to the game
 
 System.out.println(game1.add("Mons", "Monster", 50)); 
 
-//Mons ditambah ke game
+//Mons is added to the game
 
 System.out.println(game1.eat("Mons", "Fooder")); 
 
-//Mons memakan Fooder
+//Mons is eating Fooder
 
-//Nyawa Mons kini 65
+//Mons now have 65 HP
 
 System.out.println(game1.eat("Mons", "Almarhum")); 
 
-//Mons memakan Almarhum
+//Mons is eating Almarhum
 
-//Nyawa Mons kini 80
+//Mons now have 80 HP
 
 System.out.println(game1.diet("Mons"));
 
@@ -291,11 +279,11 @@ System.out.println(game1.status("Mons"));
 
 // HP: 105
 
-// Masih hidup
+// Alive
 
-// Memakan Human Almarhum, Monster Fooder
+// Ate Human Almarhum, Monster Fooder
 
-**Contoh lagi**
+**Another example**
 
 game1.add("Fooder", "Monster", 0);
 
@@ -309,31 +297,30 @@ game1.attack("Mons")
 
 System.out.println(game1.diet()); 
 
-//Termakan : Human Almarhum, Monster Fooder, Monster Fooder
+//Has been eaten : Human Almarhum, Monster Fooder, Monster Fooder
 
-**Untuk contoh lain bisa dibaca di** 
+**for another example, read from the link below** 
 
 [Lab7.java](https://gitlab.com/DDP2-CSUI/ddp-lab/blob/master/lab_7/src/main/java/Lab7.java "Lab7.java")
 
-2 Hal dibawah tidak di test. Tapi agar lengkap:
+The 2 things below will not be testedm but to make it complete:
 
-**Jika mencetak diet() ketika tidak ada yang sudah dimakan. Keluarkan "Belum ada yang termakan"**
+** If printing diet() when nothing has been eaten. Print "Nothing has been eaten" **
 
-**Jika mencetak status() ketika belum ada pemain. Keluarkan "Tidak ada pemain"**
+**If printing status() when there is no player. Print "There are no players"**
 
 #### Bonus
 
-1. Buat methode di `game` dengan nama `cetakMenu` dan cetak **[Tree](https://en.wikipedia.org/wiki/Tree_(data_structure))** dari attribute `diet` untuk setiap player yang masih ada di game (belum di remove atau dimakan). player yang masih ada di game tersebut sebagai root dari tree, dan Player yang sudah dimakan sebagai nodenya. (format pencetakan Tree bebas)
-
+1. Create a methode in `game` with name `printMenu` and print **[Tree](https://en.wikipedia.org/wiki/Tree_(data_structure))** from `diet` attribute for every player still is in the game (not yet removed or eaten). Player that is still in the game will be the root of the tree, and the Player has been eaten as the node. (the format for printinf Tree is free)
 Contoh:
 
-B Makan D
+B Eat D
 
-B Makan C
+B Eat C
 
-A Makan B
+A Eat B
 
-Maka Treenya (Pencetakan tidak perlu mengikuti format ini)
+Thus the tree (Printing does not need to follow this format)
 
 ---A
 
@@ -343,46 +330,18 @@ Maka Treenya (Pencetakan tidak perlu mengikuti format ini)
 
 ## Checklist
 
-Isi kurung siku komponen dengan x untuk menceklis komponen.
+Fill in square brackets with `x` to check components
 
-### Komponen Wajib | 100 Poin
+### Mandatory Components | 100 Poin
 
-- [ ] **Mengimplementasikan class-class yang diminta (boleh mengimplementasikan lebih dari yang diminta)**
-- [ ] **Mengimplementasikan atribut-atribut yang sesuai pada setiap class**
-- [ ] **Mengimplementasikan setiap method sesuai dengan kebutuhan soal**
+- [ ] **Implement classes that was asked (you are allowed to implement more than that was asked)**
+- [ ] **Implement attributes that suits to each class**
+- [ ] **Implement every method according to the needs of the problem
+**
 
-### Komponen Bonus | 10 Poin
+### Bonus Components | 10 Poin
 
-- [ ] **Implementasi `cetakMenu` yang mencetak Tree dari attribute `diet` Player yang masih hidup**
-
------
-### **Woah, apa ini !?**
-
-Ketika kalian meng-push hasil kerja kalian, kalian akan sadar bahwa ada logo cross merah atau centang hijau di samping hasil kerja kalian.
-
-![alt text](https://i.imgur.com/ZNfetmP.png "Ilustrasi git 1")
-
-Kalian mungkin memperhatikan bahwa kita mulai memakai sistem git sejak semester 2, mengikuti kakak angkatan kalian yang baru mulai memakai sistem git sejak semester 3. Salah satu guna dari menggunakan git adalah kita bisa menggunakan fitur Continuous Integration?
-
-Apa itu Continuous Integration? Continuous Integration adalah konsep di mana ketika kalian push, hasil push kalian langsung di build (compile) dan di test (uji langsung). Jika gagal, kalian akan diberitahu.
-
-Bagian Build baru akan dijelaskan di mata kuliah Advanced Programming. Kalian hanya perlu mengetahui bagian test.
-
-Sistem yang digunakan untuk mengetest di Java bernama JUnit. Kita bisa menggunakan framework JUnit untuk mengetes secara langsung (tanpa harus print di command line). Untuk sekarang, kalian tidak perlu tahu cara kerja JUnit.
-
-Kamu dapat memeriksa hasil kerja Junit di tab Commit. Tekan logo centang hijau atau cross merah untuk memeriksa detail lebih lanjut.
-
-![alt text](https://i.imgur.com/E23AOfl.png "Ilustrasi commit")
-
-Ketika kamu menekan logo tersebut, kamu akan memeriksa rangkuman dari tes tersebut yang memiliki dua lingkaran.
-
-Jika lingkaran pertama cross, maka program kamu gagal karena compile error.
-Jika lingkaran pertama centang hijau tetapi lingkaran kedua cross, maka program kamu tidak akurat.
-Jika kedua lingkaran centang, berati program kamu sudah baik.
-
-![alt text](https://i.imgur.com/1ElduFi.png "Ilustrasi status")
-
-Kamu dapat menekan tombol cross merah atau centang hijau untuk melihat hasil lebih lanjut. Sebagai contoh, jika kalain mendapat cross merah di lingkaran kedua, kamu dapat menemkan cross merah kedua untuk melihat test case mana program kalian tidak akurat.
+- [ ] **Implement `printMenu` that prints Tree from `diet` attribute of Players that are still alive**
 
 ### **Woah, What is This!?**
 
