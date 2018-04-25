@@ -1,32 +1,33 @@
-# **Tutorial 7: Inheritance (Soal Tutorial)**
+# **Tutorial 7: Inheritance (Tutorial Problem)**
 
-Dasar-dasar Pemrograman 2 - CSGE601021 | Fakultas Ilmu Komputer, Universitas Indonesia, Semester Genap 2017/2018
+CSGE601021 Programming Foundations 2| Faculty of Computer Science Universitas
+Indonesia, Term 2 2017/2018
 
-**Dibuat oleh AE | INT**
+**Created by AE | INT**
 
 * * *
 Pada tutorial sebelumnya, Anda telah mempelajari mengenai konsep *cohesion* dan *coupling*, pada tutorial kali ini kita akan membahas lebih dalam lagi mengenai konsep OO khususnya **inheritance**.
-
-## **Tujuan Pembelajaran**
-1. Memahami *konsep inheritance*
-2. Dapat mengimplementasikan konsep *inheritance* menggunakan bahasa java
+In the previous tutorial you have learned about the concept of *cohesion* and *coupling*, in this tutorial we will discuss in depth more about the concept of OO in particular **inheritance**.
+## **Learning Objectives**
+1. Understand the *concept of inheritance*
+2. Able to implement the concept of *inheritance* using Java language.
 
 ### **Before You Start...**
-1. Lakukan `git pull upstream master` dengan menggunakan Command Prompt pada folder repository lokal Anda.
-2. Kerjakan soal tersebut kemudian letakkan file jawaban anda di folder `lab_7/src/main/java`. Kami sudah menyediakan folder kosong untuk kamu.
-3. Setelah selesai mengimplementasikan kode tersebut, lakukan add, commit, dan push code kalian tersebut.
+1. Do `git pull upstream master` by using the command prompt/shell at your local repository folder
+2. Implement your code according to the specifications written in this document and put the Java file in `lab_7/src/main/java`. We have provided an empty folder for you.
+3. After you finish implementing your code, add, commit, then push your code
 
-## **Materi Tutorial**
+## **Tutorial Materialsl**
 
 ### **What is inheritance**
-**Inheritance** dapat didefinisikan sebagai suatu proses di mana satu kelas memerlukan suatu
-properti (method atau atribut) dari kelas lainnya. Penggunaan inheritance sebuah informasi data
-dapat di-manage dalam struktur hierarchical.
-Suatu kelas yang meng-inherit properti dari kelas lain dikenal sebagai subclass dan kelas yang
-di-inherit dikenal sebagai superclass.
+**Inheritance** can be defined as a process in which a class requires a
+property (method or attribute) of another class. The use of inheritance of data information
+can be managed in a hierarchical structure.
+A class that inherits properties from other classes is known as a subclass and a class
+is inherited is known as superclass.
 
 #### **Example of Inheritance**
-Mari kita coba mengimplmentasikan inheritance pada program sederhana berikut ini
+Let's try to implement inheritance in the following simple program
 ```java
 interface HitungBangunDatar {
     void hitungLuas();
@@ -94,12 +95,11 @@ class PersegiPanjang extends BangunDatar {
 
 
 ```
-Perhatikan bahwa kelas Persegi dan *PersegiPanjang* (subclass) meng-inherit kelas *BangunDatar*
-(superclass), dan mengambil atribut hasil dan method hitungKeliling() serta hitungLuas() dari
-superclass-nya. Cara subclass meng-inherit yaitu dengan keyword `extends`.
-Kita juga dapat memanggil method superclass atau mengambil atribut superclass melalui suatu
-subclass dengan memakai keyword `super`. Silahkan membuat kode seperti berikut, dan coba kalian
-eksekusikan.
+Note that the Persegi class and *PersegiPanjang* (subclass) inherit the class *BangunDatar*
+(superclass), and retrieves the result attribute and method hitungKeliling() and hitungLuas() from
+its superclass. The subclass is able to inherit by using the keyword `extends`.
+We can also call the superclass method or take the superclass attribute through a
+subclass by using the `super` keyword. Please make the following code, and try it out.
 
 ```java
 # Reference: https://www.tutorialspoint.com/java/java_inheritance.htm
@@ -136,8 +136,8 @@ public class Sub_class extends Super_class {
 }
 
 ```
-Selain dengan memanggil method dari superclass, kita juga bisa meng-construct superclass dengan
-menggunakan method 'super' pada constructor subclass. Silahkan buat program seperti di bawah ini:
+In addition to calling the method from the superclass, we can also construct the superclass with
+using the 'super' method in the subclass constructor. Please create a program like below:
 
 ```java
 class Superclass {
@@ -165,8 +165,15 @@ Perhatikan kembali bahwa method super pada constructor kelas *Subclass* digunaka
 meng-construct kelas *Superclass*. Ini sangat berguna ketika superclass mempunyai semua atribut
 yang ada di subclass sehingga kita hanya perlu memanggil method super.
 Dan terakhir, kita juga dapat mengecek apakah suatu kelas merupakan instance dari kelas yang
-lain dengan memakai keyword `instanceof`. Silahkan mengimplementasikan program sederhana
+lain dengan memakai keyword `instanceof`. Silahkan Implements program sederhana
 berikut untuk lebih memahami fungsionalitas instanceof
+
+Notice again that the super method in class constructor *Subclass* is used to
+construct the class *Superclass*. This is very useful when the superclass has all the attributes
+that is in the subclass so we just need to call the super method.
+Lastly, we can also check if a class is an instance of the class
+by using the `instanceof` keyword. Please implement a simple program
+below to better understand the instanceof functionality
 
 ```java
 # Reference: https://www.tutorialspoint.com/java/java_inheritance.htm
@@ -183,88 +190,84 @@ public class Dog extends Mammal {
 }
 
 ```
-
-Perhatikan bahwa output dari program akan menjadi seperti berikut:
-
-true
+Note that the output of the program will be as follows:
 
 true
 
 true
 
-Hal tersebut menunjukkan bahwa m merupakan instance dari kelas Animal, dan d merupakan
-instance dari kelas Mammal serta Animal. Keyword instance sangat berguna untuk mengetahui
-apakah suatu kelas meng-extend suatu kelas atau meng-implement suatu interface.
+true
+
+It shows that m is an instance of the Animal class, and d is a
+instance of the Mammal and Animal classes. Keyword instance is very useful to know
+whether a class extends a class or implements an interface.
 
 ## **Soal Tutorial: To Eat Or To Be Eaten**
 
 ### **What's the story?**
-
-Suatu ketika Dek Depe sedang bermain game dan merasa kelaparan. Ditengah-tengah dilema untuk melanjutkan gamenya atau makan, Dek Depe mendapat ide untuk membuat game dimana semua player bisa memakan lawannya yang sudah mati agar mendapatkan HP tambahan. Namun karena Dek Depe tidak sempat membuat prototype untuk idenya ini karena harus makan, ia meminta para pekerja gratis, ehm, para Mahasiswa DDP2 yang baik hati dan suka membantu untuk menyelesaikan pekerjaan ini.
+One day Dek Depe was playing a game and feeling hungry. Amid the dilemma to continue his game or to eat, Dek Depe gets an idea to make a game where all players can eat their dead opponents to get additional HPs. However, since Dek Depe did not make a prototype for this idea because he has to eat, he asked the free workers, ehm, the Programming Foundation 2 Students who are kind and helpful to complete this work.
 ***
+This game has 2 types of players, monster and human. Both have the same HP, name, and diet. Diet is all Player that has been eaten by the player during the game. Monster can eat humans and fellow dead monster. But humans can only eat burned monster.
+Ordinary humans can not burn the monster until they are cooked, but there are people who have special abilities which are the magician, magician are human who can use the move `burn` instead of just` attack` like ordinary humans. `burn` is the same as the usual` attack`, but if the monster dies due to a `burn` attack or when `burn` is directed to a monster's body then the monster will mature so it is safe for human to eat it.
 
-Game ini memiliki 2 tipe player. Yakni monster dan manusia. Keduanya sama-sama memiliki HP, nama, dan diet. Diet adalah semua Player yang sudah dimakan oleh player tersebut selama di game. Monster bisa memakan manusia dan sesama monster yang sudah mati. Namun manusia hanya boleh memakan monster yang sudah matang terbakar. 
-Manusia biasa tidak bisa membakar monster hingga matang, namun terdapat manusia yang memiliki kemampuan khusus yakni penyihir,penyihir adalah manusia yang bisa menggunakan move `burn` selain sekedar `attack` seperti manusia biasa. `burn` sama seperti `attack` biasa, namun jika monster mati karena serangan `burn` atau ketika `burn` diarahkan ke mayat monster maka monster itu akan matang sehingga aman untuk dimakan oleh manusia.
-
-Terdapat minimal 4 kelas yang harus diimplemntasikan dengan menggunakan konsep inheritence. yakni
+There are at least 4 classes that must be implemented using the inherent concept which are:
 
 #### Player
 
-Player memiliki attribut `name`, `hp`, dan `diet`. Semua player dapat menyerang dan memakan dengan `attack` dan `eat`. `attack` akan mengurangi HP musuh sejumlah **10**, sedangkan `eat` akan memakan player yang bisa dimakan dan mendapatkan tambahan `hp` sejumlah **15**. player juga dapat memperlihatkan `diet` dan `status`. Dimana `diet` mengembalikan player-player yang sudah dimakan oleh player tersebut. `status` akan memperlihatkan tipe player tersebut (apakah dia manusia, monster atau penyihir), namanya, HP serta informasi `diet`. Apabila mati karena `burn` Magician, atau setelah mati terkena `burn`, Player akan menjadi matang.
+The player has attributes `name`,` hp`, and `diet` . All players can attack and eat with `attack` and` eat`. `attack` will reduce the enemy HP number **10**, while` eat` will eat player that is edible and get additional **15** `hp`. The player can also show `diet` and` status`. Where the `diet` returns players who have been eaten by the player. `status` will show the type of player (whether he is a human being, a monster or a wizard), his name, HP and the 'diet` information. If it dies due to the `burn` Magician, or after being exposed to `burn`, Player will mature.
 
-**player mati ketika hp 0, nilai minimal dari hp adalah 0. Sehingga ketika diserang dan nilai hp menjadi < 0, hp yang tersimpan tetap 0. Ketika assigment nyawa Player dapat bernilai kurang dari sama dengan 0**
+**player is dead when the hp becomes 0, the minimum value of hp is 0. So when a player is attacked and its hp value becomes < 0, the stored hp remains 0.**
 
 #### Human
 
-Human hanya dapat memakan monster yang sudah matang sebelumnya. Namun Human tidak bisa melakukan `roar` seperti monster. 
+Human can only eat matured monster. But Human can not do `roar` like a monster
 
 #### Monster
 
-Monster dapat memakan semua hal yang sudah mati. Monster juga bisa melakukan `roar`. `roar` dari monster ditentukan ketika monster ditambah ke game. Namun jika `roar` tidak di spesifikasi, gunakan default "AAAAAAaaaAAAAAaaaAAAAAA". Monster memiliki nyawa 2x lipat dari nyawa yang di assign. 
+Monster can eat anything that's dead. Monster can also do `roar`. `roar` from monsters is determined when monsters are added to the game. But if `roar` is not specificated, use default" AAAAAAaaaAAAAAaaaAAAAAA ". Monster has 2x hp of the assigned hp.
 
 #### Magician
 
-Apalah artinya RPG tanpa Magician? Magician di game ini **adalah `human`** yang memiliki kemampuan khusus bernama `burn` yang dapat menyerang sekaligus memasak Player yang ia target. **Damage dari burn adalah 10**. Player yang mati karena `burn` damage atau yang sudah mati dan terkena `burn` akan menjadi matang. **Magician akan terkena damage 2x lipat ketika dijadikan `target` untuk method `attack` dan `burn`**
+What is the meaning of RPG without Magician? Magician in this game **is a `human`** who has a special ability named `burn` who can attack and cook the Player he targets. **Damage from burn is 10**. Players who die from `burn` damage or Player who is already died and get hit by `burn` will mature. **Magician recieve 2x damage when it becomes a `target` from `attack` and `burn` method**
 
-#### Beberapa Aturan
+#### Some Rules
+1. A name must be unique for the entire player. Even when it's dead.
+2. The player is removed from the game when it is eaten. **The player's name is considered invalid for command eat, attack, burn, diet, status, remove, roar. However it is valid for command add**
+3. Minimum HP is 0
+4. The dead player can not do anything other than willingly waiting to be eaten
+5. The dead player can still be attacked.
+6. **For validation of method name eat, attack and burn, simply remove "Thre is no (Player) or (target)"**
+7. **For validation of method of diet, status, remove, roar, simply output "There is no (Player)"**
+8. **The dead player can not eat, attack, burn. Print "(Player) can not (eat/attack/burn) (target)"**
+9. **Command `diet()` will print all players that has been eaten. Print `diet()` contains `diet` attributes of all players. The sequence begins printing the `diet` attribute starting from the player who entered the game from the beginning**
+10. **canEat() in test is a method that must be implemented throughout the player, indicating whether a player can eat pther player or not**
+11. **Character changed to Player to be consistent with template**
 
-1. Nama unik untuk seluruh player. Bahkan ketika sudah mati sekalipun.
-2. player di remove dari game ketika sudah dimakan. **Nama player dianggap tidak valid untuk command eat, attack, burn, diet, status, remove, roar. Namun menjadi valid untuk command add**
-3. Minimal HP adalah 0
-4. player yang mati tidak bisa melakukan apa-apa selain merelakan dirinya dimakan(?)
-5. player yang mati tetap bisa diserang.
-6. **Untuk validasi keberadaan nama method eat, attack dan burn, cukup keluarkan "Tidak ada (Player) atau (target)"**
-7. **Untuk validasi keberadaan nama method diet, status, remove, roar, cukup keluarkan "Tidak ada (Player)"**
-8. **player yang mati tidak dapat melakukan eat, attack, burn. cetak "(Player) tidak bisa (memakan/menyerang/membakar) (target)"**
-9. **Command `diet()` akan mencetak semua player yang sudah dimakan. Cetak `diet()` berisi attribut `diet` seluruh player. Urutan dimulai pencetakan attribut `diet` dimulai dari player yang masuk ke game dari awal**
-10. **canEat() di test adalah method yang harus diimplementasi di seluruh player, yang menandakan apakah suatu player dapat memakan player_lain atau tidak**
-11. **Character diubah menjadi Player supaya konsisten dengan template**
-
-#### Beberapa contoh output command
+#### Some example output command
 
 System.out.println(game1.add("Almarhum", "Human", 0)); 
 
-//Almarhum ditambah ke game
+//Almarhum is added to the game
 
 System.out.println(game1.add("Fooder", "Monster", 0)); 
 
-//Fooder ditambah ke game
+//Fooder is added to the game
 
 System.out.println(game1.add("Mons", "Monster", 50)); 
 
-//Mons ditambah ke game
+//Mons is added to the game
 
 System.out.println(game1.eat("Mons", "Fooder")); 
 
-//Mons memakan Fooder
+//Mons is eating Fooder
 
-//Nyawa Mons kini 65
+//Mons now have 65 HP
 
 System.out.println(game1.eat("Mons", "Almarhum")); 
 
-//Mons memakan Almarhum
+//Mons is eating Almarhum
 
-//Nyawa Mons kini 80
+//Mons now have 80 HP
 
 System.out.println(game1.diet("Mons"));
 
@@ -276,11 +279,11 @@ System.out.println(game1.status("Mons"));
 
 // HP: 105
 
-// Masih hidup
+// Alive
 
-// Memakan Human Almarhum, Monster Fooder
+// Ate Human Almarhum, Monster Fooder
 
-**Contoh lagi**
+**Another example**
 
 game1.add("Fooder", "Monster", 0);
 
@@ -294,31 +297,30 @@ game1.attack("Mons")
 
 System.out.println(game1.diet()); 
 
-//Termakan : Human Almarhum, Monster Fooder, Monster Fooder
+//Has been eaten : Human Almarhum, Monster Fooder, Monster Fooder
 
-**Untuk contoh lain bisa dibaca di** 
+**for another example, read from the link below** 
 
 [Lab7.java](https://gitlab.com/DDP2-CSUI/ddp-lab/blob/master/lab_7/src/main/java/Lab7.java "Lab7.java")
 
-2 Hal dibawah tidak di test. Tapi agar lengkap:
+The 2 things below will not be testedm but to make it complete:
 
-**Jika mencetak diet() ketika tidak ada yang sudah dimakan. Keluarkan "Belum ada yang termakan"**
+** If printing diet() when nothing has been eaten. Print "Nothing has been eaten" **
 
-**Jika mencetak status() ketika belum ada pemain. Keluarkan "Tidak ada pemain"**
+**If printing status() when there is no player. Print "There are no players"**
 
 #### Bonus
 
-1. Buat methode di `game` dengan nama `cetakMenu` dan cetak **[Tree](https://en.wikipedia.org/wiki/Tree_(data_structure))** dari attribute `diet` untuk setiap player yang masih ada di game (belum di remove atau dimakan). player yang masih ada di game tersebut sebagai root dari tree, dan Player yang sudah dimakan sebagai nodenya. (format pencetakan Tree bebas)
-
+1. Create a methode in `game` with name `printMenu` and print **[Tree](https://en.wikipedia.org/wiki/Tree_(data_structure))** from `diet` attribute for every player still is in the game (not yet removed or eaten). Player that is still in the game will be the root of the tree, and the Player has been eaten as the node. (the format for printinf Tree is free)
 Contoh:
 
-B Makan D
+B Eat D
 
-B Makan C
+B Eat C
 
-A Makan B
+A Eat B
 
-Maka Treenya (Pencetakan tidak perlu mengikuti format ini)
+Thus the tree (Printing does not need to follow this format)
 
 ---A
 
@@ -328,43 +330,39 @@ Maka Treenya (Pencetakan tidak perlu mengikuti format ini)
 
 ## Checklist
 
-Isi kurung siku komponen dengan x untuk menceklis komponen.
+Fill in square brackets with `x` to check components
 
-### Komponen Wajib | 100 Poin
+### Mandatory Components | 100 Poin
 
-- [ ] **Mengimplementasikan class-class yang diminta (boleh mengimplementasikan lebih dari yang diminta)**
-- [ ] **Mengimplementasikan atribut-atribut yang sesuai pada setiap class**
-- [ ] **Mengimplementasikan setiap method sesuai dengan kebutuhan soal**
+- [ ] **Implement classes that was asked (you are allowed to implement more than that was asked)**
+- [ ] **Implement attributes that suits to each class**
+- [ ] **Implement every method according to the needs of the problem
+**
 
-### Komponen Bonus | 10 Poin
+### Bonus Components | 10 Poin
 
-- [ ] **Implementasi `cetakMenu` yang mencetak Tree dari attribute `diet` Player yang masih hidup**
+- [ ] **Implement `printMenu` that prints Tree from `diet` attribute of Players that are still alive**
 
------
-### **Woah, apa ini !?**
+### **Woah, What is This!?**
 
-Ketika kalian meng-push hasil kerja kalian, kalian akan sadar bahwa ada logo cross merah atau centang hijau di samping hasil kerja kalian.
+After you pushed your work, you will realise that there is a red cross or green tick icons beside your work (commit).
 
 ![alt text](https://i.imgur.com/ZNfetmP.png "Ilustrasi git 1")
 
-Kalian mungkin memperhatikan bahwa kita mulai memakai sistem git sejak semester 2, mengikuti kakak angkatan kalian yang baru mulai memakai sistem git sejak semester 3. Salah satu guna dari menggunakan git adalah kita bisa menggunakan fitur Continuous Integration?
+You might have noticed that we started using Git since semester 2, following your seniors who started using Git since semester 3. One of the benefits of using Git is we can integrate our work (commits) history with a Continuous Integration (CI) system.
 
-Apa itu Continuous Integration? Continuous Integration adalah konsep di mana ketika kalian push, hasil push kalian langsung di build (compile) dan di test (uji langsung). Jika gagal, kalian akan diberitahu.
+What is Continuous Integration (CI)? To put it simply, CI is an automated process in which every changes in a work are checked and processed according to certain rules. For example, every commits you made will be checked by GitLab CI system to see whether your latest tutorial code can be compiled and produced output according to tutorial specification. If, for some reasons, your work failed to be processed by CI system, you will be notified by the CI system.
 
-Bagian Build baru akan dijelaskan di mata kuliah Advanced Programming. Kalian hanya perlu mengetahui bagian test.
+It will require a separate lecture session to properly explain about CI and concepts related to it such as build system and unit tests. At this point, you only need to know that CI automates the process of checking and testing your tutorial.
 
-Sistem yang digunakan untuk mengetest di Java bernama JUnit. Kita bisa menggunakan framework JUnit untuk mengetes secara langsung (tanpa harus print di command line). Untuk sekarang, kalian tidak perlu tahu cara kerja JUnit.
-
-Kamu dapat memeriksa hasil kerja Junit di tab Commit. Tekan logo centang hijau atau cross merah untuk memeriksa detail lebih lanjut.
+To see the history of your work, try clicking the **Commits** tab in the sidepanel of your GitLab project page. It will display list of commits made by yourself and the teaching team.
 
 ![alt text](https://i.imgur.com/E23AOfl.png "Ilustrasi commit")
 
-Ketika kamu menekan logo tersebut, kamu akan memeriksa rangkuman dari tes tersebut yang memiliki dua lingkaran.
+When you press the logo, you will check the summary of the test which has two circles. If the first circle display red cross, then your program failed due to compile error. If the first circle display green tick but the second circle display red cross, then your program produced different output than the expected output. If both circles display green ticks, your program is already correct and produced output according to the specifications.
 
-Jika lingkaran pertama cross, maka program kamu gagal karena compile error.
-Jika lingkaran pertama centang hijau tetapi lingkaran kedua cross, maka program kamu tidak akurat.
-Jika kedua lingkaran centang, berati program kamu sudah baik.
+In case you were wondering, the circles represent stages/phases in a CI process. The first circle is *build stage* that contains instructions to compile your latest work (commit). If your work successfully compiled, it will be given to the next stage named *test stage* where it will be tested using JUnit testing framework.
 
 ![alt text](https://i.imgur.com/1ElduFi.png "Ilustrasi status")
 
-Kamu dapat menekan tombol cross merah atau centang hijau untuk melihat hasil lebih lanjut. Sebagai contoh, jika kalain mendapat cross merah di lingkaran kedua, kamu dapat menemkan cross merah kedua untuk melihat test case mana program kalian tidak akurat.
+You can click the red cross or green tick icon to see more results. For example, if you get a red cross in the second circle, you can find a second red cross to see which test case your program is inaccurate.
