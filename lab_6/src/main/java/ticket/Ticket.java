@@ -11,7 +11,7 @@ public class Ticket {
         this.movie = movie;
         this.day = day;
         this.type = type;
-        if (day.toLowerCase().equals("sabtu") || day.toLowerCase().equals("minggu")){
+        if (day.toLowerCase().equals("saturday") || day.toLowerCase().equals("sunday")){
             this.price += 40000;
         }
         if (this.type){
@@ -36,9 +36,9 @@ public class Ticket {
     // methods
     public String toString(){
         return  String.format("------------------------------------------------------------------\n"+ 
-                              "Film            : %s\n"+
-                              "Jadwal Tayang   : %s\n"+
-                              "Jenis           : %s\n"+
+                              "Movies      : %s\n"+
+                              "Showtimes   : %s\n"+
+                              "Type        : %s\n"+
                               "------------------------------------------------------------------"
                               ,this.movie, this.day, this.type);
     }

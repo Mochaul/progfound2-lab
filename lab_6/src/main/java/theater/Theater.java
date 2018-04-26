@@ -38,16 +38,16 @@ public class Theater{
         for(int i=0; i < theaters.length; i++){
             totalBalance += theaters[i].getBalance();
             if (i==0) {
-                result+=String.format("Bioskop         : %s\n"+
-                                      "Saldo Kas       : Rp. %d\n",
+                result+=String.format("Cinema         : %s\n"+
+                                      "Cash Balance       : Rp. %d\n",
                                       theaters[i].getName(), theaters[i].getBalance());
             }else{
-                result+=String.format("\nBioskop         : %s\n"+
-                                      "Saldo Kas       : Rp. %d\n",
+                result+=String.format("\nCinema         : %s\n"+
+                                      "Cash Balance       : Rp. %d\n",
                                       theaters[i].getName(), theaters[i].getBalance());
             }
         }
-        System.out.println(String.format("Total uang yang dimiliki Koh Mas : Rp. %d\n"+
+        System.out.println(String.format("Koh Mas's total money: Rp. %d\n"+
                                          "------------------------------------------------------------------\n"+
                                          result+"\n"+
                                          "------------------------------------------------------------------",
