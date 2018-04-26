@@ -6,7 +6,9 @@ class Lab8 {
         Scanner in = new Scanner(System.in);
         String[] row;
         boolean exitFlag = false;
-        Company company = new Company("TAMPAN");
+        
+        int threshold = Integer.parseInt(in.nextLine());
+        Company company = new Company("TAMPAN", threshold);
 
         while (true){
             // TAMBAH_KARYAWAN <TIPE> <NAMA_KARYAWAN> <GAJI_AWAL>
@@ -24,11 +26,20 @@ class Lab8 {
                     System.out.println(company.recruit(row[1], row[2]));
                     break;
                 case "GAJIAN":
-                    System.out.println(company.payday());
+                    company.payday();
                     break;
-                case "EXIT":
+                case "exit":
                     exitFlag = true;
                     break;
+                case "help":
+                    System.out.printf("\navailable commands:\n" +
+                                      "TAMBAH_KARYAWAN <TIPE> <NAMA_KARYAWAN> <GAJI_AWAL>\n" +
+                                      "STATUS <NAMA_KARYAWAN>\n" +
+                                      "TAMBAH_BAWAHAN <NAMA_YANG_MENAMBAHKAN> <NAMA_YANG_DITAMBAHKAN>\n" +
+                                      "exit\n\n");
+                    break;
+                default:
+                    System.out.println("invalid command. enter 'help' for list available commands");
             }
             if (exitFlag) break;
         }

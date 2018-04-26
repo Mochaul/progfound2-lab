@@ -7,14 +7,16 @@ public class Company{
     private final int MAX_EMPLOYEE_COUNT = 10000;
     protected final static int PAY_RAISE_PERIOD = 6;
     protected static final double PAY_RAISE_RATE = 1.1;
+    private final int MANAGER_SALARY_THRESHOLD;
 
     private int employeeCount = 0;
     private String name;
     private ArrayList<Employee> employees;
 
-    public Company(String name){
+    public Company(String name, int threshold){
         this.name = name;
         this.employees = new ArrayList<>();
+        this.MANAGER_SALARY_THRESHOLD = threshold;
     }
 
     public String getCompanyName(){
@@ -65,11 +67,13 @@ public class Company{
         
     }
 
-    public String payday(){
+    public void payday(){
+        System.out.println("Semua karyawan telah diberikan gaji");
         for (Employee e : this.employees){
-            e.receivePay();
+            if (e.receivePay() && e.getSalary() > MANAGER_SALARY_THRESHOLD && e instanceof Staff){
+                this.promote(e);
+            }
         }
-        return "Semua karyawan telah diberikan gaji";
     }
 
     public String toString(){
@@ -96,5 +100,17 @@ public class Company{
             }
         }
         return false;
+    }
+
+    private void promote(Employee e){
+        int i;
+        for (i=0; i<this.employees.size(); i++){
+            if (this.employees.get(i) == e){
+                break;
+            }
+        } 
+        this.employees.set(i, new Manager(e.getName(), e.getSalary()));
+        System.out.printf("Selamat, %s telah dipromosikan menjadi MANAGER\n", e.getName());
+        
     }
 }
