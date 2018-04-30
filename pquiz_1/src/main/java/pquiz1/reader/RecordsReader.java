@@ -23,10 +23,18 @@ public class RecordsReader implements CsvReader{
         this.courses = new ArrayList<>();
         this.loadStudents();
     }
-    
+
+    /**
+     * Loads data of students in csv to instance variable {@code students}
+     * 
+     * @return
+     */
     private void loadStudents(){
         for(String line : this.lines){
-            String[] arr = line.split(",");
+            /** credit Rohit Jain https://stackoverflow.com/questions/18893390/splitting-on-comma-outside-quotes?utm_medium=organic&utm_source=google_rich_qa&utm_campaign=google_rich_qa
+             *  splits comma not between quotes
+             */
+            String[] arr = line.split(",(?=(?:[^\"]*\"[^\"]*\")*[^\"]*$)");
             int index = this.indexOfStudent(arr[0]);
             if (index != -1){
                 // if student found, add course only
