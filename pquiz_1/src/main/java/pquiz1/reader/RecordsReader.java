@@ -13,14 +13,15 @@ public class RecordsReader implements CsvReader{
     Path file;
     List<String> lines;
     ArrayList<Student> students;
-    ArrayList<Course> courses;
     
+    /**
+     * creates an instance of {@code RecordsReader}
+     */
     public RecordsReader(Path file) throws IOException{
         this.file = file;
         this.lines = Files.readAllLines(this.file, StandardCharsets.UTF_8);
         this.lines.remove(0); // removes first line
         this.students = new ArrayList<>();
-        this.courses = new ArrayList<>();
         this.loadStudents();
     }
 

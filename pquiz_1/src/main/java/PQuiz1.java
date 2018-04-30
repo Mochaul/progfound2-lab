@@ -22,8 +22,7 @@ public class PQuiz1 {
         Path dataFile = cwd.resolve("data/uni-x-students.csv");
         Path path = FileSystems.getDefault().getPath("./../../../data", "uni-x-students.csv");
         
-        /* TODO: Create an instance of class that implements CsvReader and
-           reads the CSV data from the file referred by dataFile */
+        // create reader object
         CsvReader reader = new RecordsReader(path);
 
         List<Student> students = reader.getStudents();
