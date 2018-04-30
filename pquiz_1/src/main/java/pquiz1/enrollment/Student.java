@@ -35,4 +35,11 @@ public class Student {
     public boolean addCourse(Course course) {
         return enrolledCourse.add(course);
     }
+
+    public boolean hasCourse(String name){
+        for (Course course : enrolledCourse){
+            if (course.getName().equals(name)) return true;
+        }
+        return false;
+    }
 }
