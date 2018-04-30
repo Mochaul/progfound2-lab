@@ -1,0 +1,20 @@
+// All Gradle build file in every tutorial must have this buildscript
+// declaration followed by JUnit Gradle plugin. It is necessary redundancy.
+buildscript {
+    repositories {
+        mavenCentral()
+    }
+
+    dependencies {
+        classpath "org.junit.platform:junit-platform-gradle-plugin:${junit5_platform_version}"
+    }
+}
+
+apply plugin: 'org.junit.platform.gradle.plugin'
+
+apply plugin: 'application'
+mainClassName = 'pquiz1.PQuiz1'
+
+run {
+    standardInput = System.in
+}
