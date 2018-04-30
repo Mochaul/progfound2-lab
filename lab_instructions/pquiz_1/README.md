@@ -41,6 +41,10 @@ Your task in this programming quiz is to create a Java class that implements
 `CsvReader` interface. The interface specifies methods that will be called
 by the main program (`PQuiz1`) in order to get information from the CSV file.
 
+> Hint: You are allowed to replace `Path` object reference with `File` if you
+> are more familiar with API provided by classes in `java.io` package instead
+> of `java.nio`.
+
 Some hints regarding reading the CSV file:
 
 - The first line only contains data descriptors, thus the actual records in the
