@@ -87,7 +87,7 @@ public class Lab6Test {
         System.setOut(new PrintStream(out));
         sisDea.findMovie(compFestXXI, "Si Juki The Movie");
         String output = out.toString().trim();
-        assertTrue(output.equals("Movie Si Juki The Movie searched by Sis Dea is not in the cinema CompFest XXI"));
+        assertTrue(output.equals("Movie Si Juki The Movie searched by Sis Dea is not in cinema CompFest XXI"));
 
         System.setOut(new PrintStream(out));
         sisDea.findMovie(compFestXXI, "Dilan 1990");
@@ -95,6 +95,14 @@ public class Lab6Test {
         assertTrue(output.contains("Dilan 1990") && output.contains("Romantic/Drama")
         && output.contains("Teenager") && output.contains("Film Local"));
     }
+    /**
+     * Movie Si Juki The Movie searched by Sis Dea is not in cinema CompFest XXI
+     * Title       : Dilan 1990
+        Genre       : Romantic/Drama
+        Duration    : 110 minutes
+        Rating      : Teenager
+        Type        : Film Local
+     */
 
     @Test
     @DisplayName("Test Sis Dea Order tickets")
