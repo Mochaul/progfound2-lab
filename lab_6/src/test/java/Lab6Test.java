@@ -75,7 +75,7 @@ public class Lab6Test {
         System.setOut(new PrintStream(out));
         dekDepe.orderTicket(cgtBlitz, "Black Panther", "Monday", "3 Dimensions");
         String output = out.toString().trim();
-        assertTrue(output.equals("Tickets for the movie Black Panther type 3 Dimension on Monday are not available at CGT Blitz"));
+        assertTrue(output.equals("Tickets for the movie Black Panther type 3 Dimensions on Monday are not available at CGT Blitz"));
 
         assertEquals(tickets1[7],
                 dekDepe.orderTicket(cgtBlitz, "The Greatest Showman", "Friday", "3 Dimensions"));
@@ -93,7 +93,7 @@ public class Lab6Test {
         sisDea.findMovie(compFestXXI, "Dilan 1990");
         output = out.toString().trim();
         assertTrue(output.contains("Dilan 1990") && output.contains("Romantic/Drama")
-        && output.contains("Teenagers") && output.contains("Local Movie"));
+        && output.contains("Teenager") && output.contains("Film Local"));
     }
 
     @Test
@@ -102,7 +102,7 @@ public class Lab6Test {
         System.setOut(new PrintStream(out));
         sisDea.orderTicket(compFestXXI, "Dilan 1990", "Tuesday", "Ordinary");
         String output = out.toString().trim();
-        assertTrue(output.equals("Tickets for the movie Dilan 1990 type Ordinary on Tuesday are not available in CompFest XXI"));
+        assertTrue(output.equals("Tickets for the movie Dilan 1990 type Ordinary on Tuesday are not available at CompFest XXI"));
 
         assertEquals(tickets2[8],
                 sisDea.orderTicket(compFestXXI, "Dilan 1990", "Sunday", "Ordinary"));
@@ -119,7 +119,7 @@ public class Lab6Test {
         System.setOut(new PrintStream(out));
         kakPewe.orderTicket(cgtBlitz,"Si Juki The Movie", "Thursday", "Ordinary");
         String output = out.toString().trim();
-        assertTrue(output.equals("Kak Pewe has purchased Si Juki The Movie type Ordinary at CGT Blitz on Thursday for Rp.60000"));
+        assertTrue(output.equals("Kak Pewe has purchased Si Juki The Movie type Ordinary at CGT Blitz on Thursday for Rp. 60000"));
 
         assertEquals(tickets2[2],
                 kakPewe.orderTicket(compFestXXI, "Black Panther", "Saturday", "3 Dimensions"));

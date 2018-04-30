@@ -22,10 +22,10 @@ class Lab7Test {
     private Player mons;
     private Player dead;
     private Player wizard;
-    private Game game1;
+    // private Game game1;
     private ByteArrayOutputStream outContent;
     private ByteArrayOutputStream errContent;
-    private Logger logger;
+    // private Logger logger;
 
     @BeforeEach
     void init() {

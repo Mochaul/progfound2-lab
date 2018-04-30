@@ -39,11 +39,11 @@ public class Theater{
             totalBalance += theaters[i].getBalance();
             if (i==0) {
                 result+=String.format("Cinema         : %s\n"+
-                                      "Cash Balance       : Rp. %d\n",
+                                      "Cash Balance   : Rp. %d\n",
                                       theaters[i].getName(), theaters[i].getBalance());
             }else{
                 result+=String.format("\nCinema         : %s\n"+
-                                      "Cash Balance       : Rp. %d\n",
+                                      "Cash Balance     : Rp. %d\n",
                                       theaters[i].getName(), theaters[i].getBalance());
             }
         }

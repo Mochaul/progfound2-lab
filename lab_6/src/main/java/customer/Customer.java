@@ -25,7 +25,7 @@ public class Customer{
                 if(ticket.getDay().equals(day) && ( (ticket.getType() == true && type.toLowerCase().equals("3 dimensions")) || (ticket.getType() == false && type.toLowerCase().equals("ordinary"))) ){
                     // if customer does not meet age requirements for movie
                     if( (ticket.getMovie().getRating().toLowerCase().equals("teenager") && this.age < 13) || (ticket.getMovie().getRating().toLowerCase().equals("adult") && this.age < 17) ){
-                        System.out.println(String.format("%s is not old enought to watch %s", this.name, title));
+                        System.out.println(String.format("%s is not old enough to watch %s", this.name, title));
                         return null;
                     }else{
                         System.out.println(String.format("%s has purchased %s type %s at %s on %s for Rp. %d", this.name, title, type, theater.getName(), day, ticket.getPrice()));
