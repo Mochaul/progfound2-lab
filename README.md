@@ -15,7 +15,10 @@ This repository contains Tutorial & Lab materials for Programming Foundations 2.
     3. [Lab 3](lab_instructions/lab_3/README.md) - Recursion
     4. [Lab 4](lab_instructions/lab_4/README.md) - Object Oriented Programming
     5. [Lab 5](lab_instructions/lab_5/README.md) - Array and ArrayList
-    5. [Lab 6](lab_instructions/lab_6/README.md) - OO Case Study
+    6. [Lab 6](lab_instructions/lab_6/README.md) - OO Case Study
+2. Programming Quiz
+    1. [Quiz 1](lab_instructions/pquiz_1/README.md) - Programming Quiz 1
+    2. [Quiz 1 (Make-Up)](lab_instructions/pquiz_1b/README.md) - Programming Quiz 1 (Make-Up)
 
 * * *
 
@@ -36,7 +39,7 @@ for installation and configuration guide.
 Lecturer:
 
 - [Daya Adianto](https://gitlab.com/addianto)
-    - Office Hours: Monday/Friday, 4 PM - 5 PM at 3303
+    - Office Hours: Monday, 4 PM - 5 PM at 3303 (or 3204 - RSE Lab)
 
 TA:
 
