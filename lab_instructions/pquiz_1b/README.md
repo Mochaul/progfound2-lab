@@ -1,4 +1,4 @@
-# Programming Quiz 1: Students Information System
+# Programming Quiz 1 (Make-Up): Students Information System
 
 CSGE601021 Programming Foundations 2 @ Faculty of Computer Science Universitas
 Indonesia, Term 2 2017/2018
@@ -15,9 +15,13 @@ This quiz covers programming topics as follows:
 - File processing
 - Interface
 
-This quiz is published on **Monday, 30 April 2018 and due on the same day
+This quiz is published on **Tuesday, 8 May 2018 and due on the same day
 at 12:00**. Grading will be conducted by **evaluating latest commit pushed
 before the deadline.**
+
+The starter code is available in `pquiz_1b` directory. Please work your
+solution in the same directory as well, specifically in `src/main/java/pquiz1b`
+subdirectory of `pquiz_1b`.
 
 ## Description
 
@@ -39,7 +43,7 @@ diploma), **S1 (4-year bachelor)**
 
 Your task in this programming quiz is to create a Java class that implements
 `CsvReader` interface. The interface specifies methods that will be called
-by the main program (`PQuiz1`) in order to get information from the CSV file.
+by the main program (`PQuiz1B`) in order to get information from the CSV file.
 
 > Hint: You are allowed to replace `Path` object reference with `File` if you
 > are more familiar with API provided by classes in `java.io` package instead
@@ -60,7 +64,7 @@ Please make sure that you:
 - [ ] Push your commits to online Git repository at your GitLab project
 - [ ] Create a new class that implements `CsvReader` interface
 - [ ] Implement each methods from `CsvReader` correctly
-- [ ] Replace null assignment of `CsvReader` instance in the main program (`PQuiz1`)
+- [ ] Replace null assignment of `CsvReader` instance in the main program (`PQuiz1B`)
 with actual object of `CsvReader`
 - [ ] Invite the lecturer (@addianto) as a Master in your tutorial/quiz GitLab
 project
