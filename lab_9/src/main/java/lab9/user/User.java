@@ -1,11 +1,19 @@
 package lab9.user;
 
 import lab9.event.Event;
+
+import java.math.BigInteger;
 import java.util.ArrayList;
+import java.util.Collections;
+import java.util.Comparator;
 
 /**
-* Class representing a user, willing to attend event(s)
-*/
+ * Class representing a user, willing to attend event(s)
+ * 
+ * @author  Nicolaus
+ * @version 1.0
+ * @since   2018-05-16
+ */
 public class User
 {
     /** Name of user */
@@ -15,9 +23,10 @@ public class User
     private ArrayList<Event> events;
     
     /**
-    * Constructor
-    * Initializes a user object with given name and empty event list
-    */
+     * Initializes a user object with given name and empty event list
+     * 
+     * @param   name    name of user
+     */
     public User(String name)
     {
         this.name = name;
@@ -26,6 +35,7 @@ public class User
     
     /**
     * Accessor for name field
+    *
     * @return name of this instance
     */
     public String getName() {
@@ -40,8 +50,13 @@ public class User
     */
     public boolean addEvent(Event newEvent)
     {
-        // TODO: Implement!
-        return false;
+        for(Event e : events){
+            if(newEvent.overlapsWith(e)){
+                return false;
+            }
+        }
+        events.add(newEvent);
+        return true;
     }
 
     /**
@@ -53,12 +68,29 @@ public class User
     * @return list of events this user plans to attend
     */
     public ArrayList<Event> getEvents()
-    {
-        // TODO: Implement!
-        // WARNING: The list returned needs to be a copy of the actual events list.
-        //          You don't want people to change your plans (e.g. clearing the
-        //          list) without your consent, right?
-        // HINT: see Java API Documentation on ArrayList (java.util.ArrayList)                                                                                                          (or... Google. Yeah that works too. OK.)
-        return null;
+    { 
+        ArrayList<Event> result = new ArrayList<>();
+        for(Event e : events){
+            result.add((Event)e.clone());
+        }
+        Collections.sort(result, new Comparator<Event>() {
+            public int compare(Event one, Event other) {
+                return one.getStartDate().compareTo(other.getStartDate());
+            }
+        });
+        return result;
+    }
+
+    /**
+     * returns a biginteger whose value is the total cost of attending all events selected by this user
+     * 
+     * @return total cost of attending events selected by user
+     */
+    public BigInteger getTotalCost(){
+        BigInteger result = new BigInteger("0");
+        for(Event e : events){
+            result = result.add(e.getCost());
+        }
+        return result;
     }
 }
