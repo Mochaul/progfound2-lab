@@ -9,10 +9,10 @@ import java.math.BigInteger;
  * A class representing an event and its properties.
  * 
  * @author  Nicolaus
- * @version 1.0
+ * @version 1.1
  * @since   2018-05-16
  */
-public class Event {
+public class Event implements Cloneable{
     private final String READ_FORMAT = "yyyy-MM-dd_HH:mm:ss";
     private final String WRITE_FORMAT = "yyyy-MM-dd, HH:mm:ss";
     private final SimpleDateFormat RFORMAT = new SimpleDateFormat(READ_FORMAT);
@@ -40,7 +40,8 @@ public class Event {
     }
 
     /**
-    * Accessor for name field. 
+    * Accessor for name field.
+    * 
     * @return name of this event instance
     */
     public String getName()
@@ -48,6 +49,51 @@ public class Event {
         return this.name;
     }
     
+    /**
+     * Accessor for start field.
+     * 
+     * @return start date of this event instance
+     */
+    public Date getStartDate(){
+        return this.start;
+    }
+
+    /**
+     * Accessor for end field.
+     * 
+     * @return end date of this event instance
+     */
+    public Date getEndDate(){
+        return this.end;
+    }
+
+    /**
+     * Accessor for cost field.
+     * 
+     * @return cost of attending event per hour
+     */
+    public BigInteger getCostPerHour(){
+        return this.cost;
+    }
+
+    /**
+     * returns a double whose value is the duration of the event in hours
+     * 
+     * @return duration of event in hours
+     */
+    public double getDuration(){
+        return ((double)(this.end.getTime() - this.start.getTime()))/(1000.0*60.0*60.0);
+    }
+
+    /**
+     * returns a biginteger whose value is the cost of attending this event
+     * 
+     * @return cost per hour * duration of event
+     */
+    public BigInteger getCost(){
+        // multiplying by 1000 then dividing to increase precision of integer
+        return this.getCostPerHour().multiply( new BigInteger(String.valueOf((int)(this.getDuration()*1000))) ).divide(new BigInteger("1000"));
+    }
     /**
      * returns a string containing information of the event
      * 
@@ -72,5 +118,19 @@ public class Event {
             return true;
         }
         return false;
+    }
+
+    /**
+     * returns a deep copy of this event
+     * 
+     * @return  deep copy of event
+     */
+    @Override
+    public Object clone(){  
+        try{  
+            return super.clone();  
+        }catch(Exception e){ 
+            return null; 
+        }
     }
 }
