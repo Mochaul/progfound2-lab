@@ -13,14 +13,22 @@ import java.math.BigInteger;
  * @since   2018-05-16
  */
 public class Event implements Cloneable{
+    /** format of date to be read from argument in constructor */
     private final String READ_FORMAT = "yyyy-MM-dd_HH:mm:ss";
+    /** format of date to be written in {@code toString()} */
     private final String WRITE_FORMAT = "yyyy-MM-dd, HH:mm:ss";
+    /** reader for format {@code READ_FORMAT} */
     private final SimpleDateFormat RFORMAT = new SimpleDateFormat(READ_FORMAT);
+    /** writer for format {@code WRITE_FORMAT} */
     private final SimpleDateFormat WFORMAT = new SimpleDateFormat(WRITE_FORMAT);
 
+    /** name of event */
     private String name;
+    /** start date of event */
     private Date start;
+    /** end date of event */
     private Date end;
+    /** cost per hour when attending this event */
     private BigInteger cost;
 
     /**
