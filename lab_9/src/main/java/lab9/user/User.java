@@ -11,8 +11,8 @@ import java.util.Comparator;
  * Class representing a user, willing to attend event(s)
  * 
  * @author  Nicolaus
- * @version 1.0
- * @since   2018-05-16
+ * @version 1.1
+ * @since   2018-05-17
  */
 public class User
 {
@@ -89,7 +89,7 @@ public class User
     public BigInteger getTotalCost(){
         BigInteger result = new BigInteger("0");
         for(Event e : events){
-            result = result.add(e.getCost());
+            result = result.add(e.getCostPerHour());
         }
         return result;
     }
