@@ -9,14 +9,14 @@ import java.math.BigInteger;
  * A class representing an event and its properties.
  * 
  * @author  Nicolaus
- * @version 1.1
- * @since   2018-05-16
+ * @version 1.2
+ * @since   2018-05-17
  */
 public class Event implements Cloneable{
     /** format of date to be read from argument in constructor */
     private final String READ_FORMAT = "yyyy-MM-dd_HH:mm:ss";
     /** format of date to be written in {@code toString()} */
-    private final String WRITE_FORMAT = "yyyy-MM-dd, HH:mm:ss";
+    private final String WRITE_FORMAT = "dd-MM-yyyy, HH:mm:ss";
     /** reader for format {@code READ_FORMAT} */
     private final SimpleDateFormat RFORMAT = new SimpleDateFormat(READ_FORMAT);
     /** writer for format {@code WRITE_FORMAT} */
@@ -85,12 +85,12 @@ public class Event implements Cloneable{
     }
 
     /**
-     * returns a double whose value is the duration of the event in hours
+     * returns a double whose value is the duration of the event in seconds
      * 
-     * @return duration of event in hours
+     * @return duration of event in seconds
      */
-    public double getDuration(){
-        return ((double)(this.end.getTime() - this.start.getTime()))/(1000.0*60.0*60.0);
+    public long getDuration(){
+        return (long)((this.end.getTime() - this.start.getTime())/(1000.0));
     }
 
     /**
@@ -99,8 +99,7 @@ public class Event implements Cloneable{
      * @return cost per hour * duration of event
      */
     public BigInteger getCost(){
-        // multiplying by 1000 then dividing to increase precision of integer
-        return this.getCostPerHour().multiply( new BigInteger(String.valueOf((int)(this.getDuration()*1000))) ).divide(new BigInteger("1000"));
+        return this.getCostPerHour().multiply(new BigInteger(String.valueOf(this.getDuration()))).divide(new BigInteger("3600"));
     }
     /**
      * returns a string containing information of the event
