@@ -28,7 +28,13 @@ public class XoxoDecryption {
      * @return The original message before it is encrypted.
      */
     public String decrypt(String encryptedMessage, int seed) {
-        //TODO: Implement decryption algorithm
-        
+        String result = "";
+        int c;
+        for(int i=0; i<encryptedMessage.length(); i++){
+            c = encryptedMessage.charAt(i) ^ ((hugKeyString.charAt(i%hugKeyString.length()) ^ seed) - 'a');
+            result += (char)c;
+            System.out.println(c);
+        }
+        return result;
     }
 }
