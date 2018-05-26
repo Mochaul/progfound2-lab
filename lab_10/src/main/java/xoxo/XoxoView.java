@@ -1,10 +1,14 @@
 package xoxo;
 
+import java.awt.*;
+import javax.swing.*;
 import java.awt.event.ActionListener;
 
 import javax.swing.JButton;
 import javax.swing.JTextField;
 import javax.swing.JTextArea;
+
+import xoxo.util.SpringUtilities;
 
 /**
  * This class handles most of the GUI construction.
@@ -64,7 +68,35 @@ public class XoxoView {
      * Constructs the GUI.
      */
     private void initGui() {
-        //TODO: Construct your GUI here
+        // create components
+        messageField = new JTextField(20);
+        keyField = new JTextField(20);
+        seedField = new JTextField(20);
+        logField = new JTextArea(5, 20);
+        encryptButton =  new JButton("encrypt");
+        decryptButton = new JButton("decrypt");
+        
+        JPanel panel = new JPanel(new SpringLayout());
+        JLabel label = new JLabel("message: ", JLabel.TRAILING);
+        panel.add(label);
+        label.setLabelFor(messageField);
+        panel.add(messageField);
+        JLabel label2 = new JLabel("key: ", JLabel.TRAILING);
+        panel.add(label2);
+        label.setLabelFor(keyField);
+        panel.add(keyField);
+        JLabel label3 = new JLabel("seed: ", JLabel.TRAILING);
+        panel.add(label3);
+        label.setLabelFor(seedField);
+        panel.add(seedField);
+
+        JFrame frame = new JFrame();
+        SpringUtilities.makeCompactGrid(panel, 4, 2, 6, 6, 6, 6);
+        frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        panel.setOpaque(true);
+        frame.setContentPane(panel);
+        frame.pack();
+        frame.setVisible(true);
     }
 
     /**
