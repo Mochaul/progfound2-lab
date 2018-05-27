@@ -96,17 +96,17 @@ public class XoxoView {
         panel2.add(decryptButton);
 
         // create parent container for above two containers
-        JPanel panel3 = new JPanel(new SpringLayout());
-        panel3.add(panel);
-        panel3.add(panel2);
-        panel3.add(logField);
-        SpringUtilities.makeCompactGrid(panel3, 3, 1, 6, 6, 6, 6);
-        panel3.setOpaque(true);
+        JPanel parentPanel = new JPanel(new SpringLayout());
+        parentPanel.add(panel);
+        parentPanel.add(panel2);
+        parentPanel.add(logField);
+        SpringUtilities.makeCompactGrid(parentPanel, 3, 1, 6, 6, 6, 6);
+        parentPanel.setOpaque(true);
 
         // create frame object
         JFrame frame = new JFrame();
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-        frame.setContentPane(panel3);
+        frame.setContentPane(parentPanel);
         frame.pack();
         frame.setResizable(false);
         frame.setVisible(true);
